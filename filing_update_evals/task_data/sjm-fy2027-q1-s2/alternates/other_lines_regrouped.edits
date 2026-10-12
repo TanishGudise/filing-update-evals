@@ -29,7 +29,7 @@ Model!H61 = 150000
 Model!H62 = =H63-H59-H60-H61
 Model!H63 = 2288800
 Model!H64 = 6394300
-Model!H65 = =H71-H63-H64-H70
+Model!H65 = =H71-H63-H64-H67-H70
 Model!H67 = 0
 Model!H68 = 5750800
 Model!H69 = 0

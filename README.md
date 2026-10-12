@@ -112,9 +112,10 @@ columns tie exactly, rounding included.
 Out of 30 candidates picked for plain statements and a spread of fiscal years and units, a filer
 qualifies when:
 
-- its latest 10-Q is fresh, and every required line (revenue, operating income, pre-tax income,
-  tax, net income, D&A, the cash flow totals and the balance sheet totals) is tagged for every
-  period the model needs, with no value restated between filings;
+- its latest 10-Q is fresh, and every required line is tagged for every period the model needs,
+  with no value restated between filings. The required lines are revenue, operating income,
+  pre-tax income, tax, net income, D&A, capex, the cash flow totals, cash, equity and the balance
+  sheet totals;
 - it has one class of common stock;
 - assets equal liabilities plus equity on every date;
 - no derived "other" line comes out negative;
@@ -131,8 +132,8 @@ Some lines get narrower rules:
 
   At the quarter end, the statement page must also show no number for it.
 - **Debt and NCI lines are never folded.** A debt or non-controlling-interest line that can't be
-  mapped fails the filer. One no candidate tag covers is zero only if the balance sheet shows no
-  such row with a number.
+  mapped fails the filer. A line that no candidate tag covers is zero only if the balance sheet
+  shows no matching row with a number.
 - **Other optional lines can be folded.** If one is tagged inconsistently or restated, it goes
   into the model's derived "other" line instead. Each fold is listed in `data/screen.md`.
 

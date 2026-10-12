@@ -28,16 +28,29 @@ from filing_update_evals.xbrl import LINES, CompanyFacts
 REPO = Path(__file__).resolve().parent.parent
 RAW = REPO / "raw" / "www.sec.gov"
 NEEDED_KINDS = ("cover", "income", "balance", "cash")
-ABSENT_CHECKS = {
+ROW_PATTERNS = {
+    "receivables": re.compile(r"receivable", re.I),
+    "inventory": re.compile(r"inventor|merchandise", re.I),
+    "ppe": re.compile(r"property|equipment", re.I),
+    "goodwill": re.compile(r"goodwill", re.I),
+    "intangibles": re.compile(r"intangible", re.I),
+    "payables": re.compile(r"accounts payable|trade payables", re.I),
     "short_term_debt": re.compile(
-        r"short-term (debt|borrowings)|notes payable|commercial paper|line of credit", re.I
+        r"short[- ]term (debt|borrowings)|notes payable|commercial paper|line of credit"
+        r"|credit facility|revolv",
+        re.I,
     ),
     "current_ltd": re.compile(
-        r"current (portion|maturities|installments) of (long-term )?(debt|borrowings|notes)", re.I
+        r"current (portion|maturities|installments) of (long[- ]term )?(debt|borrowings|notes)", re.I
     ),
-    "long_term_debt": re.compile(r"long-term (debt|borrowings)|senior notes", re.I),
+    "long_term_debt": re.compile(r"long[- ]term (debt|borrowings)|senior notes|term loan", re.I),
     "redeemable_nci": re.compile(r"redeemable non-?controlling", re.I),
     "nci": re.compile(r"non-?controlling interest|minority interest", re.I),
+}
+"""How a balance sheet row for a line is labelled, for lines the model may hold at 0."""
+ABSENT_CHECKS = {
+    line: ROW_PATTERNS[line]
+    for line in ("short_term_debt", "current_ltd", "long_term_debt", "redeemable_nci", "nci")
 }
 
 
@@ -115,21 +128,37 @@ def verify() -> int:
             if not ok:
                 problems.append(f"{line} ({concept}) {value:,.0f} not on the {page_of[kind]} page")
         # A balance zero-filled at the quarter end (untagged there) must be blank on the page: find
-        # the line's row by its prior-year-end value (the comparative column) and check that the
-        # current column shows no number.
-        for line, (kind, _, _) in LINES.items():
-            if kind != "instant" or "untagged" not in r["concepts"].get(line, "") or "balance" not in tables:
-                continue
-            if r["values"][line][f"FYQ{k}END"] != 0:
-                continue
+        # the line's row by its prior-year-end value (the comparative column), or, when that is 0
+        # too, by its label; the current column must show no number. Rows whose number a mapped
+        # line already accounts for are skipped.
+        if "balance" in tables:
             table = tables["balance"]
-            prior = abs(r["values"][line]["FY-1END"]) / table.scale
-            if not prior:
-                continue
-            for label, cells in table.rows:
-                numbers = [parse_number(c) for c in cells]
-                if any(n is not None and abs(abs(n) - prior) <= 1e-9 * max(1.0, prior) for n in numbers[1:]):
-                    if numbers and numbers[0] not in (None, 0.0):
+            mapped = {
+                abs(r["values"][name][f"FYQ{k}END"]) / table.scale
+                for name, (kind, _, _) in LINES.items()
+                if kind == "instant" and r["concepts"].get(name) and "untagged" not in r["concepts"][name]
+            }
+
+            def accounted(number, mapped=mapped) -> bool:
+                return number is not None and any(abs(abs(number) - m) <= 1e-9 * max(1.0, m) for m in mapped)
+
+            for line, (kind, _, _) in LINES.items():
+                if kind != "instant" or "untagged" not in r["concepts"].get(line, ""):
+                    continue
+                if r["values"][line][f"FYQ{k}END"] != 0:
+                    continue
+                prior = abs(r["values"][line]["FY-1END"]) / table.scale
+                for label, cells in table.rows:
+                    numbers = [parse_number(c) for c in cells]
+                    if prior:
+                        on_row = any(
+                            n is not None and abs(abs(n) - prior) <= 1e-9 * max(1.0, prior)
+                            for n in numbers[1:]
+                        )
+                    else:
+                        pattern = ROW_PATTERNS.get(line)
+                        on_row = bool(pattern and pattern.search(label))
+                    if on_row and numbers and numbers[0] not in (None, 0.0) and not accounted(numbers[0]):
                         problems.append(
                             f"{line} is untagged at the quarter end but {label!r} shows {cells[0]}"
                         )

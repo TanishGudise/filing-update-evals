@@ -121,5 +121,9 @@ def test_the_per_rollout_cap_reaches_the_agent(run_module, tmp_path):
     run_module.main(
         [*ARGS, "--modes", "agent", "--cap", "1", "--rollout-cap", "0.000001", "--runs-dir", str(tmp_path)]
     )
-    results = tmp_path / "t" / "results.jsonl"
-    assert not results.exists() or not results.read_text().strip(), "stopped before its first request"
+    rows = [json.loads(line) for line in (tmp_path / "t" / "results.jsonl").read_text().splitlines()]
+    assert [(r["stop"], r["turns"]) for r in rows] == [("rollout_cap", 0)], "its own cap: recorded, not rerun"
+    run_module.main(
+        [*ARGS, "--modes", "agent", "--cap", "1", "--rollout-cap", "0.000001", "--runs-dir", str(tmp_path)]
+    )
+    assert len((tmp_path / "t" / "results.jsonl").read_text().splitlines()) == 1

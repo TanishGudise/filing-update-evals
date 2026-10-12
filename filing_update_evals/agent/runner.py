@@ -108,7 +108,8 @@ class Rollout:
     category: str = ""
     checks: dict = field(default_factory=dict)
     stop: str = ""
-    """submitted | ended | turns | budget | refusal | error | reply"""
+    """submitted | ended | turns | rollout_cap | budget | refusal | error | reply. "budget" means
+    the run's cap stopped it (it runs again next time); "rollout_cap" means its own cap did."""
     turns: int = 0
     input_tokens: int = 0
     cache_read_tokens: int = 0
@@ -173,8 +174,11 @@ def _send(
             return None
         reserve = worst_case(model, bound, max_tokens)
         spent = rollout.cost_usd + rollout.uncertain_cost_usd
-        if (cap is not None and spent + reserve > cap) or not ledger.reserve(reserve):
-            rollout.stop = "budget"
+        if cap is not None and spent + reserve > cap:
+            rollout.stop = "rollout_cap"  # this rollout's own cap: final, graded as it stands
+            return None
+        if not ledger.reserve(reserve):
+            rollout.stop = "budget"  # the run's cap: the rollout runs again next time
             return None
         try:
             response = send()

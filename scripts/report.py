@@ -146,7 +146,7 @@ def main(argv: list[str] | None = None) -> int:
         counts = defaultdict(int)
         for r in rs:
             counts[r["category"] or "none"] += 1
-        early = sum(1 for r in rs if r["stop"] in ("budget", "turns", "error", "refusal"))
+        early = sum(1 for r in rs if r["stop"] in ("budget", "rollout_cap", "turns", "error", "refusal"))
         lines.append(
             f"| {model} | {mode} | "
             + " | ".join(pct(counts[c] / len(rs)) for c in CATEGORIES)
