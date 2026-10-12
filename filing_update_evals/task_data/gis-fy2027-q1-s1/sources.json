@@ -1,4 +1,15 @@
 {
+ "accepted": {
+  "IS!H12": {
+   "accession": "0001628280-26-063201",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2026-08-30",
+   "label": "Interest, net",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-06-01"
+  }
+ },
  "cells": {
   "BS!G10": {
    "accession": "0001628280-26-063201",
@@ -386,7 +397,7 @@
   },
   "IS!C12": {
    "accession": "",
-   "concept": "",
+   "concept": "(folded into other)",
    "end": "2025-08-24",
    "period": "FY-1Q1",
    "sign": 1,
@@ -450,7 +461,7 @@
   },
   "IS!D12": {
    "accession": "",
-   "concept": "",
+   "concept": "(folded into other)",
    "end": "2025-11-23",
    "period": "FY-1Q2",
    "sign": 1,
@@ -514,7 +525,7 @@
   },
   "IS!E12": {
    "accession": "",
-   "concept": "",
+   "concept": "(folded into other)",
    "end": "2026-02-22",
    "period": "FY-1Q3",
    "sign": 1,
@@ -578,7 +589,7 @@
   },
   "IS!G12": {
    "accession": "",
-   "concept": "",
+   "concept": "(folded into other)",
    "end": "2026-05-31",
    "period": "FY-1",
    "sign": 1,
@@ -642,7 +653,7 @@
   },
   "IS!H12": {
    "accession": "",
-   "concept": "",
+   "concept": "(folded into other)",
    "end": "2026-08-30",
    "period": "FYQ1",
    "sign": 1,

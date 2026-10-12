@@ -577,7 +577,8 @@
     "FYQ2END": 0.0
    },
    "sources": {},
-   "by_period": {}
+   "by_period": {},
+   "folded": "tags change"
   },
   "intangibles": {
    "concept": "",
@@ -587,7 +588,8 @@
     "FYQ2END": 0.0
    },
    "sources": {},
-   "by_period": {}
+   "by_period": {},
+   "folded": "tags change"
   },
   "total_assets": {
    "concept": "Assets",

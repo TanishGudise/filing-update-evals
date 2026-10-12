@@ -258,7 +258,15 @@
     "FYQ1": 0.0
    },
    "sources": {},
-   "by_period": {}
+   "by_period": {},
+   "folded": "tags change",
+   "reported": {
+    "period": "FYQ1",
+    "concept": "-InterestIncomeExpenseNonoperatingNet",
+    "value": 142200000.0,
+    "accession": "0001628280-26-063201",
+    "label": "Interest, net"
+   }
   },
   "pretax_income": {
    "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",

@@ -306,7 +306,8 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
         body = src[line]
         start, end = data["periods"][key]
         source = {
-            "concept": body["by_period"].get(key, body["concept"]) or "",
+            "concept": body["by_period"].get(key, body["concept"])
+            or ("(folded into other)" if body.get("folded") else ""),
             "accession": body["sources"].get(key, ""),
             "period": key,
             "start": start,

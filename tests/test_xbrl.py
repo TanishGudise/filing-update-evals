@@ -154,6 +154,12 @@ def test_other_concept_mixes_are_folded_not_stitched():
     )
     assert not problems
     assert lines["interest_expense"].concept == "" and any("interest_expense folded" in n for n in notes)
+    # Folded: 0 in every period, but what each period reports is kept (for accepted readings).
+    folded = lines["interest_expense"]
+    assert folded.folded and set(folded.values.values()) == {0.0}
+    assert folded.reported["FYQ2"] == ["-InterestIncomeExpenseNet", 12.0, TARGET]
+    assert folded.reported["FY-1Q1"][:2] == ["InterestExpense", 10.0]
+    assert not lines["revenue"].folded and not lines["revenue"].reported
 
 
 def test_net_interest_is_sign_flipped():

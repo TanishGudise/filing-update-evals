@@ -307,6 +307,12 @@ class LineValue:
     values: dict[str, float] = field(default_factory=dict)  # period key -> value
     by_period: dict[str, str] = field(default_factory=dict)  # period key -> concept used
     sources: dict[str, str] = field(default_factory=dict)  # period key -> accession of the value
+    folded: str = ""
+    """Why the line is folded into the model's "other" line ("tags change" or "restated"): 0 in
+    every period, though some periods have a value. "" if it isn't folded."""
+    reported: dict[str, list] = field(default_factory=dict)
+    """A folded line only: period key -> [concept, value, accession] for each period a candidate
+    concept has a value (the first candidate in order)."""
 
 
 class ScreenError(Exception):
@@ -453,6 +459,16 @@ def _name(candidate: str | tuple[str, ...]) -> str:
     return candidate if isinstance(candidate, str) else "+".join(candidate)
 
 
+def _folded(cf: CompanyFacts, table: dict, want: list[Period], up_to: dt.date, cause: str) -> LineValue:
+    """A line folded into "other": 0 everywhere, keeping what each period's first candidate reports."""
+    reported = {}
+    for p in want:
+        name = next((n for n in table if p.key in table[n]), None)
+        if name is not None:
+            reported[p.key] = [name, table[name][p.key][0], _source(cf, name, p, up_to)]
+    return LineValue("", {p.key: 0.0 for p in want}, folded=cause, reported=reported)
+
+
 def map_lines(
     cf: CompanyFacts, cal: Calendar, target_filed: dt.date, overrides: dict[str, list[str]] | None = None
 ) -> tuple[dict[str, LineValue], list[str], list[str]]:
@@ -531,7 +547,7 @@ def map_lines(
                 )
                 continue
             notes.append(f"{line} folded into other (no single concept covers every period)")
-            out[line] = LineValue("", {p.key: 0.0 for p in want})
+            out[line] = _folded(cf, table, want, target_filed, "tags change")
             continue
 
         values = {k: (table[n][k][0] if n in table else 0.0) for k, n in chosen.items()}
@@ -541,7 +557,7 @@ def map_lines(
                 problems.append(f"{line}: a value was restated between filings")
                 continue
             notes.append(f"{line} folded into other (restated between filings)")
-            out[line] = LineValue("", {p.key: 0.0 for p in want})
+            out[line] = _folded(cf, table, want, target_filed, "restated")
             continue
         by_key = {p.key: p for p in want}
         sources = {k: _source(cf, n, by_key[k], target_filed) for k, n in chosen.items() if n in table}
