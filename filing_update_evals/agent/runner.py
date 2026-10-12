@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import fcntl
 import json
+import os
 import time
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -67,13 +68,30 @@ class Ledger:
     def _update(self, fn):
         with open(self.path, "r+") as f:
             fcntl.flock(f, fcntl.LOCK_EX)
-            state = json.load(f)
-            result = fn(state)
-            f.seek(0)
-            f.truncate()
-            json.dump(state, f)
-            fcntl.flock(f, fcntl.LOCK_UN)
+            try:
+                state = json.load(f)
+                result = fn(state)
+                f.seek(0)
+                f.truncate()
+                json.dump(state, f)
+                f.flush()  # the new state must be on disk before another writer can read it
+                os.fsync(f.fileno())
+            finally:
+                fcntl.flock(f, fcntl.LOCK_UN)
             return result
+
+    def recover(self) -> float:
+        """Charge reservations a crashed run left behind as spent (they can't be settled now, and
+        each is an upper bound on what its request cost). Call only when no run is active."""
+
+        def fn(state):
+            stale = state.get("reserved_usd", 0.0)
+            state["spent_usd"] += stale
+            state["reserved_usd"] = 0.0
+            state["recovered_usd"] = state.get("recovered_usd", 0.0) + stale
+            return stale
+
+        return self._update(fn)
 
     def reserve(self, amount: float) -> bool:
         """Reserve a request's worst case; False if it would cross the cap."""

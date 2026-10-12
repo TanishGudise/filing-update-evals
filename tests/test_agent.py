@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from types import SimpleNamespace
 
 import pytest
@@ -179,3 +180,34 @@ def test_single_reply_mode(tmp_path):
         ledger=Ledger(tmp_path / "l.json", 1.0),
     )
     assert rollout.stop == "reply" and rollout.score == 1.0
+
+
+def test_ledger_survives_concurrent_writers(tmp_path):
+    import threading
+
+    ledger = Ledger(tmp_path / "ledger.json", cap_usd=1_000.0)
+    errors = []
+
+    def work():
+        try:
+            for _ in range(150):
+                assert ledger.reserve(0.01)
+                ledger.settle(0.01, 0.001)
+        except Exception as exc:  # pragma: no cover - the failure being tested for
+            errors.append(exc)
+
+    threads = [threading.Thread(target=work) for _ in range(8)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert not errors
+    state = json.loads((tmp_path / "ledger.json").read_text())
+    assert state["requests"] == 1200 and abs(state["spent_usd"] - 1.2) < 1e-9 and state["reserved_usd"] < 1e-9
+
+
+def test_stale_reservations_are_charged_on_recovery(tmp_path):
+    ledger = Ledger(tmp_path / "ledger.json", cap_usd=10.0)
+    assert ledger.reserve(0.4)  # a run crashed before settling this
+    assert abs(ledger.recover() - 0.4) < 1e-12
+    assert abs(ledger.spent() - 0.4) < 1e-12 and ledger.recover() == 0.0

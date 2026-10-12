@@ -189,6 +189,9 @@ def main(argv: list[str] | None = None) -> int:
     # SDK retries off: the runner retries itself, and every attempt reserves its worst case first.
     client = anthropic.Anthropic(api_key=api_key(), max_retries=0, timeout=600)
     ledger = Ledger(out / "ledger.json", args.cap)
+    stale = ledger.recover()
+    if stale:
+        print(f"charged ${stale:.4f} of reservations left by an interrupted run as spent")
     results_path = out / "results.jsonl"
     done = set()
     if results_path.exists():
@@ -198,6 +201,17 @@ def main(argv: list[str] | None = None) -> int:
                 done.add((r["run"], r["mode"], r["model"], r["task"]))
 
     def one(item):
+        try:
+            return attempt(item)
+        except (
+            Exception
+        ) as exc:  # one rollout's failure must not stop the run; it isn't recorded, so it reruns
+            run, mode, model, spec = item
+            why = f"{type(exc).__name__}: {exc}"
+            print(f"{spec.id} {model} {mode} run {run}: harness error, not recorded: {why}")
+            return None
+
+    def attempt(item):
         run, mode, model, spec = item
         if (run, mode, model, spec.id) in done:
             return None
