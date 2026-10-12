@@ -115,7 +115,20 @@ def verify() -> int:
             units = r.get("page_units", {}).get("income", "")
             checked = r.get("page_checked_lines", 0)
             print(f"{r['ticker']:5} lines checked {checked:2}  units {units!r:22} {status}")
-    print("qualified after page check:", ", ".join(r["ticker"] for r in results if r["qualified"]))
+    passed = [r["ticker"] for r in results if r["qualified"]]
+    print("qualified after page check:", ", ".join(passed))
+    md = REPO / "data" / "screen.md"
+    text = md.read_text().split("\nAfter the statement-page check")[0].rstrip("\n")
+    failed = [
+        f"{r['ticker']} ({r['page_problems'][0]})"
+        for r in results
+        if r["screen_qualified"] and not r["qualified"]
+    ]
+    md.write_text(
+        text
+        + f"\n\nAfter the statement-page check: {len(passed)} of {len(results)}: {', '.join(passed)}\n"
+        + "".join(f"- dropped {line}\n" for line in failed)
+    )
     return 0
 
 

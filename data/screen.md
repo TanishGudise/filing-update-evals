@@ -34,3 +34,10 @@
 | SJM | 0430 | 0000091419-26-000080 (2026-07-31) | Q1 | 2026-08-26 | 100000 | qualified |
 
 Qualified: 18 of 30: GWW, ROL, GNTX, LECO, IDXX, TSCO, DG, ROST, HD, BBY, ULTA, WSM, CTAS, GIS, LW, MLKN, TTC, SJM
+
+After the statement-page check: 13 of 30: ROL, GNTX, IDXX, TSCO, DG, ROST, HD, BBY, ULTA, WSM, GIS, MLKN, SJM
+- dropped GWW (da (DepreciationDepletionAndAmortization) 165,000,000 not on the cash page)
+- dropped LECO (interest_expense (InterestExpenseNonoperating) 14,323,000 not on the income page)
+- dropped CTAS (da (DepreciationDepletionAndAmortization) 127,326,000 not on the cash page)
+- dropped LW (pretax_income (IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest) 46,000,000 not on the income page)
+- dropped TTC (da (DepreciationDepletionAndAmortization) 101,300,000 not on the cash page)
