@@ -197,7 +197,9 @@ def main(argv: list[str] | None = None) -> int:
     if results_path.exists():
         for line in results_path.read_text().splitlines():
             r = json.loads(line)
-            if r["stop"] != "budget":  # a rollout the run's cap stopped runs again next time
+            # A rollout the run's cap stopped, or that an API error ended before any response, never
+            # tested the model: it runs again next time (the latest result replaces it).
+            if r["stop"] != "budget" and not (r["stop"] == "error" and r["turns"] == 0):
                 done.add((r["run"], r["mode"], r["model"], r["task"]))
 
     def one(item):
