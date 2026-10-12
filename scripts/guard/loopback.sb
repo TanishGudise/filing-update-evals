@@ -1,0 +1,7 @@
+(version 1)
+(allow default)
+; Loopback only: no outbound IP traffic except to this machine, and no DNS.
+(deny network-outbound)
+(allow network-outbound (remote ip "localhost:*"))
+(allow network-outbound (remote unix-socket))
+(deny network-outbound (literal "/private/var/run/mDNSResponder"))

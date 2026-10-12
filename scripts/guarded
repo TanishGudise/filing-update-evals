@@ -1,0 +1,8 @@
+#!/bin/sh
+# Run a command with loopback-only networking. A macOS sandbox profile blocks outbound IP
+# traffic and DNS for the whole process tree (LibreOffice included), and
+# scripts/guard/sitecustomize.py patches the socket module in every Python process.
+# Usage: scripts/guarded <command> [args...]
+here=$(cd "$(dirname "$0")" && pwd)
+PYTHONPATH="$here/guard${PYTHONPATH:+:$PYTHONPATH}" FUE_NETWORK_GUARD=loopback \
+    exec sandbox-exec -f "$here/guard/loopback.sb" "$@"

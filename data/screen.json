@@ -1,0 +1,6684 @@
+[
+ {
+  "ticker": "GWW",
+  "cik": 277135,
+  "name": "W.W. GRAINGER, INC.",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0000277135-26-000079",
+   "filed": "2026-08-04",
+   "period_end": "2026-06-30",
+   "primary_document": "gww-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0000277135-26-000076",
+   "release_filed": "2026-08-04",
+   "prior_accession": "0000277135-26-000053",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-04",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [
+   "interest_expense folded into other (no single concept covers every period)"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 47100942,
+   "as_of": "2026-07-28"
+  },
+  "scale": 1000000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 4306000000.0,
+    "FY-1Q2": 4554000000.0,
+    "FY-1Q3": 4657000000.0,
+    "FY-1": 17942000000.0,
+    "FY-1Q3YTD": 13517000000.0,
+    "FYQ1": 4742000000.0,
+    "FYQ2": 5021000000.0,
+    "FY-2": 17168000000.0
+   },
+   "cogs": {
+    "FY-1Q1": 2596000000.0,
+    "FY-1Q2": 2799000000.0,
+    "FY-1Q3": 2859000000.0,
+    "FY-1": 10933000000.0,
+    "FY-1Q3YTD": 8254000000.0,
+    "FYQ1": 2846000000.0,
+    "FYQ2": 3037000000.0
+   },
+   "sga": {
+    "FY-1Q1": 1038000000.0,
+    "FY-1Q2": 1077000000.0,
+    "FY-1Q3": 1287000000.0,
+    "FY-1": 4514000000.0,
+    "FY-1Q3YTD": 3402000000.0,
+    "FYQ1": 1103000000.0,
+    "FYQ2": 1177000000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 672000000.0,
+    "FY-1Q2": 678000000.0,
+    "FY-1Q3": 511000000.0,
+    "FY-1": 2495000000.0,
+    "FY-1Q3YTD": 1861000000.0,
+    "FYQ1": 793000000.0,
+    "FYQ2": 807000000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0,
+    "FYQ2": 0.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 657000000.0,
+    "FY-1Q2": 661000000.0,
+    "FY-1Q3": 492000000.0,
+    "FY-1": 2430000000.0,
+    "FY-1Q3YTD": 1810000000.0,
+    "FYQ1": 775000000.0,
+    "FYQ2": 798000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 157000000.0,
+    "FY-1Q2": 153000000.0,
+    "FY-1Q3": 171000000.0,
+    "FY-1": 622000000.0,
+    "FY-1Q3YTD": 481000000.0,
+    "FYQ1": 194000000.0,
+    "FYQ2": 198000000.0
+   },
+   "net_income": {
+    "FY-1Q1": 479000000.0,
+    "FY-1Q2": 482000000.0,
+    "FY-1Q3": 294000000.0,
+    "FY-1": 1706000000.0,
+    "FY-1Q3YTD": 1255000000.0,
+    "FYQ1": 555000000.0,
+    "FYQ2": 570000000.0
+   },
+   "da": {
+    "FYQ1YTD": 80000000.0,
+    "FYQ2YTD": 165000000.0,
+    "FY-1": 330000000.0,
+    "FY-1Q1": 79000000.0,
+    "FY-1Q2YTD": 163000000.0,
+    "FY-1Q3YTD": 247000000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 739000000.0,
+    "FYQ2YTD": 1183000000.0,
+    "FY-1": 2015000000.0
+   },
+   "capex": {
+    "FYQ1YTD": 170000000.0,
+    "FYQ2YTD": 281000000.0,
+    "FY-1": 684000000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -178000000.0,
+    "FYQ2YTD": -294000000.0,
+    "FY-1": -645000000.0
+   },
+   "cff": {
+    "FYQ1YTD": -446000000.0,
+    "FYQ2YTD": -874000000.0,
+    "FY-1": -1825000000.0
+   },
+   "cash": {
+    "FY-1END": 585000000.0,
+    "FYQ1END": 695000000.0,
+    "FYQ2END": 589000000.0
+   },
+   "receivables": {
+    "FY-1END": 2329000000.0,
+    "FYQ1END": 2627000000.0,
+    "FYQ2END": 2825000000.0
+   },
+   "inventory": {
+    "FY-1END": 2394000000.0,
+    "FYQ1END": 2385000000.0,
+    "FYQ2END": 2371000000.0
+   },
+   "current_assets": {
+    "FY-1END": 5484000000.0,
+    "FYQ1END": 5907000000.0,
+    "FYQ2END": 5998000000.0
+   },
+   "ppe": {
+    "FY-1END": 2268000000.0,
+    "FYQ1END": 2359000000.0,
+    "FYQ2END": 2401000000.0
+   },
+   "goodwill": {
+    "FY-1END": 360000000.0,
+    "FYQ1END": 358000000.0,
+    "FYQ2END": 354000000.0
+   },
+   "intangibles": {
+    "FY-1END": 265000000.0,
+    "FYQ1END": 268000000.0,
+    "FYQ2END": 272000000.0
+   },
+   "total_assets": {
+    "FY-1END": 8962000000.0,
+    "FYQ1END": 9473000000.0,
+    "FYQ2END": 9618000000.0
+   },
+   "payables": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 126000000.0,
+    "FYQ1END": 2000000.0,
+    "FYQ2END": 2000000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1940000000.0,
+    "FYQ1END": 2199000000.0,
+    "FYQ2END": 2138000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 2362000000.0,
+    "FYQ1END": 2409000000.0,
+    "FYQ2END": 2406000000.0
+   },
+   "equity": {
+    "FY-1END": 3736000000.0,
+    "FYQ1END": 3930000000.0,
+    "FYQ2END": 4131000000.0
+   },
+   "nci": {
+    "FY-1END": 405000000.0,
+    "FYQ1END": 413000000.0,
+    "FYQ2END": 382000000.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 8962000000.0,
+    "FYQ1END": 9473000000.0,
+    "FYQ2END": 9618000000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R5.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": [
+   "da (DepreciationDepletionAndAmortization) 165,000,000 not on the cash page"
+  ]
+ },
+ {
+  "ticker": "ROL",
+  "cik": 84839,
+  "name": "ROLLINS INC",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0000084839-26-000040",
+   "filed": "2026-07-23",
+   "period_end": "2026-06-30",
+   "primary_document": "rol-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0000084839-26-000038",
+   "release_filed": "2026-07-22",
+   "prior_accession": "0000084839-26-000022",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-22",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermLineOfCredit",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 481145404,
+   "as_of": "2026-07-13"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 822504000.0,
+    "FY-1Q2": 999527000.0,
+    "FY-1Q3": 1026106000.0,
+    "FY-1": 3761050000.0,
+    "FY-1Q3YTD": 2848137000.0,
+    "FYQ1": 906424000.0,
+    "FYQ2": 1078576000.0,
+    "FY-2": 3388708000.0
+   },
+   "cogs": {
+    "FY-1Q1": 400134000.0,
+    "FY-1Q2": 461861000.0,
+    "FY-1Q3": 467450000.0,
+    "FY-1": 1777006000.0,
+    "FY-1Q3YTD": 1329445000.0,
+    "FYQ1": 445522000.0,
+    "FYQ2": 508630000.0
+   },
+   "sga": {
+    "FY-1Q1": 250513000.0,
+    "FY-1Q2": 307596000.0,
+    "FY-1Q3": 301404000.0,
+    "FY-1": 1133232000.0,
+    "FY-1Q3YTD": 859513000.0,
+    "FYQ1": 282918000.0,
+    "FYQ2": 334977000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 142648000.0,
+    "FY-1Q2": 198333000.0,
+    "FY-1Q3": 225021000.0,
+    "FY-1": 726068000.0,
+    "FY-1Q3YTD": 566002000.0,
+    "FYQ1": 145486000.0,
+    "FYQ2": 201359000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 5796000.0,
+    "FY-1Q2": 7380000.0,
+    "FY-1Q3": 7942000.0,
+    "FY-1": 28558000.0,
+    "FY-1Q3YTD": 21118000.0,
+    "FYQ1": 8851000.0,
+    "FYQ2": 9391000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 137544000.0,
+    "FY-1Q2": 191245000.0,
+    "FY-1Q3": 217429000.0,
+    "FY-1": 700926000.0,
+    "FY-1Q3YTD": 546218000.0,
+    "FYQ1": 137098000.0,
+    "FYQ2": 189754000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 32296000.0,
+    "FY-1Q2": 49756000.0,
+    "FY-1Q3": 53902000.0,
+    "FY-1": 174221000.0,
+    "FY-1Q3YTD": 135954000.0,
+    "FYQ1": 29260000.0,
+    "FYQ2": 45844000.0
+   },
+   "net_income": {
+    "FY-1Q1": 105248000.0,
+    "FY-1Q2": 141489000.0,
+    "FY-1Q3": 163527000.0,
+    "FY-1": 526705000.0,
+    "FY-1Q3YTD": 410264000.0,
+    "FYQ1": 107838000.0,
+    "FYQ2": 143910000.0
+   },
+   "da": {
+    "FYQ1YTD": 32498000.0,
+    "FYQ2YTD": 66108000.0,
+    "FY-1": 124744000.0,
+    "FY-1Q1": 29209000.0,
+    "FY-1Q2YTD": 60946000.0,
+    "FY-1Q3YTD": 93177000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 118367000.0,
+    "FYQ2YTD": 290873000.0,
+    "FY-1": 678107000.0
+   },
+   "capex": {
+    "FYQ1YTD": 7139000.0,
+    "FYQ2YTD": 13568000.0,
+    "FY-1": 28086000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -24567000.0,
+    "FYQ2YTD": -146209000.0,
+    "FY-1": -326699000.0
+   },
+   "cff": {
+    "FYQ1YTD": -76192000.0,
+    "FYQ2YTD": -134722000.0,
+    "FY-1": -343579000.0
+   },
+   "cash": {
+    "FY-1END": 100004000.0,
+    "FYQ1END": 116543000.0,
+    "FYQ2END": 109085000.0
+   },
+   "receivables": {
+    "FY-1END": 202518000.0,
+    "FYQ1END": 210721000.0,
+    "FYQ2END": 238989000.0
+   },
+   "inventory": {
+    "FY-1END": 42982000.0,
+    "FYQ1END": 44128000.0,
+    "FYQ2END": 42807000.0
+   },
+   "current_assets": {
+    "FY-1END": 472682000.0,
+    "FYQ1END": 513678000.0,
+    "FYQ2END": 590401000.0
+   },
+   "ppe": {
+    "FY-1END": 126187000.0,
+    "FYQ1END": 124910000.0,
+    "FYQ2END": 126689000.0
+   },
+   "goodwill": {
+    "FY-1END": 1374664000.0,
+    "FYQ1END": 1384591000.0,
+    "FYQ2END": 1449382000.0
+   },
+   "intangibles": {
+    "FY-1END": 582384000.0,
+    "FYQ1END": 565723000.0,
+    "FYQ2END": 601532000.0
+   },
+   "total_assets": {
+    "FY-1END": 3140523000.0,
+    "FYQ1END": 3160234000.0,
+    "FYQ2END": 3354932000.0
+   },
+   "payables": {
+    "FY-1END": 44361000.0,
+    "FYQ1END": 61188000.0,
+    "FYQ2END": 79759000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 123683000.0,
+    "FYQ1END": 163926000.0,
+    "FYQ2END": 215918000.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 785525000.0,
+    "FYQ1END": 794663000.0,
+    "FYQ2END": 938101000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 486147000.0,
+    "FYQ1END": 486627000.0,
+    "FYQ2END": 487107000.0
+   },
+   "equity": {
+    "FY-1END": 1374321000.0,
+    "FYQ1END": 1381688000.0,
+    "FYQ2END": 1429597000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 3140523000.0,
+    "FYQ1END": 3160234000.0,
+    "FYQ2END": 3354932000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Thousands",
+   "income": "shares in Thousands, $ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R4.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": []
+ },
+ {
+  "ticker": "POOL",
+  "cik": 945841,
+  "name": "POOL CORP",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0001193125-26-322532",
+   "filed": "2026-07-29",
+   "period_end": "2026-06-30",
+   "primary_document": "pool-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0001193125-26-313430",
+   "release_filed": "2026-07-23",
+   "prior_accession": "0001193125-26-185263",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-23",
+  "qualified": false,
+  "problems": [
+   "calendar: no revenue facts for the target quarter"
+  ],
+  "screen_qualified": false
+ },
+ {
+  "ticker": "GGG",
+  "cik": 42888,
+  "name": "GRACO INC",
+  "fiscal_year_end": "1226",
+  "target": {
+   "accession": "0000042888-26-000123",
+   "filed": "2026-07-22",
+   "period_end": "2026-06-26",
+   "primary_document": "ggg-20260626.htm",
+   "xbrl": true,
+   "release_accession": null,
+   "release_filed": null,
+   "prior_accession": "0000042888-26-000098",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-22",
+  "calendar": {
+   "fy_start": "2025-12-27",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-27",
+    "2026-06-26"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-28",
+    "2025-06-27",
+    "2025-09-26",
+    "2025-12-26"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "Revenues",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "(untagged: 0) | LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 161953824,
+   "as_of": "2026-07-08"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 528284000.0,
+    "FY-1Q2": 571806000.0,
+    "FY-1Q3": 543358000.0,
+    "FY-1": 2236604000.0,
+    "FY-1Q3YTD": 1643448000.0,
+    "FYQ1": 540144000.0,
+    "FYQ2": 590552000.0,
+    "FY-2": 2113316000.0
+   },
+   "cogs": {
+    "FY-1Q1": 250551000.0,
+    "FY-1Q2": 272276000.0,
+    "FY-1Q3": 254133000.0,
+    "FY-1": 1063421000.0,
+    "FY-1Q3YTD": 776960000.0,
+    "FYQ1": 259503000.0,
+    "FYQ2": 273608000.0
+   },
+   "sga": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0,
+    "FYQ2": 0.0
+   },
+   "operating_income": {
+    "FY-1Q1": 144013000.0,
+    "FY-1Q2": 157484000.0,
+    "FY-1Q3": 164721000.0,
+    "FY-1": 624797000.0,
+    "FY-1Q3YTD": 466218000.0,
+    "FYQ1": 137775000.0,
+    "FYQ2": 175093000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 713000.0,
+    "FY-1Q2": 655000.0,
+    "FY-1Q3": 711000.0,
+    "FY-1": 2893000.0,
+    "FY-1Q3YTD": 2079000.0,
+    "FYQ1": 836000.0,
+    "FYQ2": 835000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 151474000.0,
+    "FY-1Q2": 158208000.0,
+    "FY-1Q3": 168460000.0,
+    "FY-1": 641200000.0,
+    "FY-1Q3YTD": 478142000.0,
+    "FYQ1": 140088000.0,
+    "FYQ2": 181454000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 27373000.0,
+    "FY-1Q2": 30585000.0,
+    "FY-1Q3": 30832000.0,
+    "FY-1": 119361000.0,
+    "FY-1Q3YTD": 88790000.0,
+    "FYQ1": 21582000.0,
+    "FYQ2": 36528000.0
+   },
+   "net_income": {
+    "FY-1Q1": 124101000.0,
+    "FY-1Q2": 127623000.0,
+    "FY-1Q3": 137628000.0,
+    "FY-1": 521839000.0,
+    "FY-1Q3YTD": 389352000.0,
+    "FYQ1": 118506000.0,
+    "FYQ2": 144926000.0
+   },
+   "da": {
+    "FYQ1YTD": 28602000.0,
+    "FYQ2YTD": 51643000.0,
+    "FY-1": 107433000.0,
+    "FY-1Q1": 24708000.0,
+    "FY-1Q2YTD": 51844000.0,
+    "FY-1Q3YTD": 75744000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 120248000.0,
+    "FYQ2YTD": 297965000.0,
+    "FY-1": 683591000.0
+   },
+   "capex": {
+    "FYQ1YTD": 12141000.0,
+    "FYQ2YTD": 28516000.0,
+    "FY-1": 45669000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -12060000.0,
+    "FYQ2YTD": -28573000.0,
+    "FY-1": -172796000.0
+   },
+   "cff": {
+    "FYQ1YTD": -18348000.0,
+    "FYQ2YTD": -381569000.0,
+    "FY-1": -576055000.0
+   },
+   "cash": {
+    "FY-1END": 624083000.0,
+    "FYQ1END": 712171000.0,
+    "FYQ2END": 507575000.0
+   },
+   "receivables": {
+    "FY-1END": 393753000.0,
+    "FYQ1END": 390367000.0,
+    "FYQ2END": 424220000.0
+   },
+   "inventory": {
+    "FY-1END": 401138000.0,
+    "FYQ1END": 407647000.0,
+    "FYQ2END": 393719000.0
+   },
+   "current_assets": {
+    "FY-1END": 1471881000.0,
+    "FYQ1END": 1566565000.0,
+    "FYQ2END": 1374550000.0
+   },
+   "ppe": {
+    "FY-1END": 755064000.0,
+    "FYQ1END": 745561000.0,
+    "FYQ2END": 748505000.0
+   },
+   "goodwill": {
+    "FY-1END": 585304000.0,
+    "FYQ1END": 580958000.0,
+    "FYQ2END": 575675000.0
+   },
+   "intangibles": {
+    "FY-1END": 303851000.0,
+    "FYQ1END": 292636000.0,
+    "FYQ2END": 283456000.0
+   },
+   "total_assets": {
+    "FY-1END": 3274270000.0,
+    "FYQ1END": 3334768000.0,
+    "FYQ2END": 3130453000.0
+   },
+   "payables": {
+    "FY-1END": 78573000.0,
+    "FYQ1END": 84807000.0,
+    "FYQ2END": 101787000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 1624000.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 467261000.0,
+    "FYQ1END": 440583000.0,
+    "FYQ2END": 459352000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "equity": {
+    "FY-1END": 2653931000.0,
+    "FYQ1END": 2742398000.0,
+    "FYQ2END": 2522688000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 3274270000.0,
+    "FYQ1END": 3334768000.0,
+    "FYQ2END": 3130453000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R6.htm"
+  },
+  "page_checked_lines": 24,
+  "page_problems": []
+ },
+ {
+  "ticker": "GNTX",
+  "cik": 355811,
+  "name": "GENTEX CORP",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0000355811-26-000048",
+   "filed": "2026-08-04",
+   "period_end": "2026-06-30",
+   "primary_document": "gntx-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0000355811-26-000044",
+   "release_filed": "2026-07-24",
+   "prior_accession": "0000355811-26-000026",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-24",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquireProductiveAssets",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "",
+   "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+   "nci": "(untagged: 0) | MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 210683331,
+   "as_of": "2026-07-24"
+  },
+  "scale": 1,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 576773090.0,
+    "FY-1Q2": 657858210.0,
+    "FY-1Q3": 655236055.0,
+    "FY-1": 2534268965.0,
+    "FY-1Q3YTD": 1889867355.0,
+    "FYQ1": 675443125.0,
+    "FYQ2": 651299705.0,
+    "FY-2": 2313314333.0
+   },
+   "cogs": {
+    "FY-1Q1": 385039503.0,
+    "FY-1Q2": 432567307.0,
+    "FY-1Q3": 430069318.0,
+    "FY-1": 1667560025.0,
+    "FY-1Q3YTD": 1247676128.0,
+    "FYQ1": 446816212.0,
+    "FYQ2": 410301978.0
+   },
+   "sga": {
+    "FY-1Q1": 29933005.0,
+    "FY-1Q2": 48515355.0,
+    "FY-1Q3": 49686902.0,
+    "FY-1": 177868692.0,
+    "FY-1Q3YTD": 128135262.0,
+    "FYQ1": 49791834.0,
+    "FYQ2": 50037461.0
+   },
+   "operating_income": {
+    "FY-1Q1": 112987106.0,
+    "FY-1Q2": 118520135.0,
+    "FY-1Q3": 122326938.0,
+    "FY-1": 473935754.0,
+    "FY-1Q3YTD": 353834179.0,
+    "FYQ1": 123659919.0,
+    "FYQ2": 141338394.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0,
+    "FYQ2": 0.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 113627582.0,
+    "FY-1Q2": 115470139.0,
+    "FY-1Q3": 120570708.0,
+    "FY-1": 461062415.0,
+    "FY-1Q3YTD": 349668429.0,
+    "FYQ1": 118047562.0,
+    "FYQ2": 136828690.0
+   },
+   "income_tax": {
+    "FY-1Q1": 18753537.0,
+    "FY-1Q2": 19819689.0,
+    "FY-1Q3": 19684004.0,
+    "FY-1": 76380338.0,
+    "FY-1Q3YTD": 58257230.0,
+    "FYQ1": 19626503.0,
+    "FYQ2": 22644919.0
+   },
+   "net_income": {
+    "FY-1Q1": 94874045.0,
+    "FY-1Q2": 96039584.0,
+    "FY-1Q3": 100967910.0,
+    "FY-1": 384841367.0,
+    "FY-1Q3YTD": 291881539.0,
+    "FYQ1": 98455143.0,
+    "FYQ2": 114689417.0
+   },
+   "da": {
+    "FYQ1YTD": 25656252.0,
+    "FYQ2YTD": 51430181.0,
+    "FY-1": 104041764.0,
+    "FY-1Q1": 25509069.0,
+    "FY-1Q2YTD": 52880443.0,
+    "FY-1Q3YTD": 78808967.0
+   },
+   "cfo": {
+    "FYQ1YTD": 137083229.0,
+    "FYQ2YTD": 321663680.0,
+    "FY-1": 587126291.0
+   },
+   "capex": {
+    "FYQ1YTD": 17042162.0,
+    "FYQ2YTD": 36237437.0,
+    "FY-1": 129088778.0
+   },
+   "cfi": {
+    "FYQ1YTD": -25574035.0,
+    "FYQ2YTD": -48594550.0,
+    "FY-1": -266899521.0
+   },
+   "cff": {
+    "FYQ1YTD": -92393276.0,
+    "FYQ2YTD": -185270616.0,
+    "FY-1": -407899821.0
+   },
+   "cash": {
+    "FY-1END": 145645715.0,
+    "FYQ1END": 164761633.0,
+    "FYQ2END": 233444229.0
+   },
+   "receivables": {
+    "FY-1END": 368517569.0,
+    "FYQ1END": 419468925.0,
+    "FYQ2END": 386338964.0
+   },
+   "inventory": {
+    "FY-1END": 516253617.0,
+    "FYQ1END": 523509606.0,
+    "FYQ2END": 518950411.0
+   },
+   "current_assets": {
+    "FY-1END": 1128434468.0,
+    "FYQ1END": 1208193001.0,
+    "FYQ2END": 1230931482.0
+   },
+   "ppe": {
+    "FY-1END": 790935378.0,
+    "FYQ1END": 786333204.0,
+    "FYQ2END": 780173903.0
+   },
+   "goodwill": {
+    "FY-1END": 357211919.0,
+    "FYQ1END": 360924307.0,
+    "FYQ2END": 360849822.0
+   },
+   "intangibles": {
+    "FY-1END": 189341387.0,
+    "FYQ1END": 185598287.0,
+    "FYQ2END": 184618279.0
+   },
+   "total_assets": {
+    "FY-1END": 2928592834.0,
+    "FYQ1END": 2997636194.0,
+    "FYQ2END": 2999428544.0
+   },
+   "payables": {
+    "FY-1END": 248983498.0,
+    "FYQ1END": 276649198.0,
+    "FYQ2END": 248271728.0
+   },
+   "short_term_debt": {
+    "FY-1END": 3795925.0,
+    "FYQ1END": 3840654.0,
+    "FYQ2END": 3706980.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 387542969.0,
+    "FYQ1END": 444579260.0,
+    "FYQ2END": 405117273.0
+   },
+   "long_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "equity": {
+    "FY-1END": 2487829724.0,
+    "FYQ1END": 2502585166.0,
+    "FYQ2END": 2538100758.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 2928592834.0,
+    "FYQ1END": 2997636194.0,
+    "FYQ2END": 2999428544.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "",
+   "income": "",
+   "cash": ""
+  },
+  "page_scale": 1,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R3.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 25,
+  "page_problems": []
+ },
+ {
+  "ticker": "LII",
+  "cik": 1069202,
+  "name": "LENNOX INTERNATIONAL INC",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0001069202-26-000087",
+   "filed": "2026-07-29",
+   "period_end": "2026-06-30",
+   "primary_document": "lii-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0001069202-26-000085",
+   "release_filed": "2026-07-29",
+   "prior_accession": "0001069202-26-000054",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-29",
+  "qualified": false,
+  "problems": [
+   "calendar: no revenue facts for the target quarter"
+  ],
+  "screen_qualified": false
+ },
+ {
+  "ticker": "LECO",
+  "cik": 59527,
+  "name": "LINCOLN ELECTRIC HOLDINGS INC",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0000059527-26-000022",
+   "filed": "2026-07-30",
+   "period_end": "2026-06-30",
+   "primary_document": "leco-20260630x10q.htm",
+   "xbrl": true,
+   "release_accession": "0000059527-26-000021",
+   "release_filed": "2026-07-30",
+   "prior_accession": "0000059527-26-000012",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-30",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquireProductiveAssets",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "(untagged: 0) | IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "(untagged: 0) | DebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 54505757,
+   "as_of": "2026-06-30"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 1004388000.0,
+    "FY-1Q2": 1088673000.0,
+    "FY-1Q3": 1061227000.0,
+    "FY-1": 4233003000.0,
+    "FY-1Q3YTD": 3154288000.0,
+    "FYQ1": 1121434000.0,
+    "FYQ2": 1219663000.0,
+    "FY-2": 4008670000.0
+   },
+   "cogs": {
+    "FY-1Q1": 638940000.0,
+    "FY-1Q2": 683126000.0,
+    "FY-1Q3": 671916000.0,
+    "FY-1": 2698751000.0,
+    "FY-1Q3YTD": 1993982000.0,
+    "FYQ1": 722302000.0,
+    "FYQ2": 770667000.0
+   },
+   "sga": {
+    "FY-1Q1": 196665000.0,
+    "FY-1Q2": 210861000.0,
+    "FY-1Q3": 206823000.0,
+    "FY-1": 797994000.0,
+    "FY-1Q3YTD": 614349000.0,
+    "FYQ1": 210811000.0,
+    "FYQ2": 224871000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 164918000.0,
+    "FY-1Q2": 192144000.0,
+    "FY-1Q3": 176657000.0,
+    "FY-1": 718059000.0,
+    "FY-1Q3YTD": 533719000.0,
+    "FYQ1": 186158000.0,
+    "FYQ2": 220644000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 14382000.0,
+    "FY-1Q2": 14281000.0,
+    "FY-1Q3": 15149000.0,
+    "FY-1": 58379000.0,
+    "FY-1Q3YTD": 43812000.0,
+    "FYQ1": 14759000.0,
+    "FYQ2": 14323000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 153235000.0,
+    "FY-1Q2": 183559000.0,
+    "FY-1Q3": 165995000.0,
+    "FY-1": 675450000.0,
+    "FY-1Q3YTD": 502789000.0,
+    "FYQ1": 173354000.0,
+    "FYQ2": 207882000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 34748000.0,
+    "FY-1Q2": 40163000.0,
+    "FY-1Q3": 43367000.0,
+    "FY-1": 154917000.0,
+    "FY-1Q3YTD": 118278000.0,
+    "FYQ1": 36972000.0,
+    "FYQ2": 49363000.0
+   },
+   "net_income": {
+    "FY-1Q1": 118487000.0,
+    "FY-1Q2": 143396000.0,
+    "FY-1Q3": 122628000.0,
+    "FY-1": 520533000.0,
+    "FY-1Q3YTD": 384511000.0,
+    "FYQ1": 136382000.0,
+    "FYQ2": 158519000.0
+   },
+   "da": {
+    "FYQ1YTD": 26009000.0,
+    "FYQ2YTD": 51978000.0,
+    "FY-1": 98546000.0,
+    "FY-1Q1": 23784000.0,
+    "FY-1Q2YTD": 48246000.0,
+    "FY-1Q3YTD": 72990000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 102170000.0,
+    "FYQ2YTD": 355934000.0,
+    "FY-1": 661173000.0
+   },
+   "capex": {
+    "FYQ1YTD": 39163000.0,
+    "FYQ2YTD": 70600000.0,
+    "FY-1": 126974000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -38715000.0,
+    "FYQ2YTD": -69204000.0,
+    "FY-1": -257326000.0
+   },
+   "cff": {
+    "FYQ1YTD": -72569000.0,
+    "FYQ2YTD": -355588000.0,
+    "FY-1": -461887000.0
+   },
+   "cash": {
+    "FY-1END": 308789000.0,
+    "FYQ1END": 298903000.0,
+    "FYQ2END": 242443000.0
+   },
+   "receivables": {
+    "FY-1END": 538791000.0,
+    "FYQ1END": 598315000.0,
+    "FYQ2END": 586348000.0
+   },
+   "inventory": {
+    "FY-1END": 633364000.0,
+    "FYQ1END": 693938000.0,
+    "FYQ2END": 690543000.0
+   },
+   "current_assets": {
+    "FY-1END": 1739512000.0,
+    "FYQ1END": 1863444000.0,
+    "FYQ2END": 1760550000.0
+   },
+   "ppe": {
+    "FY-1END": 702762000.0,
+    "FYQ1END": 720836000.0,
+    "FYQ2END": 731762000.0
+   },
+   "goodwill": {
+    "FY-1END": 886686000.0,
+    "FYQ1END": 886373000.0,
+    "FYQ2END": 885232000.0
+   },
+   "intangibles": {
+    "FY-1END": 250424000.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 3777577000.0,
+    "FYQ1END": 3900395000.0,
+    "FYQ2END": 3813310000.0
+   },
+   "payables": {
+    "FY-1END": 364934000.0,
+    "FYQ1END": 448138000.0,
+    "FYQ2END": 447437000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 143780000.0,
+    "FYQ1END": 163502000.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 956691000.0,
+    "FYQ1END": 1020357000.0,
+    "FYQ2END": 888083000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1150228000.0,
+    "FYQ1END": 1150138000.0,
+    "FYQ2END": 1150054000.0
+   },
+   "equity": {
+    "FY-1END": 1469794000.0,
+    "FYQ1END": 1511260000.0,
+    "FYQ2END": 1554180000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 3777577000.0,
+    "FYQ1END": 3900395000.0,
+    "FYQ2END": 3813310000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 25,
+  "page_problems": [
+   "interest_expense (InterestExpenseNonoperating) 14,323,000 not on the income page"
+  ]
+ },
+ {
+  "ticker": "CHD",
+  "cik": 313927,
+  "name": "CHURCH & DWIGHT CO INC /DE/",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0001193125-26-327567",
+   "filed": "2026-07-31",
+   "period_end": "2026-06-30",
+   "primary_document": "chd-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0001193125-26-326749",
+   "release_filed": "2026-07-31",
+   "prior_accession": "0001193125-26-200630",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-31",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpense",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "Depreciation+AmortizationOfIntangibleAssets",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "(untagged: 0) | ShortTermBorrowings",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 237203907,
+   "as_of": "2026-07-29"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 1467100000.0,
+    "FY-1Q2": 1506300000.0,
+    "FY-1Q3": 1585600000.0,
+    "FY-1": 6203200000.0,
+    "FY-1Q3YTD": 4559000000.0,
+    "FYQ1": 1469300000.0,
+    "FYQ2": 1530000000.0,
+    "FY-2": 6107100000.0
+   },
+   "cogs": {
+    "FY-1Q1": 807500000.0,
+    "FY-1Q2": 859300000.0,
+    "FY-1Q3": 871200000.0,
+    "FY-1": 3428400000.0,
+    "FY-1Q3YTD": 2538000000.0,
+    "FYQ1": 787900000.0,
+    "FYQ2": 836100000.0
+   },
+   "sga": {
+    "FY-1Q1": 227700000.0,
+    "FY-1Q2": 228200000.0,
+    "FY-1Q3": 256900000.0,
+    "FY-1": 988300000.0,
+    "FY-1Q3YTD": 712800000.0,
+    "FYQ1": 251000000.0,
+    "FYQ2": 252200000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 295300000.0,
+    "FY-1Q2": 261700000.0,
+    "FY-1Q3": 254600000.0,
+    "FY-1": 1077600000.0,
+    "FY-1Q3YTD": 811600000.0,
+    "FYQ1": 291000000.0,
+    "FYQ2": 276400000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 23300000.0,
+    "FY-1Q2": 23500000.0,
+    "FY-1Q3": 23800000.0,
+    "FY-1": 95200000.0,
+    "FY-1Q3YTD": 70600000.0,
+    "FYQ1": 24000000.0,
+    "FYQ2": 24200000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 282100000.0,
+    "FY-1Q2": 250500000.0,
+    "FY-1Q3": 236200000.0,
+    "FY-1": 956900000.0,
+    "FY-1Q3YTD": 768800000.0,
+    "FYQ1": 272600000.0,
+    "FYQ2": 255900000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 62000000.0,
+    "FY-1Q2": 59500000.0,
+    "FY-1Q3": 54000000.0,
+    "FY-1": 220100000.0,
+    "FY-1Q3YTD": 175500000.0,
+    "FYQ1": 56300000.0,
+    "FYQ2": 53100000.0
+   },
+   "net_income": {
+    "FY-1Q1": 220100000.0,
+    "FY-1Q2": 191000000.0,
+    "FY-1Q3": 182200000.0,
+    "FY-1": 736800000.0,
+    "FY-1Q3YTD": 593300000.0,
+    "FYQ1": 216300000.0,
+    "FYQ2": 202800000.0
+   },
+   "da": {
+    "FYQ1YTD": 55400000.0,
+    "FYQ2YTD": 111200000.0,
+    "FY-1": 210800000.0,
+    "FY-1Q1": 51900000.0,
+    "FY-1Q2YTD": 99300000.0,
+    "FY-1Q3YTD": 154300000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 174800000.0,
+    "FYQ2YTD": 461600000.0,
+    "FY-1": 1215400000.0
+   },
+   "capex": {
+    "FYQ1YTD": 31900000.0,
+    "FYQ2YTD": 61800000.0,
+    "FY-1": 122400000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -33500000.0,
+    "FYQ2YTD": -361900000.0,
+    "FY-1": -616900000.0
+   },
+   "cff": {
+    "FYQ1YTD": -44900000.0,
+    "FYQ2YTD": -251700000.0,
+    "FY-1": -1162400000.0
+   },
+   "cash": {
+    "FY-1END": 409000000.0,
+    "FYQ1END": 503400000.0,
+    "FYQ2END": 254800000.0
+   },
+   "receivables": {
+    "FY-1END": 593400000.0,
+    "FYQ1END": 576600000.0,
+    "FYQ2END": 596800000.0
+   },
+   "inventory": {
+    "FY-1END": 534800000.0,
+    "FYQ1END": 578400000.0,
+    "FYQ2END": 601900000.0
+   },
+   "current_assets": {
+    "FY-1END": 1597000000.0,
+    "FYQ1END": 1720700000.0,
+    "FYQ2END": 1521700000.0
+   },
+   "ppe": {
+    "FY-1END": 822800000.0,
+    "FYQ1END": 823900000.0,
+    "FYQ2END": 826500000.0
+   },
+   "goodwill": {
+    "FY-1END": 2627500000.0,
+    "FYQ1END": 2629400000.0,
+    "FYQ2END": 2649900000.0
+   },
+   "intangibles": {
+    "FY-1END": 3511500000.0,
+    "FYQ1END": 3477200000.0,
+    "FYQ2END": 3743100000.0
+   },
+   "total_assets": {
+    "FY-1END": 8912400000.0,
+    "FYQ1END": 9006500000.0,
+    "FYQ2END": 9105700000.0
+   },
+   "payables": {
+    "FY-1END": 732400000.0,
+    "FYQ1END": 729900000.0,
+    "FYQ2END": 775900000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 49900000.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1497700000.0,
+    "FYQ1END": 1413400000.0,
+    "FYQ2END": 1327200000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 2205100000.0,
+    "FYQ1END": 2205700000.0,
+    "FYQ2END": 2206300000.0
+   },
+   "equity": {
+    "FY-1END": 4002200000.0,
+    "FYQ1END": 4186000000.0,
+    "FYQ2END": 4347800000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 8912400000.0,
+    "FYQ1END": 9006500000.0,
+    "FYQ2END": 9105700000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R6.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": [
+   "da (Depreciation+AmortizationOfIntangibleAssets) 111,200,000 not on the cash page"
+  ]
+ },
+ {
+  "ticker": "TXRH",
+  "cik": 1289460,
+  "name": "Texas Roadhouse, Inc.",
+  "fiscal_year_end": "1229",
+  "target": {
+   "accession": "0001104659-26-092408",
+   "filed": "2026-08-07",
+   "period_end": "2026-06-30",
+   "primary_document": "txrh-20260630x10q.htm",
+   "xbrl": true,
+   "release_accession": "0001104659-26-091980",
+   "release_filed": "2026-08-06",
+   "prior_accession": "0001104659-26-057604",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-06",
+  "calendar": {
+   "fy_start": "2025-12-31",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-04-01",
+    "2025-07-01",
+    "2025-09-30",
+    "2025-12-30"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "",
+   "sga": "",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 65640926,
+   "as_of": "2026-07-29"
+  },
+  "problems": [
+   "net_income: no concept found"
+  ],
+  "qualified": false,
+  "screen_qualified": false
+ },
+ {
+  "ticker": "IDXX",
+  "cik": 874716,
+  "name": "IDEXX LABORATORIES INC /DE",
+  "fiscal_year_end": "1231",
+  "target": {
+   "accession": "0000874716-26-000123",
+   "filed": "2026-08-04",
+   "period_end": "2026-06-30",
+   "primary_document": "idxx-20260630.htm",
+   "xbrl": true,
+   "release_accession": "0001104659-26-090033",
+   "release_filed": "2026-08-04",
+   "prior_accession": "0000874716-26-000076",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-04",
+  "calendar": {
+   "fy_start": "2026-01-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-31",
+    "2026-06-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 78781116,
+   "as_of": "2026-07-31"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 998427000.0,
+    "FY-1Q2": 1109457000.0,
+    "FY-1Q3": 1105239000.0,
+    "FY-1": 4303702000.0,
+    "FY-1Q3YTD": 3213123000.0,
+    "FYQ1": 1140820000.0,
+    "FYQ2": 1216585000.0,
+    "FY-2": 3897504000.0
+   },
+   "cogs": {
+    "FY-1Q1": 375048000.0,
+    "FY-1Q2": 414725000.0,
+    "FY-1Q3": 421885000.0,
+    "FY-1": 1644123000.0,
+    "FY-1Q3YTD": 1211658000.0,
+    "FYQ1": 418081000.0,
+    "FYQ2": 437498000.0
+   },
+   "sga": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0,
+    "FYQ2": 0.0
+   },
+   "operating_income": {
+    "FY-1Q1": 316534000.0,
+    "FY-1Q2": 373046000.0,
+    "FY-1Q3": 354846000.0,
+    "FY-1": 1360031000.0,
+    "FY-1Q3YTD": 1044426000.0,
+    "FYQ1": 362586000.0,
+    "FYQ2": 425566000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 7666000.0,
+    "FY-1Q2": 11321000.0,
+    "FY-1Q3": 10655000.0,
+    "FY-1": 38852000.0,
+    "FY-1Q3YTD": 29642000.0,
+    "FYQ1": 7741000.0,
+    "FYQ2": 10182000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 310084000.0,
+    "FY-1Q2": 362352000.0,
+    "FY-1Q3": 344771000.0,
+    "FY-1": 1324189000.0,
+    "FY-1Q3YTD": 1017207000.0,
+    "FYQ1": 355442000.0,
+    "FYQ2": 417224000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 67407000.0,
+    "FY-1Q2": 68363000.0,
+    "FY-1Q3": 70161000.0,
+    "FY-1": 264725000.0,
+    "FY-1Q3YTD": 205931000.0,
+    "FYQ1": 76996000.0,
+    "FYQ2": 78812000.0
+   },
+   "net_income": {
+    "FY-1Q1": 242677000.0,
+    "FY-1Q2": 293989000.0,
+    "FY-1Q3": 274610000.0,
+    "FY-1": 1059464000.0,
+    "FY-1Q3YTD": 811276000.0,
+    "FYQ1": 278446000.0,
+    "FYQ2": 338412000.0
+   },
+   "da": {
+    "FYQ1YTD": 37683000.0,
+    "FYQ2YTD": 78734000.0,
+    "FY-1": 145183000.0,
+    "FY-1Q1": 34063000.0,
+    "FY-1Q2YTD": 69835000.0,
+    "FY-1Q3YTD": 106462000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 266248000.0,
+    "FYQ2YTD": 613410000.0,
+    "FY-1": 1181805000.0
+   },
+   "capex": {
+    "FYQ1YTD": 31984000.0,
+    "FYQ2YTD": 56630000.0,
+    "FY-1": 124676000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -33544000.0,
+    "FYQ2YTD": -59040000.0,
+    "FY-1": -136239000.0
+   },
+   "cff": {
+    "FYQ1YTD": -211430000.0,
+    "FYQ2YTD": -536619000.0,
+    "FY-1": -1164964000.0
+   },
+   "cash": {
+    "FY-1END": 180070000.0,
+    "FYQ1END": 200528000.0,
+    "FYQ2END": 196933000.0
+   },
+   "receivables": {
+    "FY-1END": 552378000.0,
+    "FYQ1END": 603544000.0,
+    "FYQ2END": 627083000.0
+   },
+   "inventory": {
+    "FY-1END": 377756000.0,
+    "FYQ1END": 382400000.0,
+    "FYQ2END": 391579000.0
+   },
+   "current_assets": {
+    "FY-1END": 1413827000.0,
+    "FYQ1END": 1454075000.0,
+    "FYQ2END": 1509489000.0
+   },
+   "ppe": {
+    "FY-1END": 747380000.0,
+    "FYQ1END": 740382000.0,
+    "FYQ2END": 733238000.0
+   },
+   "goodwill": {
+    "FY-1END": 414004000.0,
+    "FYQ1END": 412104000.0,
+    "FYQ2END": 410946000.0
+   },
+   "intangibles": {
+    "FY-1END": 109843000.0,
+    "FYQ1END": 104750000.0,
+    "FYQ2END": 98169000.0
+   },
+   "total_assets": {
+    "FY-1END": 3350759000.0,
+    "FYQ1END": 3385497000.0,
+    "FYQ2END": 3442335000.0
+   },
+   "payables": {
+    "FY-1END": 110408000.0,
+    "FYQ1END": 129974000.0,
+    "FYQ2END": 129097000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 74995000.0,
+    "FYQ1END": 149997000.0,
+    "FYQ2END": 149999000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1148814000.0,
+    "FYQ1END": 1299851000.0,
+    "FYQ2END": 1287665000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 374842000.0,
+    "FYQ1END": 299854000.0,
+    "FYQ2END": 299865000.0
+   },
+   "equity": {
+    "FY-1END": 1605383000.0,
+    "FYQ1END": 1556103000.0,
+    "FYQ2END": 1612575000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 3350759000.0,
+    "FYQ1END": 3385497000.0,
+    "FYQ2END": 3442335000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Thousands",
+   "income": "shares in Thousands, $ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R4.htm",
+   "cash": "R9.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": []
+ },
+ {
+  "ticker": "TSCO",
+  "cik": 916365,
+  "name": "TRACTOR SUPPLY CO /DE/",
+  "fiscal_year_end": "1228",
+  "target": {
+   "accession": "0000916365-26-000059",
+   "filed": "2026-08-06",
+   "period_end": "2026-06-27",
+   "primary_document": "tsco-20260627.htm",
+   "xbrl": true,
+   "release_accession": "0000916365-26-000052",
+   "release_filed": "2026-07-23",
+   "prior_accession": "0000916365-26-000024",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-07-23",
+  "calendar": {
+   "fy_start": "2025-12-28",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-03-28",
+    "2026-06-27"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-29",
+    "2025-06-28",
+    "2025-09-27",
+    "2025-12-27"
+   ]
+  },
+  "notes": [
+   "intangibles folded into other (restated between filings)"
+  ],
+  "concepts": {
+   "revenue": "Revenues",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpense | InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "(untagged: 0) | Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 521040137,
+   "as_of": "2026-07-25"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 3466952000.0,
+    "FY-1Q2": 4439729000.0,
+    "FY-1Q3": 3719044000.0,
+    "FY-1": 15524046000.0,
+    "FY-1Q3YTD": 11625726000.0,
+    "FYQ1": 3592046000.0,
+    "FYQ2": 4541314000.0,
+    "FY-2": 14883231000.0
+   },
+   "cogs": {
+    "FY-1Q1": 2211530000.0,
+    "FY-1Q2": 2799755000.0,
+    "FY-1Q3": 2329812000.0,
+    "FY-1": 9869538000.0,
+    "FY-1Q3YTD": 7341097000.0,
+    "FYQ1": 2290861000.0,
+    "FYQ2": 2858705000.0
+   },
+   "sga": {
+    "FY-1Q1": 886206000.0,
+    "FY-1Q2": 940063000.0,
+    "FY-1Q3": 922454000.0,
+    "FY-1": 3693108000.0,
+    "FY-1Q3YTD": 2748723000.0,
+    "FYQ1": 941153000.0,
+    "FYQ2": 1021899000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 249137000.0,
+    "FY-1Q2": 577812000.0,
+    "FY-1Q3": 342709000.0,
+    "FY-1": 1467389000.0,
+    "FY-1Q3YTD": 1169658000.0,
+    "FYQ1": 233431000.0,
+    "FYQ2": 467115000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 19641000.0,
+    "FY-1Q2": 17983000.0,
+    "FY-1Q3": 14667000.0,
+    "FY-1": 69144000.0,
+    "FY-1Q3YTD": 52291000.0,
+    "FYQ1": 19108000.0,
+    "FYQ2": 17103000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 229496000.0,
+    "FY-1Q2": 559829000.0,
+    "FY-1Q3": 328042000.0,
+    "FY-1": 1398245000.0,
+    "FY-1Q3YTD": 1117367000.0,
+    "FYQ1": 214323000.0,
+    "FYQ2": 450012000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 50127000.0,
+    "FY-1Q2": 129786000.0,
+    "FY-1Q3": 68774000.0,
+    "FY-1": 302158000.0,
+    "FY-1Q3YTD": 248687000.0,
+    "FYQ1": 49799000.0,
+    "FYQ2": 89297000.0
+   },
+   "net_income": {
+    "FY-1Q1": 179369000.0,
+    "FY-1Q2": 430043000.0,
+    "FY-1Q3": 259268000.0,
+    "FY-1": 1096087000.0,
+    "FY-1Q3YTD": 868680000.0,
+    "FYQ1": 164524000.0,
+    "FYQ2": 360715000.0
+   },
+   "da": {
+    "FYQ1YTD": 126601000.0,
+    "FYQ2YTD": 257449000.0,
+    "FY-1": 494011000.0,
+    "FY-1Q1": 120079000.0,
+    "FY-1Q2YTD": 242179000.0,
+    "FY-1Q3YTD": 366248000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 91120000.0,
+    "FYQ2YTD": 653136000.0,
+    "FY-1": 1635259000.0
+   },
+   "capex": {
+    "FYQ1YTD": 202610000.0,
+    "FYQ2YTD": 435713000.0,
+    "FY-1": 894770000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -171336000.0,
+    "FYQ2YTD": -495613000.0,
+    "FY-1": -778578000.0
+   },
+   "cff": {
+    "FYQ1YTD": 110376000.0,
+    "FYQ2YTD": -120044000.0,
+    "FY-1": -914063000.0
+   },
+   "cash": {
+    "FY-1END": 194109000.0,
+    "FYQ1END": 224269000.0,
+    "FYQ2END": 231588000.0
+   },
+   "receivables": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "inventory": {
+    "FY-1END": 3084086000.0,
+    "FYQ1END": 3583601000.0,
+    "FYQ2END": 3518451000.0
+   },
+   "current_assets": {
+    "FY-1END": 3507797000.0,
+    "FYQ1END": 4041596000.0,
+    "FYQ2END": 4254516000.0
+   },
+   "ppe": {
+    "FY-1END": 3026544000.0,
+    "FYQ1END": 3132326000.0,
+    "FYQ2END": 3223898000.0
+   },
+   "goodwill": {
+    "FY-1END": 346724000.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 425419000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 10933679000.0,
+    "FYQ1END": 11662097000.0,
+    "FYQ2END": 12161821000.0
+   },
+   "payables": {
+    "FY-1END": 1390833000.0,
+    "FYQ1END": 1760426000.0,
+    "FYQ2END": 1760347000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 2614449000.0,
+    "FYQ1END": 2929721000.0,
+    "FYQ2END": 3189749000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1764974000.0,
+    "FYQ1END": 2125726000.0,
+    "FYQ2END": 2153826000.0
+   },
+   "equity": {
+    "FY-1END": 2581293000.0,
+    "FYQ1END": 2513749000.0,
+    "FYQ2END": 2631565000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 10933679000.0,
+    "FYQ1END": 11662097000.0,
+    "FYQ2END": 12161821000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Thousands, $ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R3.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 23,
+  "page_problems": []
+ },
+ {
+  "ticker": "DG",
+  "cik": 29534,
+  "name": "DOLLAR GENERAL CORP",
+  "fiscal_year_end": "0129",
+  "target": {
+   "accession": "0001104659-26-101932",
+   "filed": "2026-08-27",
+   "period_end": "2026-07-31",
+   "primary_document": "dg-20260731x10q.htm",
+   "xbrl": true,
+   "release_accession": "0001104659-26-101918",
+   "release_filed": "2026-08-27",
+   "prior_accession": "0001104659-26-069205",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-27",
+  "calendar": {
+   "fy_start": "2026-01-31",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-01",
+    "2026-07-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-02",
+    "2025-08-01",
+    "2025-10-31",
+    "2026-01-30"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquireProductiveAssets",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 220616790,
+   "as_of": "2026-08-25"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 10435979000.0,
+    "FY-1Q2": 10727737000.0,
+    "FY-1Q3": 10649450000.0,
+    "FY-1": 42724369000.0,
+    "FY-1Q3YTD": 31813166000.0,
+    "FYQ1": 10786965000.0,
+    "FYQ2": 11290380000.0,
+    "FY-2": 40612308000.0
+   },
+   "cogs": {
+    "FY-1Q1": 7204691000.0,
+    "FY-1Q2": 7366069000.0,
+    "FY-1Q3": 7465120000.0,
+    "FY-1": 29624680000.0,
+    "FY-1Q3YTD": 22035880000.0,
+    "FYQ1": 7376493000.0,
+    "FYQ2": 7609459000.0
+   },
+   "sga": {
+    "FY-1Q1": 2655175000.0,
+    "FY-1Q2": 2766240000.0,
+    "FY-1Q3": 2758479000.0,
+    "FY-1": 10896021000.0,
+    "FY-1Q3YTD": 8179894000.0,
+    "FYQ1": 2771956000.0,
+    "FYQ2": 2911757000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 576113000.0,
+    "FY-1Q2": 595428000.0,
+    "FY-1Q3": 425851000.0,
+    "FY-1": 2203668000.0,
+    "FY-1Q3YTD": 1597392000.0,
+    "FYQ1": 638516000.0,
+    "FYQ2": 769164000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 64604000.0,
+    "FY-1Q2": 57727000.0,
+    "FY-1Q3": 55935000.0,
+    "FY-1": 230567000.0,
+    "FY-1Q3YTD": 178266000.0,
+    "FYQ1": 47238000.0,
+    "FYQ2": 42883000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 511509000.0,
+    "FY-1Q2": 537701000.0,
+    "FY-1Q3": 369916000.0,
+    "FY-1": 1964592000.0,
+    "FY-1Q3YTD": 1419126000.0,
+    "FYQ1": 591278000.0,
+    "FYQ2": 726281000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 119581000.0,
+    "FY-1Q2": 126275000.0,
+    "FY-1Q3": 87259000.0,
+    "FY-1": 452281000.0,
+    "FY-1Q3YTD": 333115000.0,
+    "FYQ1": 147151000.0,
+    "FYQ2": 175966000.0
+   },
+   "net_income": {
+    "FY-1Q1": 391928000.0,
+    "FY-1Q2": 411426000.0,
+    "FY-1Q3": 282657000.0,
+    "FY-1": 1512311000.0,
+    "FY-1Q3YTD": 1086011000.0,
+    "FYQ1": 444127000.0,
+    "FYQ2": 550315000.0
+   },
+   "da": {
+    "FYQ1YTD": 270832000.0,
+    "FYQ2YTD": 548310000.0,
+    "FY-1": 1046318000.0,
+    "FY-1Q1": 252793000.0,
+    "FY-1Q2YTD": 509609000.0,
+    "FY-1Q3YTD": 775957000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 716188000.0,
+    "FYQ2YTD": 1496705000.0,
+    "FY-1": 3634500000.0
+   },
+   "capex": {
+    "FYQ1YTD": 351605000.0,
+    "FYQ2YTD": 758450000.0,
+    "FY-1": 1241162000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -347803000.0,
+    "FYQ2YTD": -754282000.0,
+    "FY-1": -1237196000.0
+   },
+   "cff": {
+    "FYQ1YTD": -153773000.0,
+    "FYQ2YTD": -291334000.0,
+    "FY-1": -2191379000.0
+   },
+   "cash": {
+    "FY-1END": 1138501000.0,
+    "FYQ1END": 1353113000.0,
+    "FYQ2END": 1589590000.0
+   },
+   "receivables": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "inventory": {
+    "FY-1END": 6331861000.0,
+    "FYQ1END": 6635903000.0,
+    "FYQ2END": 6552841000.0
+   },
+   "current_assets": {
+    "FY-1END": 7897803000.0,
+    "FYQ1END": 8467476000.0,
+    "FYQ2END": 8781911000.0
+   },
+   "ppe": {
+    "FY-1END": 6398589000.0,
+    "FYQ1END": 6471946000.0,
+    "FYQ2END": 6623844000.0
+   },
+   "goodwill": {
+    "FY-1END": 4338589000.0,
+    "FYQ1END": 4338589000.0,
+    "FYQ2END": 4338589000.0
+   },
+   "intangibles": {
+    "FY-1END": 1200050000.0,
+    "FYQ1END": 1200061000.0,
+    "FYQ2END": 1200082000.0
+   },
+   "total_assets": {
+    "FY-1END": 30963730000.0,
+    "FYQ1END": 31699653000.0,
+    "FYQ2END": 32167333000.0
+   },
+   "payables": {
+    "FY-1END": 4051592000.0,
+    "FYQ1END": 4341284000.0,
+    "FYQ2END": 4349548000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 14401000.0,
+    "FYQ1END": 13302000.0,
+    "FYQ2END": 12670000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 6961135000.0,
+    "FYQ1END": 7243019000.0,
+    "FYQ2END": 7265065000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 4565881000.0,
+    "FYQ1END": 4563106000.0,
+    "FYQ2END": 4558145000.0
+   },
+   "equity": {
+    "FY-1END": 8511962000.0,
+    "FYQ1END": 8843284000.0,
+    "FYQ2END": 9288648000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 30963730000.0,
+    "FYQ1END": 31699653000.0,
+    "FYQ2END": 32167333000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Thousands",
+   "income": "shares in Thousands, $ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R3.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": []
+ },
+ {
+  "ticker": "ROST",
+  "cik": 745732,
+  "name": "ROSS STORES, INC.",
+  "fiscal_year_end": "0201",
+  "target": {
+   "accession": "0000745732-26-000041",
+   "filed": "2026-09-01",
+   "period_end": "2026-08-01",
+   "primary_document": "rost-20260801.htm",
+   "xbrl": true,
+   "release_accession": "0000745732-26-000038",
+   "release_filed": "2026-08-20",
+   "prior_accession": "0000745732-26-000032",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-20",
+  "calendar": {
+   "fy_start": "2026-02-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-02",
+    "2026-08-01"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-03",
+    "2025-08-02",
+    "2025-11-01",
+    "2026-01-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 319453110,
+   "as_of": "2026-08-14"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 4984971000.0,
+    "FY-1Q2": 5529152000.0,
+    "FY-1Q3": 5600946000.0,
+    "FY-1": 22750559000.0,
+    "FY-1Q3YTD": 16115069000.0,
+    "FYQ1": 6010476000.0,
+    "FYQ2": 6264886000.0,
+    "FY-2": 21129219000.0
+   },
+   "cogs": {
+    "FY-1Q1": 3581366000.0,
+    "FY-1Q2": 4002167000.0,
+    "FY-1Q3": 4032446000.0,
+    "FY-1": 16447256000.0,
+    "FY-1Q3YTD": 11615979000.0,
+    "FYQ1": 4230589000.0,
+    "FYQ2": 4145215000.0
+   },
+   "sga": {
+    "FY-1Q1": 797135000.0,
+    "FY-1Q2": 888711000.0,
+    "FY-1Q3": 920002000.0,
+    "FY-1": 3595946000.0,
+    "FY-1Q3YTD": 2605848000.0,
+    "FYQ1": 975861000.0,
+    "FYQ2": 1016053000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 606470000.0,
+    "FY-1Q2": 638274000.0,
+    "FY-1Q3": 648498000.0,
+    "FY-1": 2707357000.0,
+    "FY-1Q3YTD": 1893242000.0,
+    "FYQ1": 804026000.0,
+    "FYQ2": 1103618000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": -34409000.0,
+    "FY-1Q2": -32346000.0,
+    "FY-1Q3": -33900000.0,
+    "FY-1": -134800000.0,
+    "FY-1Q3YTD": -100655000.0,
+    "FYQ1": -33449000.0,
+    "FYQ2": -31144000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 640879000.0,
+    "FY-1Q2": 670620000.0,
+    "FY-1Q3": 682398000.0,
+    "FY-1": 2842157000.0,
+    "FY-1Q3YTD": 1993897000.0,
+    "FYQ1": 837475000.0,
+    "FYQ2": 1134762000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 161630000.0,
+    "FY-1Q2": 162625000.0,
+    "FY-1Q3": 170463000.0,
+    "FY-1": 697113000.0,
+    "FY-1Q3YTD": 494718000.0,
+    "FYQ1": 187511000.0,
+    "FYQ2": 283463000.0
+   },
+   "net_income": {
+    "FY-1Q1": 479249000.0,
+    "FY-1Q2": 507995000.0,
+    "FY-1Q3": 511935000.0,
+    "FY-1": 2145044000.0,
+    "FY-1Q3YTD": 1499179000.0,
+    "FYQ1": 649964000.0,
+    "FYQ2": 851299000.0
+   },
+   "da": {
+    "FYQ1YTD": 132599000.0,
+    "FYQ2YTD": 272790000.0,
+    "FY-1": 509391000.0,
+    "FY-1Q1": 115938000.0,
+    "FY-1Q2YTD": 242337000.0,
+    "FY-1Q3YTD": 374524000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 836009000.0,
+    "FYQ2YTD": 1711767000.0,
+    "FY-1": 3026883000.0
+   },
+   "capex": {
+    "FYQ1YTD": 208954000.0,
+    "FYQ2YTD": 460217000.0,
+    "FY-1": 819275000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -208954000.0,
+    "FYQ2YTD": -460217000.0,
+    "FY-1": -819275000.0
+   },
+   "cff": {
+    "FYQ1YTD": -1089864000.0,
+    "FYQ2YTD": -1556599000.0,
+    "FY-1": -2342097000.0
+   },
+   "cash": {
+    "FY-1END": 4594392000.0,
+    "FYQ1END": 4130980000.0,
+    "FYQ2END": 4288124000.0
+   },
+   "receivables": {
+    "FY-1END": 181301000.0,
+    "FYQ1END": 212540000.0,
+    "FYQ2END": 248140000.0
+   },
+   "inventory": {
+    "FY-1END": 2630970000.0,
+    "FYQ1END": 2976958000.0,
+    "FYQ2END": 3087370000.0
+   },
+   "current_assets": {
+    "FY-1END": 7640097000.0,
+    "FYQ1END": 7573419000.0,
+    "FYQ2END": 7876360000.0
+   },
+   "ppe": {
+    "FY-1END": 4088760000.0,
+    "FYQ1END": 4147666000.0,
+    "FYQ2END": 4257806000.0
+   },
+   "goodwill": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 15548737000.0,
+    "FYQ1END": 15554572000.0,
+    "FYQ2END": 15982280000.0
+   },
+   "payables": {
+    "FY-1END": 2386418000.0,
+    "FYQ1END": 2653741000.0,
+    "FYQ2END": 2621740000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 499743000.0,
+    "FYQ1END": 241344000.0,
+    "FYQ2END": 241459000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 4827180000.0,
+    "FYQ1END": 4914855000.0,
+    "FYQ2END": 4885538000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1017863000.0,
+    "FYQ1END": 776843000.0,
+    "FYQ2END": 777053000.0
+   },
+   "equity": {
+    "FY-1END": 6187443000.0,
+    "FYQ1END": 6305003000.0,
+    "FYQ2END": 6743184000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 15548737000.0,
+    "FYQ1END": 15554572000.0,
+    "FYQ2END": 15982280000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Thousands, $ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 25,
+  "page_problems": []
+ },
+ {
+  "ticker": "TJX",
+  "cik": 109198,
+  "name": "TJX COMPANIES INC /DE/",
+  "fiscal_year_end": "0201",
+  "target": {
+   "accession": "0000109198-26-000048",
+   "filed": "2026-08-28",
+   "period_end": "2026-08-01",
+   "primary_document": "tjx-20260801.htm",
+   "xbrl": true,
+   "release_accession": "0000109198-26-000045",
+   "release_filed": "2026-08-19",
+   "prior_accession": "0000109198-26-000034",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-19",
+  "calendar": {
+   "fy_start": "2026-02-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-02",
+    "2026-08-01"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-03",
+    "2025-08-02",
+    "2025-11-01",
+    "2026-01-31"
+   ]
+  },
+  "notes": [
+   "interest_expense folded into other (no single concept covers every period)"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "interest_expense": "",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 1099974061,
+   "as_of": "2026-08-21"
+  },
+  "problems": [
+   "operating_income: no concept found"
+  ],
+  "qualified": false,
+  "screen_qualified": false
+ },
+ {
+  "ticker": "HD",
+  "cik": 354950,
+  "name": "HOME DEPOT, INC.",
+  "fiscal_year_end": "0131",
+  "target": {
+   "accession": "0001628280-26-058715",
+   "filed": "2026-08-25",
+   "period_end": "2026-08-02",
+   "primary_document": "hd-20260802.htm",
+   "xbrl": true,
+   "release_accession": "0000354950-26-000145",
+   "release_filed": "2026-08-18",
+   "prior_accession": "0001628280-26-038247",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-18",
+  "calendar": {
+   "fy_start": "2026-02-02",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-03",
+    "2026-08-02"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-04",
+    "2025-08-03",
+    "2025-11-02",
+    "2026-02-01"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquireProductiveAssets",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "CommercialPaper",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 997689626,
+   "as_of": "2026-08-18"
+  },
+  "scale": 1000000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 39856000000.0,
+    "FY-1Q2": 45277000000.0,
+    "FY-1Q3": 41352000000.0,
+    "FY-1": 164683000000.0,
+    "FY-1Q3YTD": 126485000000.0,
+    "FYQ1": 41765000000.0,
+    "FYQ2": 47861000000.0,
+    "FY-2": 159514000000.0
+   },
+   "cogs": {
+    "FY-1Q1": 26397000000.0,
+    "FY-1Q2": 30152000000.0,
+    "FY-1Q3": 27537000000.0,
+    "FY-1": 109818000000.0,
+    "FY-1Q3YTD": 84086000000.0,
+    "FYQ1": 27984000000.0,
+    "FYQ2": 31746000000.0
+   },
+   "sga": {
+    "FY-1Q1": 7530000000.0,
+    "FY-1Q2": 7764000000.0,
+    "FY-1Q3": 7636000000.0,
+    "FY-1": 30702000000.0,
+    "FY-1Q3YTD": 22930000000.0,
+    "FYQ1": 7959000000.0,
+    "FYQ2": 8424000000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 5133000000.0,
+    "FY-1Q2": 6555000000.0,
+    "FY-1Q3": 5353000000.0,
+    "FY-1": 20890000000.0,
+    "FY-1Q3YTD": 17041000000.0,
+    "FYQ1": 4981000000.0,
+    "FYQ2": 6839000000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 615000000.0,
+    "FY-1Q2": 575000000.0,
+    "FY-1Q3": 628000000.0,
+    "FY-1": 2412000000.0,
+    "FY-1Q3YTD": 1818000000.0,
+    "FYQ1": 611000000.0,
+    "FYQ2": 583000000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 4542000000.0,
+    "FY-1Q2": 6005000000.0,
+    "FY-1Q3": 4757000000.0,
+    "FY-1": 18602000000.0,
+    "FY-1Q3YTD": 15304000000.0,
+    "FYQ1": 4377000000.0,
+    "FYQ2": 6315000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 1109000000.0,
+    "FY-1Q2": 1454000000.0,
+    "FY-1Q3": 1156000000.0,
+    "FY-1": 4446000000.0,
+    "FY-1Q3YTD": 3719000000.0,
+    "FYQ1": 1088000000.0,
+    "FYQ2": 1549000000.0
+   },
+   "net_income": {
+    "FY-1Q1": 3433000000.0,
+    "FY-1Q2": 4551000000.0,
+    "FY-1Q3": 3601000000.0,
+    "FY-1": 14156000000.0,
+    "FY-1Q3YTD": 11585000000.0,
+    "FYQ1": 3289000000.0,
+    "FYQ2": 4766000000.0
+   },
+   "da": {
+    "FYQ1YTD": 910000000.0,
+    "FYQ2YTD": 1839000000.0,
+    "FY-1": 3514000000.0,
+    "FY-1Q1": 855000000.0,
+    "FY-1Q2YTD": 1720000000.0,
+    "FY-1Q3YTD": 2606000000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 6032000000.0,
+    "FYQ2YTD": 11422000000.0,
+    "FY-1": 16325000000.0
+   },
+   "capex": {
+    "FYQ1YTD": 844000000.0,
+    "FYQ2YTD": 1724000000.0,
+    "FY-1": 3679000000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -1109000000.0,
+    "FYQ2YTD": -3011000000.0,
+    "FY-1": -8980000000.0
+   },
+   "cff": {
+    "FYQ1YTD": -4713000000.0,
+    "FYQ2YTD": -7701000000.0,
+    "FY-1": -7714000000.0
+   },
+   "cash": {
+    "FY-1END": 1389000000.0,
+    "FYQ1END": 1601000000.0,
+    "FYQ2END": 2085000000.0
+   },
+   "receivables": {
+    "FY-1END": 5597000000.0,
+    "FYQ1END": 6624000000.0,
+    "FYQ2END": 6963000000.0
+   },
+   "inventory": {
+    "FY-1END": 25817000000.0,
+    "FYQ1END": 27280000000.0,
+    "FYQ2END": 26847000000.0
+   },
+   "current_assets": {
+    "FY-1END": 34391000000.0,
+    "FYQ1END": 37172000000.0,
+    "FYQ2END": 37720000000.0
+   },
+   "ppe": {
+    "FY-1END": 28021000000.0,
+    "FYQ1END": 27930000000.0,
+    "FYQ2END": 28147000000.0
+   },
+   "goodwill": {
+    "FY-1END": 22344000000.0,
+    "FYQ1END": 22479000000.0,
+    "FYQ2END": 22899000000.0
+   },
+   "intangibles": {
+    "FY-1END": 10329000000.0,
+    "FYQ1END": 10244000000.0,
+    "FYQ2END": 10482000000.0
+   },
+   "total_assets": {
+    "FY-1END": 105095000000.0,
+    "FYQ1END": 107904000000.0,
+    "FYQ2END": 109384000000.0
+   },
+   "payables": {
+    "FY-1END": 11491000000.0,
+    "FYQ1END": 14373000000.0,
+    "FYQ2END": 13585000000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 4464000000.0,
+    "FYQ1END": 3503000000.0,
+    "FYQ2END": 4248000000.0
+   },
+   "current_ltd": {
+    "FY-1END": 4967000000.0,
+    "FYQ1END": 5178000000.0,
+    "FYQ2END": 4697000000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 32424000000.0,
+    "FYQ1END": 35580000000.0,
+    "FYQ2END": 34988000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 46341000000.0,
+    "FYQ1END": 44828000000.0,
+    "FYQ2END": 43951000000.0
+   },
+   "equity": {
+    "FY-1END": 12813000000.0,
+    "FYQ1END": 13874000000.0,
+    "FYQ2END": 16617000000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 105095000000.0,
+    "FYQ1END": 107904000000.0,
+    "FYQ2END": 109384000000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Millions",
+   "income": "shares in Millions, $ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R4.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 28,
+  "page_problems": []
+ },
+ {
+  "ticker": "LOW",
+  "cik": 60667,
+  "name": "LOWES COMPANIES INC",
+  "fiscal_year_end": "0131",
+  "target": {
+   "accession": "0000060667-26-000117",
+   "filed": "2026-08-27",
+   "period_end": "2026-07-31",
+   "primary_document": "low-20260731.htm",
+   "xbrl": true,
+   "release_accession": "0000060667-26-000113",
+   "release_filed": "2026-08-19",
+   "prior_accession": "0000060667-26-000072",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-19",
+  "calendar": {
+   "fy_start": "2026-01-31",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-01",
+    "2026-07-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-02",
+    "2025-08-01",
+    "2025-10-31",
+    "2026-01-30"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "(untagged: 0) | ShortTermBorrowings",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 561054019,
+   "as_of": "2026-08-25"
+  },
+  "scale": 1000000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 20930000000.0,
+    "FY-1Q2": 23959000000.0,
+    "FY-1Q3": 20813000000.0,
+    "FY-1": 86286000000.0,
+    "FY-1Q3YTD": 65701000000.0,
+    "FYQ1": 23078000000.0,
+    "FYQ2": 25956000000.0,
+    "FY-2": 83674000000.0
+   },
+   "cogs": {
+    "FY-1Q1": 13944000000.0,
+    "FY-1Q2": 15858000000.0,
+    "FY-1Q3": 13697000000.0,
+    "FY-1": 57401000000.0,
+    "FY-1Q3YTD": 43497000000.0,
+    "FYQ1": 15535000000.0,
+    "FYQ2": 17379000000.0
+   },
+   "sga": {
+    "FY-1Q1": 4046000000.0,
+    "FY-1Q2": 4175000000.0,
+    "FY-1Q3": 4160000000.0,
+    "FY-1": 16791000000.0,
+    "FY-1Q3YTD": 12381000000.0,
+    "FYQ1": 4423000000.0,
+    "FYQ2": 4456000000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 2494000000.0,
+    "FY-1Q2": 3469000000.0,
+    "FY-1Q3": 2481000000.0,
+    "FY-1": 10153000000.0,
+    "FY-1Q3YTD": 8445000000.0,
+    "FYQ1": 2554000000.0,
+    "FYQ2": 3549000000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 337000000.0,
+    "FY-1Q2": 313000000.0,
+    "FY-1Q3": 352000000.0,
+    "FY-1": 1406000000.0,
+    "FY-1Q3YTD": 1002000000.0,
+    "FYQ1": 399000000.0,
+    "FYQ2": 374000000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 2157000000.0,
+    "FY-1Q2": 3156000000.0,
+    "FY-1Q3": 2129000000.0,
+    "FY-1": 8747000000.0,
+    "FY-1Q3YTD": 7443000000.0,
+    "FYQ1": 2155000000.0,
+    "FYQ2": 3175000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 516000000.0,
+    "FY-1Q2": 758000000.0,
+    "FY-1Q3": 513000000.0,
+    "FY-1": 2093000000.0,
+    "FY-1Q3YTD": 1789000000.0,
+    "FYQ1": 527000000.0,
+    "FYQ2": 776000000.0
+   },
+   "net_income": {
+    "FY-1Q1": 1641000000.0,
+    "FY-1Q2": 2398000000.0,
+    "FY-1Q3": 1616000000.0,
+    "FY-1": 6654000000.0,
+    "FY-1Q3YTD": 5654000000.0,
+    "FYQ1": 1628000000.0,
+    "FYQ2": 2399000000.0
+   },
+   "da": {
+    "FYQ1YTD": 644000000.0,
+    "FYQ2YTD": 1292000000.0,
+    "FY-1": 2194000000.0,
+    "FY-1Q1": 507000000.0,
+    "FY-1Q2YTD": 1022000000.0,
+    "FY-1Q3YTD": 1557000000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 3350000000.0,
+    "FYQ2YTD": 7009000000.0,
+    "FY-1": 9864000000.0
+   },
+   "capex": {
+    "FYQ1YTD": 521000000.0,
+    "FYQ2YTD": 1063000000.0,
+    "FY-1": 2213000000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -501000000.0,
+    "FYQ2YTD": -761000000.0,
+    "FY-1": -12264000000.0
+   },
+   "cff": {
+    "FYQ1YTD": -3045000000.0,
+    "FYQ2YTD": -4058000000.0,
+    "FY-1": 1621000000.0
+   },
+   "cash": {
+    "FY-1END": 982000000.0,
+    "FYQ1END": 786000000.0,
+    "FYQ2END": 3172000000.0
+   },
+   "receivables": {
+    "FY-1END": 1090000000.0,
+    "FYQ1END": 1151000000.0,
+    "FYQ2END": 1238000000.0
+   },
+   "inventory": {
+    "FY-1END": 17300000000.0,
+    "FYQ1END": 18447000000.0,
+    "FYQ2END": 17737000000.0
+   },
+   "current_assets": {
+    "FY-1END": 20955000000.0,
+    "FYQ1END": 22162000000.0,
+    "FYQ2END": 23342000000.0
+   },
+   "ppe": {
+    "FY-1END": 18362000000.0,
+    "FYQ1END": 18254000000.0,
+    "FYQ2END": 18276000000.0
+   },
+   "goodwill": {
+    "FY-1END": 3945000000.0,
+    "FYQ1END": 3945000000.0,
+    "FYQ2END": 3957000000.0
+   },
+   "intangibles": {
+    "FY-1END": 5908000000.0,
+    "FYQ1END": 5807000000.0,
+    "FYQ2END": 5709000000.0
+   },
+   "total_assets": {
+    "FY-1END": 54144000000.0,
+    "FYQ1END": 54941000000.0,
+    "FYQ2END": 55881000000.0
+   },
+   "payables": {
+    "FY-1END": 9762000000.0,
+    "FYQ1END": 11975000000.0,
+    "FYQ2END": 11076000000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 380000000.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 2431000000.0,
+    "FYQ1END": 810000000.0,
+    "FYQ2END": 2352000000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 19463000000.0,
+    "FYQ1END": 20274000000.0,
+    "FYQ2END": 21132000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 37490000000.0,
+    "FYQ1END": 36751000000.0,
+    "FYQ2END": 35204000000.0
+   },
+   "equity": {
+    "FY-1END": -9917000000.0,
+    "FYQ1END": -9270000000.0,
+    "FYQ2END": -7437000000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 54144000000.0,
+    "FYQ1END": 54941000000.0,
+    "FYQ2END": 55881000000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": []
+ },
+ {
+  "ticker": "BBY",
+  "cik": 764478,
+  "name": "BEST BUY CO INC",
+  "fiscal_year_end": "0130",
+  "target": {
+   "accession": "0000764478-26-000042",
+   "filed": "2026-09-04",
+   "period_end": "2026-08-01",
+   "primary_document": "bby-20260801.htm",
+   "xbrl": true,
+   "release_accession": "0000764478-26-000037",
+   "release_filed": "2026-08-27",
+   "prior_accession": "0000764478-26-000022",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-27",
+  "calendar": {
+   "fy_start": "2026-02-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-02",
+    "2026-08-01"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-03",
+    "2025-08-02",
+    "2025-11-01",
+    "2026-01-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 209727698,
+   "as_of": "2026-09-02"
+  },
+  "scale": 1000000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 8767000000.0,
+    "FY-1Q2": 9438000000.0,
+    "FY-1Q3": 9672000000.0,
+    "FY-1": 41691000000.0,
+    "FY-1Q3YTD": 27877000000.0,
+    "FYQ1": 8936000000.0,
+    "FYQ2": 9779000000.0,
+    "FY-2": 41528000000.0
+   },
+   "cogs": {
+    "FY-1Q1": 6718000000.0,
+    "FY-1Q2": 7244000000.0,
+    "FY-1Q3": 7424000000.0,
+    "FY-1": 32318000000.0,
+    "FY-1Q3YTD": 21386000000.0,
+    "FYQ1": 6834000000.0,
+    "FYQ2": 7441000000.0
+   },
+   "sga": {
+    "FY-1Q1": 1721000000.0,
+    "FY-1Q2": 1829000000.0,
+    "FY-1Q3": 1884000000.0,
+    "FY-1": 7623000000.0,
+    "FY-1Q3YTD": 5434000000.0,
+    "FYQ1": 1741000000.0,
+    "FYQ2": 1923000000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 219000000.0,
+    "FY-1Q2": 251000000.0,
+    "FY-1Q3": 198000000.0,
+    "FY-1": 1389000000.0,
+    "FY-1Q3YTD": 668000000.0,
+    "FYQ1": 370000000.0,
+    "FYQ2": 421000000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 12000000.0,
+    "FY-1Q2": 12000000.0,
+    "FY-1Q3": 12000000.0,
+    "FY-1": 47000000.0,
+    "FY-1Q3YTD": 36000000.0,
+    "FYQ1": 11000000.0,
+    "FYQ2": 11000000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 222000000.0,
+    "FY-1Q2": 253000000.0,
+    "FY-1Q3": 205000000.0,
+    "FY-1": 1404000000.0,
+    "FY-1Q3YTD": 680000000.0,
+    "FYQ1": 378000000.0,
+    "FYQ2": 430000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 19000000.0,
+    "FY-1Q2": 68000000.0,
+    "FY-1Q3": 64000000.0,
+    "FY-1": 337000000.0,
+    "FY-1Q3YTD": 151000000.0,
+    "FYQ1": 102000000.0,
+    "FYQ2": 116000000.0
+   },
+   "net_income": {
+    "FY-1Q1": 202000000.0,
+    "FY-1Q2": 186000000.0,
+    "FY-1Q3": 140000000.0,
+    "FY-1": 1069000000.0,
+    "FY-1Q3YTD": 528000000.0,
+    "FYQ1": 276000000.0,
+    "FYQ2": 315000000.0
+   },
+   "da": {
+    "FYQ1YTD": 194000000.0,
+    "FYQ2YTD": 389000000.0,
+    "FY-1": 831000000.0,
+    "FY-1Q1": 211000000.0,
+    "FY-1Q2YTD": 422000000.0,
+    "FY-1Q3YTD": 628000000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 375000000.0,
+    "FYQ2YTD": 1296000000.0,
+    "FY-1": 1962000000.0
+   },
+   "capex": {
+    "FYQ1YTD": 160000000.0,
+    "FYQ2YTD": 344000000.0,
+    "FY-1": 704000000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -160000000.0,
+    "FYQ2YTD": -339000000.0,
+    "FY-1": -730000000.0
+   },
+   "cff": {
+    "FYQ1YTD": -202000000.0,
+    "FYQ2YTD": -443000000.0,
+    "FY-1": -1083000000.0
+   },
+   "cash": {
+    "FY-1END": 1738000000.0,
+    "FYQ1END": 1749000000.0,
+    "FYQ2END": 2255000000.0
+   },
+   "receivables": {
+    "FY-1END": 1043000000.0,
+    "FYQ1END": 906000000.0,
+    "FYQ2END": 922000000.0
+   },
+   "inventory": {
+    "FY-1END": 5230000000.0,
+    "FYQ1END": 5598000000.0,
+    "FYQ2END": 6296000000.0
+   },
+   "current_assets": {
+    "FY-1END": 8504000000.0,
+    "FYQ1END": 8740000000.0,
+    "FYQ2END": 9981000000.0
+   },
+   "ppe": {
+    "FY-1END": 1986000000.0,
+    "FYQ1END": 1987000000.0,
+    "FYQ2END": 1990000000.0
+   },
+   "goodwill": {
+    "FY-1END": 790000000.0,
+    "FYQ1END": 790000000.0,
+    "FYQ2END": 790000000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 14670000000.0,
+    "FYQ1END": 14890000000.0,
+    "FYQ2END": 16107000000.0
+   },
+   "payables": {
+    "FY-1END": 4745000000.0,
+    "FYQ1END": 5118000000.0,
+    "FYQ2END": 6026000000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 11000000.0,
+    "FYQ1END": 11000000.0,
+    "FYQ2END": 11000000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 7679000000.0,
+    "FYQ1END": 7797000000.0,
+    "FYQ2END": 8936000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1165000000.0,
+    "FYQ1END": 1158000000.0,
+    "FYQ2END": 1158000000.0
+   },
+   "equity": {
+    "FY-1END": 2964000000.0,
+    "FYQ1END": 3083000000.0,
+    "FYQ2END": 3183000000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 14670000000.0,
+    "FYQ1END": 14890000000.0,
+    "FYQ2END": 16107000000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Millions",
+   "income": "shares in Millions, $ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R4.htm",
+   "cash": "R6.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": []
+ },
+ {
+  "ticker": "ULTA",
+  "cik": 1403568,
+  "name": "Ulta Beauty, Inc.",
+  "fiscal_year_end": "0130",
+  "target": {
+   "accession": "0001104659-26-102442",
+   "filed": "2026-08-27",
+   "period_end": "2026-08-01",
+   "primary_document": "ulta-20260801x10q.htm",
+   "xbrl": true,
+   "release_accession": "0001104659-26-102438",
+   "release_filed": "2026-08-27",
+   "prior_accession": "0001104659-26-069491",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-27",
+  "calendar": {
+   "fy_start": "2026-02-01",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-02",
+    "2026-08-01"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-03",
+    "2025-08-02",
+    "2025-11-01",
+    "2026-01-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "Revenues",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 42757471,
+   "as_of": "2026-08-24"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 2848367000.0,
+    "FY-1Q2": 2788469000.0,
+    "FY-1Q3": 2857623000.0,
+    "FY-1": 12392820000.0,
+    "FY-1Q3YTD": 8494459000.0,
+    "FYQ1": 3163857000.0,
+    "FYQ2": 3035676000.0,
+    "FY-2": 11295654000.0
+   },
+   "cogs": {
+    "FY-1Q1": 1734148000.0,
+    "FY-1Q2": 1696773000.0,
+    "FY-1Q3": 1701958000.0,
+    "FY-1": 7547596000.0,
+    "FY-1Q3YTD": 5132879000.0,
+    "FYQ1": 1896237000.0,
+    "FYQ2": 1848724000.0
+   },
+   "sga": {
+    "FY-1Q1": 710613000.0,
+    "FY-1Q2": 741737000.0,
+    "FY-1Q3": 840920000.0,
+    "FY-1": 3296411000.0,
+    "FY-1Q3YTD": 2293270000.0,
+    "FYQ1": 814699000.0,
+    "FYQ2": 802784000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 401777000.0,
+    "FY-1Q2": 344854000.0,
+    "FY-1Q3": 309419000.0,
+    "FY-1": 1532992000.0,
+    "FY-1Q3YTD": 1056050000.0,
+    "FYQ1": 448256000.0,
+    "FYQ2": 379641000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": -3547000.0,
+    "FY-1Q2": -1413000.0,
+    "FY-1Q3": 4123000.0,
+    "FY-1": 1787000.0,
+    "FY-1Q3YTD": -837000.0,
+    "FYQ1": -652000.0,
+    "FYQ2": 3684000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 405324000.0,
+    "FY-1Q2": 346267000.0,
+    "FY-1Q3": 305296000.0,
+    "FY-1": 1531205000.0,
+    "FY-1Q3YTD": 1056887000.0,
+    "FYQ1": 448908000.0,
+    "FYQ2": 375957000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 99644000.0,
+    "FY-1Q2": 84795000.0,
+    "FY-1Q3": 73436000.0,
+    "FY-1": 373869000.0,
+    "FY-1Q3YTD": 257875000.0,
+    "FYQ1": 106860000.0,
+    "FYQ2": 91878000.0
+   },
+   "net_income": {
+    "FY-1Q1": 305052000.0,
+    "FY-1Q2": 260875000.0,
+    "FY-1Q3": 230875000.0,
+    "FY-1": 1153479000.0,
+    "FY-1Q3YTD": 796802000.0,
+    "FYQ1": 340469000.0,
+    "FYQ2": 282006000.0
+   },
+   "da": {
+    "FYQ1YTD": 81399000.0,
+    "FYQ2YTD": 162724000.0,
+    "FY-1": 300772000.0,
+    "FY-1Q1": 72033000.0,
+    "FY-1Q2YTD": 143198000.0,
+    "FY-1Q3YTD": 218985000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 261894000.0,
+    "FYQ2YTD": 381590000.0,
+    "FY-1": 1502780000.0
+   },
+   "capex": {
+    "FYQ1YTD": 58276000.0,
+    "FYQ2YTD": 139534000.0,
+    "FY-1": 434829000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -48225000.0,
+    "FYQ2YTD": -133980000.0,
+    "FY-1": -931346000.0
+   },
+   "cff": {
+    "FYQ1YTD": -471421000.0,
+    "FYQ2YTD": -512913000.0,
+    "FY-1": -850666000.0
+   },
+   "cash": {
+    "FY-1END": 424243000.0,
+    "FYQ1END": 166300000.0,
+    "FYQ2END": 158451000.0
+   },
+   "receivables": {
+    "FY-1END": 296217000.0,
+    "FYQ1END": 248240000.0,
+    "FYQ2END": 249295000.0
+   },
+   "inventory": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_assets": {
+    "FY-1END": 3144146000.0,
+    "FYQ1END": 3021604000.0,
+    "FYQ2END": 3068518000.0
+   },
+   "ppe": {
+    "FY-1END": 1434062000.0,
+    "FYQ1END": 1420091000.0,
+    "FYQ2END": 1414258000.0
+   },
+   "goodwill": {
+    "FY-1END": 226421000.0,
+    "FYQ1END": 224628000.0,
+    "FYQ2END": 223146000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 6999294000.0,
+    "FYQ1END": 6895245000.0,
+    "FYQ2END": 6963950000.0
+   },
+   "payables": {
+    "FY-1END": 685887000.0,
+    "FYQ1END": 713775000.0,
+    "FYQ2END": 646200000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 62287000.0,
+    "FYQ1END": 144899000.0,
+    "FYQ2END": 339578000.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 2224342000.0,
+    "FYQ1END": 2304079000.0,
+    "FYQ2END": 2281278000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "equity": {
+    "FY-1END": 2803451000.0,
+    "FYQ1END": 2580955000.0,
+    "FYQ2END": 2643741000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 6999294000.0,
+    "FYQ1END": 6895245000.0,
+    "FYQ2END": 6963950000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "balance": "$ in Thousands",
+   "income": "shares in Thousands, $ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "balance": "R2.htm",
+   "income": "R4.htm",
+   "cash": "R6.htm"
+  },
+  "page_checked_lines": 24,
+  "page_problems": []
+ },
+ {
+  "ticker": "WSM",
+  "cik": 719955,
+  "name": "WILLIAMS SONOMA INC",
+  "fiscal_year_end": "0131",
+  "target": {
+   "accession": "0000719955-26-000208",
+   "filed": "2026-08-28",
+   "period_end": "2026-08-02",
+   "primary_document": "wsm-20260802.htm",
+   "xbrl": true,
+   "release_accession": "0000719955-26-000203",
+   "release_filed": "2026-08-26",
+   "prior_accession": "0000719955-26-000131",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-26",
+  "calendar": {
+   "fy_start": "2026-02-02",
+   "quarter": 2,
+   "quarter_ends": [
+    "2026-05-03",
+    "2026-08-02"
+   ],
+   "prev_quarter_ends": [
+    "2025-05-04",
+    "2025-08-03",
+    "2025-11-02",
+    "2026-02-01"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 117779173,
+   "as_of": "2026-08-23"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 1730113000.0,
+    "FY-1Q2": 1836760000.0,
+    "FY-1Q3": 1882814000.0,
+    "FY-1": 7806816000.0,
+    "FY-1Q3YTD": 5449687000.0,
+    "FYQ1": 1805456000.0,
+    "FYQ2": 1959757000.0,
+    "FY-2": 7711541000.0
+   },
+   "cogs": {
+    "FY-1Q1": 964304000.0,
+    "FY-1Q2": 972137000.0,
+    "FY-1Q3": 1015081000.0,
+    "FY-1": 4203765000.0,
+    "FY-1Q3YTD": 2951522000.0,
+    "FYQ1": 1012030000.0,
+    "FYQ2": 947809000.0
+   },
+   "sga": {
+    "FY-1Q1": 475096000.0,
+    "FY-1Q2": 536564000.0,
+    "FY-1Q3": 548590000.0,
+    "FY-1": 2187329000.0,
+    "FY-1Q3YTD": 1560250000.0,
+    "FYQ1": 501738000.0,
+    "FYQ2": 563153000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 290713000.0,
+    "FY-1Q2": 328059000.0,
+    "FY-1Q3": 319143000.0,
+    "FY-1": 1415722000.0,
+    "FY-1Q3YTD": 937915000.0,
+    "FYQ1": 291688000.0,
+    "FYQ2": 448795000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": -9533000.0,
+    "FY-1Q2": -9080000.0,
+    "FY-1Q3": -9785000.0,
+    "FY-1": -36838000.0,
+    "FY-1Q3YTD": -28398000.0,
+    "FYQ1": -6907000.0,
+    "FYQ2": -12412000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 300246000.0,
+    "FY-1Q2": 337139000.0,
+    "FY-1Q3": 328928000.0,
+    "FY-1": 1452560000.0,
+    "FY-1Q3YTD": 966313000.0,
+    "FYQ1": 298595000.0,
+    "FYQ2": 461207000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 68983000.0,
+    "FY-1Q2": 89577000.0,
+    "FY-1Q3": 87336000.0,
+    "FY-1": 364123000.0,
+    "FY-1Q3YTD": 245896000.0,
+    "FYQ1": 67233000.0,
+    "FYQ2": 123098000.0
+   },
+   "net_income": {
+    "FY-1Q1": 231263000.0,
+    "FY-1Q2": 247562000.0,
+    "FY-1Q3": 241592000.0,
+    "FY-1": 1088437000.0,
+    "FY-1Q3YTD": 720417000.0,
+    "FYQ1": 231362000.0,
+    "FYQ2": 338109000.0
+   },
+   "da": {
+    "FYQ1YTD": 56116000.0,
+    "FYQ2YTD": 112683000.0,
+    "FY-1": 231449000.0,
+    "FY-1Q1": 56404000.0,
+    "FY-1Q2YTD": 113165000.0,
+    "FY-1Q3YTD": 170676000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 156323000.0,
+    "FYQ2YTD": 695862000.0,
+    "FY-1": 1314889000.0
+   },
+   "capex": {
+    "FYQ1YTD": 57685000.0,
+    "FYQ2YTD": 116434000.0,
+    "FY-1": 259438000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -57675000.0,
+    "FYQ2YTD": -116372000.0,
+    "FY-1": -260576000.0
+   },
+   "cff": {
+    "FYQ1YTD": -466981000.0,
+    "FYQ2YTD": -570002000.0,
+    "FY-1": -1252372000.0
+   },
+   "cash": {
+    "FY-1END": 1019801000.0,
+    "FYQ1END": 651601000.0,
+    "FYQ2END": 1028936000.0
+   },
+   "receivables": {
+    "FY-1END": 126821000.0,
+    "FYQ1END": 139347000.0,
+    "FYQ2END": 146219000.0
+   },
+   "inventory": {
+    "FY-1END": 1462849000.0,
+    "FYQ1END": 1455030000.0,
+    "FYQ2END": 1447423000.0
+   },
+   "current_assets": {
+    "FY-1END": 2713187000.0,
+    "FYQ1END": 2345712000.0,
+    "FYQ2END": 2746546000.0
+   },
+   "ppe": {
+    "FY-1END": 1095158000.0,
+    "FYQ1END": 1102339000.0,
+    "FYQ2END": 1121677000.0
+   },
+   "goodwill": {
+    "FY-1END": 77398000.0,
+    "FYQ1END": 77386000.0,
+    "FYQ2END": 77369000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 5411912000.0,
+    "FYQ1END": 5059548000.0,
+    "FYQ2END": 5506306000.0
+   },
+   "payables": {
+    "FY-1END": 637985000.0,
+    "FYQ1END": 560674000.0,
+    "FYQ2END": 703822000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1954130000.0,
+    "FYQ1END": 1762772000.0,
+    "FYQ2END": 1898578000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "equity": {
+    "FY-1END": 2082559000.0,
+    "FYQ1END": 1869804000.0,
+    "FYQ2END": 2140914000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 5411912000.0,
+    "FYQ1END": 5059548000.0,
+    "FYQ2END": 5506306000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Thousands, $ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 24,
+  "page_problems": []
+ },
+ {
+  "ticker": "CTAS",
+  "cik": 723254,
+  "name": "CINTAS CORP",
+  "fiscal_year_end": "0531",
+  "target": {
+   "accession": "0000723254-26-000047",
+   "filed": "2026-10-07",
+   "period_end": "2026-08-31",
+   "primary_document": "ctas-20260831.htm",
+   "xbrl": true,
+   "release_accession": "0000723254-26-000044",
+   "release_filed": "2026-09-23",
+   "prior_accession": "0000723254-26-000028",
+   "prior_form": "10-K"
+  },
+  "public": "2026-09-23",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-31",
+    "2025-11-30",
+    "2026-02-28",
+    "2026-05-31"
+   ]
+  },
+  "notes": [
+   "intangibles folded into other (restated between filings)"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 397075093,
+   "as_of": "2026-09-30"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 2718122000.0,
+    "FY-1Q2": 2799992000.0,
+    "FY-1Q3": 2841444000.0,
+    "FY-1": 11264761000.0,
+    "FY-1Q3YTD": 8359558000.0,
+    "FYQ1": 3013981000.0,
+    "FY-2": 10340181000.0
+   },
+   "cogs": {
+    "FY-1Q1": 1351561000.0,
+    "FY-1Q2": 1387507000.0,
+    "FY-1Q3": 1392988000.0,
+    "FY-1": 5556968000.0,
+    "FY-1Q3YTD": 4132056000.0,
+    "FYQ1": 1460438000.0
+   },
+   "sga": {
+    "FY-1Q1": 748702000.0,
+    "FY-1Q2": 756771000.0,
+    "FY-1Q3": 788552000.0,
+    "FY-1": 3086145000.0,
+    "FY-1Q3YTD": 2294025000.0,
+    "FYQ1": 827244000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 617859000.0,
+    "FY-1Q2": 655714000.0,
+    "FY-1Q3": 659904000.0,
+    "FY-1": 2606512000.0,
+    "FY-1Q3YTD": 1933477000.0,
+    "FYQ1": 711887000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 24161000.0,
+    "FY-1Q2": 28076000.0,
+    "FY-1Q3": 28212000.0,
+    "FY-1": 106285000.0,
+    "FY-1Q3YTD": 80449000.0,
+    "FYQ1": 24706000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 595907000.0,
+    "FY-1Q2": 628504000.0,
+    "FY-1Q3": 632497000.0,
+    "FY-1": 2505334000.0,
+    "FY-1Q3YTD": 1856908000.0,
+    "FYQ1": 689830000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 104767000.0,
+    "FY-1Q2": 133161000.0,
+    "FY-1Q3": 130001000.0,
+    "FY-1": 505366000.0,
+    "FY-1Q3YTD": 367929000.0,
+    "FYQ1": 138119000.0
+   },
+   "net_income": {
+    "FY-1Q1": 491140000.0,
+    "FY-1Q2": 495343000.0,
+    "FY-1Q3": 502496000.0,
+    "FY-1": 1999968000.0,
+    "FY-1Q3YTD": 1488979000.0,
+    "FYQ1": 551711000.0
+   },
+   "da": {
+    "FYQ1YTD": 127326000.0,
+    "FY-1": 512846000.0,
+    "FY-1Q1": 125937000.0,
+    "FY-1Q2YTD": 253438000.0,
+    "FY-1Q3YTD": 382108000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 572331000.0,
+    "FY-1": 2276280000.0
+   },
+   "capex": {
+    "FYQ1YTD": 107532000.0,
+    "FY-1": 395105000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -117367000.0,
+    "FY-1": -568428000.0
+   },
+   "cff": {
+    "FYQ1YTD": -500168000.0,
+    "FY-1": -1682072000.0
+   },
+   "cash": {
+    "FY-1END": 289018000.0,
+    "FYQ1END": 243599000.0
+   },
+   "receivables": {
+    "FY-1END": 1555190000.0,
+    "FYQ1END": 1587573000.0
+   },
+   "inventory": {
+    "FY-1END": 446435000.0,
+    "FYQ1END": 433286000.0
+   },
+   "current_assets": {
+    "FY-1END": 3853042000.0,
+    "FYQ1END": 3931745000.0
+   },
+   "ppe": {
+    "FY-1END": 1740501000.0,
+    "FYQ1END": 1768378000.0
+   },
+   "goodwill": {
+    "FY-1END": 3544212000.0,
+    "FYQ1END": 3548696000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 10529140000.0,
+    "FYQ1END": 10652735000.0
+   },
+   "payables": {
+    "FY-1END": 461157000.0,
+    "FYQ1END": 506502000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 998987000.0,
+    "FYQ1END": 999291000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 2686959000.0,
+    "FYQ1END": 2704666000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1429086000.0,
+    "FYQ1END": 1429554000.0
+   },
+   "equity": {
+    "FY-1END": 5139887000.0,
+    "FYQ1END": 5204532000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 10529140000.0,
+    "FYQ1END": 10652735000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Thousands",
+   "balance": "$ in Thousands",
+   "cash": "$ in Thousands"
+  },
+  "page_scale": 1000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R5.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 26,
+  "page_problems": [
+   "da (DepreciationDepletionAndAmortization) 127,326,000 not on the cash page"
+  ]
+ },
+ {
+  "ticker": "GIS",
+  "cik": 40704,
+  "name": "GENERAL MILLS INC",
+  "fiscal_year_end": "0530",
+  "target": {
+   "accession": "0001628280-26-063201",
+   "filed": "2026-09-23",
+   "period_end": "2026-08-30",
+   "primary_document": "gis-20260830.htm",
+   "xbrl": true,
+   "release_accession": "0001628280-26-063141",
+   "release_filed": "2026-09-23",
+   "prior_accession": "0001628280-26-046466",
+   "prior_form": "10-K"
+  },
+  "public": "2026-09-23",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-24",
+    "2025-11-23",
+    "2026-02-22",
+    "2026-05-31"
+   ]
+  },
+  "notes": [
+   "interest_expense folded into other (no single concept covers every period)"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 534687144,
+   "as_of": "2026-09-16"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 4517500000.0,
+    "FY-1Q2": 4860800000.0,
+    "FY-1Q3": 4436700000.0,
+    "FY-1": 18424600000.0,
+    "FY-1Q3YTD": 13815000000.0,
+    "FYQ1": 4389500000.0,
+    "FY-2": 19486600000.0
+   },
+   "cogs": {
+    "FY-1Q1": 2984700000.0,
+    "FY-1Q2": 3168300000.0,
+    "FY-1Q3": 3069800000.0,
+    "FY-1": 12228900000.0,
+    "FY-1Q3YTD": 9222800000.0,
+    "FYQ1": 2902300000.0
+   },
+   "sga": {
+    "FY-1Q1": 845100000.0,
+    "FY-1Q2": 842400000.0,
+    "FY-1Q3": 812900000.0,
+    "FY-1": 3388500000.0,
+    "FY-1Q3YTD": 2500400000.0,
+    "FYQ1": 832200000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 1725800000.0,
+    "FY-1Q2": 728000000.0,
+    "FY-1Q3": 524600000.0,
+    "FY-1": 885800000.0,
+    "FY-1Q3YTD": 2978400000.0,
+    "FYQ1": 633600000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 1608100000.0,
+    "FY-1Q2": 617800000.0,
+    "FY-1Q3": 411500000.0,
+    "FY-1": 405500000.0,
+    "FY-1Q3YTD": 2637400000.0,
+    "FYQ1": 502000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 410900000.0,
+    "FY-1Q2": 143900000.0,
+    "FY-1Q3": 99900000.0,
+    "FY-1": 414300000.0,
+    "FY-1Q3YTD": 654700000.0,
+    "FYQ1": 122800000.0
+   },
+   "net_income": {
+    "FY-1Q1": 1204200000.0,
+    "FY-1Q2": 413000000.0,
+    "FY-1Q3": 303100000.0,
+    "FY-1": -87600000.0,
+    "FY-1Q3YTD": 1920300000.0,
+    "FYQ1": 397000000.0
+   },
+   "da": {
+    "FYQ1YTD": 139800000.0,
+    "FY-1": 555200000.0,
+    "FY-1Q1": 138700000.0,
+    "FY-1Q2YTD": 276700000.0,
+    "FY-1Q3YTD": 416100000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 297800000.0,
+    "FY-1": 2166200000.0
+   },
+   "capex": {
+    "FYQ1YTD": 90500000.0,
+    "FY-1": 539900000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -115900000.0,
+    "FY-1": 1258200000.0
+   },
+   "cff": {
+    "FYQ1YTD": -209600000.0,
+    "FY-1": -3315000000.0
+   },
+   "cash": {
+    "FY-1END": 453800000.0,
+    "FYQ1END": 433100000.0
+   },
+   "receivables": {
+    "FY-1END": 1646800000.0,
+    "FYQ1END": 1775200000.0
+   },
+   "inventory": {
+    "FY-1END": 1917900000.0,
+    "FYQ1END": 2163200000.0
+   },
+   "current_assets": {
+    "FY-1END": 4618300000.0,
+    "FYQ1END": 4884300000.0
+   },
+   "ppe": {
+    "FY-1END": 3443400000.0,
+    "FYQ1END": 3383400000.0
+   },
+   "goodwill": {
+    "FY-1END": 14122400000.0,
+    "FYQ1END": 14113100000.0
+   },
+   "intangibles": {
+    "FY-1END": 6716900000.0,
+    "FYQ1END": 6710200000.0
+   },
+   "total_assets": {
+    "FY-1END": 30016700000.0,
+    "FYQ1END": 30273400000.0
+   },
+   "payables": {
+    "FY-1END": 3729500000.0,
+    "FYQ1END": 3715200000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 68400000.0,
+    "FYQ1END": 201600000.0
+   },
+   "current_ltd": {
+    "FY-1END": 1053600000.0,
+    "FYQ1END": 1046800000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 6774100000.0,
+    "FYQ1END": 6940000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 12416000000.0,
+    "FYQ1END": 12367200000.0
+   },
+   "equity": {
+    "FY-1END": 7368400000.0,
+    "FYQ1END": 7450400000.0
+   },
+   "nci": {
+    "FY-1END": 12200000.0,
+    "FYQ1END": 13400000.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 30016700000.0,
+    "FYQ1END": 30273400000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 28,
+  "page_problems": []
+ },
+ {
+  "ticker": "DRI",
+  "cik": 940944,
+  "name": "DARDEN RESTAURANTS INC",
+  "fiscal_year_end": "0530",
+  "target": {
+   "accession": "0000940944-26-000042",
+   "filed": "2026-10-02",
+   "period_end": "2026-08-30",
+   "primary_document": "dri-20260830.htm",
+   "xbrl": true,
+   "release_accession": "0000940944-26-000032",
+   "release_filed": "2026-09-24",
+   "prior_accession": "0000940944-26-000025",
+   "prior_form": "10-K"
+  },
+  "public": "2026-09-24",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-24",
+    "2025-11-23",
+    "2026-02-22",
+    "2026-05-31"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "",
+   "sga": "",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "(untagged: 0) | LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 113143224,
+   "as_of": "2026-09-21"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 3044700000.0,
+    "FY-1Q2": 3102100000.0,
+    "FY-1Q3": 3345300000.0,
+    "FY-1": 13210900000.0,
+    "FY-1Q3YTD": 9492100000.0,
+    "FYQ1": 3200300000.0,
+    "FY-2": 12076700000.0
+   },
+   "cogs": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0
+   },
+   "sga": {
+    "FY-1Q1": 0.0,
+    "FY-1Q2": 0.0,
+    "FY-1Q3": 0.0,
+    "FY-1": 0.0,
+    "FY-1Q3YTD": 0.0,
+    "FYQ1": 0.0
+   },
+   "operating_income": {
+    "FY-1Q1": 339200000.0,
+    "FY-1Q2": 320400000.0,
+    "FY-1Q3": 406400000.0,
+    "FY-1": 1582800000.0,
+    "FY-1Q3YTD": 1066000000.0,
+    "FYQ1": 319300000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 45400000.0,
+    "FY-1Q2": 48000000.0,
+    "FY-1Q3": 49600000.0,
+    "FY-1": 194200000.0,
+    "FY-1Q3YTD": 143000000.0,
+    "FYQ1": 50300000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 293800000.0,
+    "FY-1Q2": 272400000.0,
+    "FY-1Q3": 356800000.0,
+    "FY-1": 1388600000.0,
+    "FY-1Q3YTD": 923000000.0,
+    "FYQ1": 269000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 35900000.0,
+    "FY-1Q2": 35000000.0,
+    "FY-1Q3": 46200000.0,
+    "FY-1": 174900000.0,
+    "FY-1Q3YTD": 117100000.0,
+    "FYQ1": 34700000.0
+   },
+   "net_income": {
+    "FY-1Q1": 257800000.0,
+    "FY-1Q2": 237200000.0,
+    "FY-1Q3": 306800000.0,
+    "FY-1": 1206700000.0,
+    "FY-1Q3YTD": 801800000.0,
+    "FYQ1": 233400000.0
+   },
+   "da": {
+    "FYQ1YTD": 144200000.0,
+    "FY-1": 561100000.0,
+    "FY-1Q1": 135100000.0,
+    "FY-1Q2YTD": 273000000.0,
+    "FY-1Q3YTD": 414800000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 279000000.0,
+    "FY-1": 1853100000.0
+   },
+   "capex": {
+    "FYQ1YTD": 175300000.0,
+    "FY-1": 734000000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -171300000.0,
+    "FY-1": -711400000.0
+   },
+   "cff": {
+    "FYQ1YTD": -104400000.0,
+    "FY-1": -1163800000.0
+   },
+   "cash": {
+    "FY-1END": 219500000.0,
+    "FYQ1END": 220500000.0
+   },
+   "receivables": {
+    "FY-1END": 129900000.0,
+    "FYQ1END": 118000000.0
+   },
+   "inventory": {
+    "FY-1END": 326300000.0,
+    "FYQ1END": 321000000.0
+   },
+   "current_assets": {
+    "FY-1END": 942900000.0,
+    "FYQ1END": 953100000.0
+   },
+   "ppe": {
+    "FY-1END": 5048600000.0,
+    "FYQ1END": 5122200000.0
+   },
+   "goodwill": {
+    "FY-1END": 1658200000.0,
+    "FYQ1END": 1658200000.0
+   },
+   "intangibles": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_assets": {
+    "FY-1END": 12862400000.0,
+    "FYQ1END": 13226600000.0
+   },
+   "payables": {
+    "FY-1END": 427700000.0,
+    "FYQ1END": 470000000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 693600000.0,
+    "FYQ1END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 3005400000.0,
+    "FYQ1END": 3199000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "equity": {
+    "FY-1END": 2207500000.0,
+    "FYQ1END": 2068400000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 12862400000.0,
+    "FYQ1END": 13226600000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R6.htm",
+   "cash": "R10.htm"
+  },
+  "page_checked_lines": 22,
+  "page_problems": []
+ },
+ {
+  "ticker": "LW",
+  "cik": 1679273,
+  "name": "Lamb Weston Holdings, Inc.",
+  "fiscal_year_end": "0531",
+  "target": {
+   "accession": "0001679273-26-000052",
+   "filed": "2026-10-06",
+   "period_end": "2026-08-30",
+   "primary_document": "lw-20260830.htm",
+   "xbrl": true,
+   "release_accession": "0001679273-26-000051",
+   "release_filed": "2026-10-06",
+   "prior_accession": "0001679273-26-000026",
+   "prior_form": "10-K"
+  },
+  "public": "2026-10-06",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-24",
+    "2025-11-23",
+    "2026-02-22",
+    "2026-05-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 137780447,
+   "as_of": "2026-09-29"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 1659300000.0,
+    "FY-1Q2": 1618100000.0,
+    "FY-1Q3": 1564800000.0,
+    "FY-1": 6612300000.0,
+    "FY-1Q3YTD": 4842200000.0,
+    "FYQ1": 1670300000.0,
+    "FY-2": 6451300000.0
+   },
+   "cogs": {
+    "FY-1Q1": 1316900000.0,
+    "FY-1Q2": 1293800000.0,
+    "FY-1Q3": 1233200000.0,
+    "FY-1": 5252600000.0,
+    "FY-1Q3YTD": 3843900000.0,
+    "FYQ1": 1403800000.0
+   },
+   "sga": {
+    "FY-1Q1": 153600000.0,
+    "FY-1Q2": 171000000.0,
+    "FY-1Q3": 156800000.0,
+    "FY-1": 664600000.0,
+    "FY-1Q3YTD": 481400000.0,
+    "FYQ1": 170200000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 156500000.0,
+    "FY-1Q2": 139200000.0,
+    "FY-1Q3": 126600000.0,
+    "FY-1": 591100000.0,
+    "FY-1Q3YTD": 422300000.0,
+    "FYQ1": 82200000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 43700000.0,
+    "FY-1Q2": 44300000.0,
+    "FY-1Q3": 45000000.0,
+    "FY-1": 180500000.0,
+    "FY-1Q3YTD": 133000000.0,
+    "FYQ1": 42400000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 112200000.0,
+    "FY-1Q2": 98100000.0,
+    "FY-1Q3": 84300000.0,
+    "FY-1": 418100000.0,
+    "FY-1Q3YTD": 294600000.0,
+    "FYQ1": 46000000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 47900000.0,
+    "FY-1Q2": 36000000.0,
+    "FY-1Q3": 30300000.0,
+    "FY-1": 128100000.0,
+    "FY-1Q3YTD": 114200000.0,
+    "FYQ1": 16900000.0
+   },
+   "net_income": {
+    "FY-1Q1": 64300000.0,
+    "FY-1Q2": 62100000.0,
+    "FY-1Q3": 54000000.0,
+    "FY-1": 290000000.0,
+    "FY-1Q3YTD": 180400000.0,
+    "FYQ1": 29100000.0
+   },
+   "da": {
+    "FYQ1YTD": 100900000.0,
+    "FY-1": 396700000.0,
+    "FY-1Q1": 95300000.0,
+    "FY-1Q2YTD": 191500000.0,
+    "FY-1Q3YTD": 291800000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 234800000.0,
+    "FY-1": 942900000.0
+   },
+   "capex": {
+    "FYQ1YTD": 88700000.0,
+    "FY-1": 402700000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -90900000.0,
+    "FY-1": -380200000.0
+   },
+   "cff": {
+    "FYQ1YTD": -46300000.0,
+    "FY-1": -569100000.0
+   },
+   "cash": {
+    "FY-1END": 68200000.0,
+    "FYQ1END": 166300000.0
+   },
+   "receivables": {
+    "FY-1END": 779100000.0,
+    "FYQ1END": 787700000.0
+   },
+   "inventory": {
+    "FY-1END": 968500000.0,
+    "FYQ1END": 965300000.0
+   },
+   "current_assets": {
+    "FY-1END": 2014400000.0,
+    "FYQ1END": 2049800000.0
+   },
+   "ppe": {
+    "FY-1END": 3690000000.0,
+    "FYQ1END": 3618900000.0
+   },
+   "goodwill": {
+    "FY-1END": 1130100000.0,
+    "FYQ1END": 1124900000.0
+   },
+   "intangibles": {
+    "FY-1END": 108300000.0,
+    "FYQ1END": 106600000.0
+   },
+   "total_assets": {
+    "FY-1END": 7380100000.0,
+    "FYQ1END": 7323300000.0
+   },
+   "payables": {
+    "FY-1END": 613100000.0,
+    "FYQ1END": 631100000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 249400000.0,
+    "FYQ1END": 279300000.0
+   },
+   "current_ltd": {
+    "FY-1END": 70600000.0,
+    "FYQ1END": 70800000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1415500000.0,
+    "FYQ1END": 1409000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 3595200000.0,
+    "FYQ1END": 3578500000.0
+   },
+   "equity": {
+    "FY-1END": 1824900000.0,
+    "FYQ1END": 1806700000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 7380100000.0,
+    "FYQ1END": 7323300000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R8.htm"
+  },
+  "page_checked_lines": 28,
+  "page_problems": [
+   "pretax_income (IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest) 46,000,000 not on the income page"
+  ]
+ },
+ {
+  "ticker": "CAG",
+  "cik": 23217,
+  "name": "CONAGRA BRANDS INC.",
+  "fiscal_year_end": "0530",
+  "target": {
+   "accession": "0001104659-26-112354",
+   "filed": "2026-09-30",
+   "period_end": "2026-08-30",
+   "primary_document": "tmb-20260830x10q.htm",
+   "xbrl": true,
+   "release_accession": "0000023217-26-000052",
+   "release_filed": "2026-09-30",
+   "prior_accession": "0001104659-26-083905",
+   "prior_form": "10-K"
+  },
+  "public": "2026-09-30",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-30"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-24",
+    "2025-11-23",
+    "2026-02-22",
+    "2026-05-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "ShortTermBorrowings",
+   "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "(untagged: 0) | LongTermDebtNoncurrent",
+   "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 477411517,
+   "as_of": "2026-08-30"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 2632600000.0,
+    "FY-1Q2": 2979100000.0,
+    "FY-1Q3": 2787800000.0,
+    "FY-1": 11281600000.0,
+    "FY-1Q3YTD": 8399500000.0,
+    "FYQ1": 2595900000.0,
+    "FY-2": 11612800000.0
+   },
+   "cogs": {
+    "FY-1Q1": 1992000000.0,
+    "FY-1Q2": 2283100000.0,
+    "FY-1Q3": 2130100000.0,
+    "FY-1": 8583200000.0,
+    "FY-1Q3YTD": 6405200000.0,
+    "FYQ1": 1977200000.0
+   },
+   "sga": {
+    "FY-1Q1": 335600000.0,
+    "FY-1Q2": 325100000.0,
+    "FY-1Q3": 377600000.0,
+    "FY-1": 1439400000.0,
+    "FY-1Q3YTD": 1038300000.0,
+    "FYQ1": 350300000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 347400000.0,
+    "FY-1Q2": -597600000.0,
+    "FY-1Q3": 280100000.0,
+    "FY-1": -1628400000.0,
+    "FY-1Q3YTD": 29900000.0,
+    "FYQ1": 268400000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 93800000.0,
+    "FY-1Q2": 96000000.0,
+    "FY-1Q3": 93100000.0,
+    "FY-1": 382600000.0,
+    "FY-1Q3YTD": 282900000.0,
+    "FYQ1": 91800000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 289100000.0,
+    "FY-1Q2": -655300000.0,
+    "FY-1Q3": 229600000.0,
+    "FY-1": -1824400000.0,
+    "FY-1Q3YTD": -136600000.0,
+    "FYQ1": 232900000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 124600000.0,
+    "FY-1Q2": 8300000.0,
+    "FY-1Q3": 29800000.0,
+    "FY-1": 91800000.0,
+    "FY-1Q3YTD": 162700000.0,
+    "FYQ1": 58600000.0
+   },
+   "net_income": {
+    "FY-1Q1": 164500000.0,
+    "FY-1Q2": -663600000.0,
+    "FY-1Q3": 199800000.0,
+    "FY-1": -1916200000.0,
+    "FY-1Q3YTD": -299300000.0,
+    "FYQ1": 174300000.0
+   },
+   "da": {
+    "FYQ1YTD": 97900000.0,
+    "FY-1": 396000000.0,
+    "FY-1Q1": 95300000.0,
+    "FY-1Q2YTD": 192300000.0,
+    "FY-1Q3YTD": 293700000.0
+   },
+   "cfo": {
+    "FYQ1YTD": -4200000.0,
+    "FY-1": 1402100000.0
+   },
+   "capex": {
+    "FYQ1YTD": 123700000.0,
+    "FY-1": 423400000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -109700000.0,
+    "FY-1": 262600000.0
+   },
+   "cff": {
+    "FYQ1YTD": 267300000.0,
+    "FY-1": -1516100000.0
+   },
+   "cash": {
+    "FY-1END": 218000000.0,
+    "FYQ1END": 371600000.0
+   },
+   "receivables": {
+    "FY-1END": 658200000.0,
+    "FYQ1END": 677000000.0
+   },
+   "inventory": {
+    "FY-1END": 1905400000.0,
+    "FYQ1END": 2154000000.0
+   },
+   "current_assets": {
+    "FY-1END": 2882100000.0,
+    "FYQ1END": 3359800000.0
+   },
+   "ppe": {
+    "FY-1END": 2862900000.0,
+    "FYQ1END": 2823800000.0
+   },
+   "goodwill": {
+    "FY-1END": 8119300000.0,
+    "FYQ1END": 8118900000.0
+   },
+   "intangibles": {
+    "FY-1END": 1830700000.0,
+    "FYQ1END": 1819800000.0
+   },
+   "total_assets": {
+    "FY-1END": 17274400000.0,
+    "FYQ1END": 17701500000.0
+   },
+   "payables": {
+    "FY-1END": 1513300000.0,
+    "FYQ1END": 1562600000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 34200000.0,
+    "FYQ1END": 32500000.0
+   },
+   "current_ltd": {
+    "FY-1END": 778200000.0,
+    "FYQ1END": 787500000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 3188000000.0,
+    "FYQ1END": 3065400000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 6456000000.0,
+    "FYQ1END": 0.0
+   },
+   "equity": {
+    "FY-1END": 6357600000.0,
+    "FYQ1END": 6404900000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 17274400000.0,
+    "FYQ1END": 17701500000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R6.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": []
+ },
+ {
+  "ticker": "RPM",
+  "cik": 110621,
+  "name": "RPM INTERNATIONAL INC/DE/",
+  "fiscal_year_end": "0531",
+  "target": {
+   "accession": "0001193125-26-415321",
+   "filed": "2026-10-06",
+   "period_end": "2026-08-31",
+   "primary_document": "rpm-20260831.htm",
+   "xbrl": true,
+   "release_accession": "0001193125-26-414916",
+   "release_filed": "2026-10-06",
+   "prior_accession": "0001193125-26-312142",
+   "prior_form": "10-K"
+  },
+  "public": "2026-10-06",
+  "calendar": {
+   "fy_start": "2026-06-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-31",
+    "2025-11-30",
+    "2026-02-28",
+    "2026-05-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "interest_expense": "InterestExpense",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquireProductiveAssets",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 127533690,
+   "as_of": "2026-09-30"
+  },
+  "problems": [
+   "operating_income: no concept found"
+  ],
+  "qualified": false,
+  "screen_qualified": false
+ },
+ {
+  "ticker": "MLKN",
+  "cik": 66382,
+  "name": "MILLERKNOLL, INC.",
+  "fiscal_year_end": "0529",
+  "target": {
+   "accession": "0000066382-26-000156",
+   "filed": "2026-09-28",
+   "period_end": "2026-08-29",
+   "primary_document": "mlkn-20260829.htm",
+   "xbrl": true,
+   "release_accession": "0000066382-26-000150",
+   "release_filed": "2026-09-22",
+   "prior_accession": "0000066382-26-000092",
+   "prior_form": "10-K"
+  },
+  "public": "2026-09-22",
+  "calendar": {
+   "fy_start": "2026-05-31",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-08-29"
+   ],
+   "prev_quarter_ends": [
+    "2025-08-30",
+    "2025-11-29",
+    "2026-02-28",
+    "2026-05-30"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "FiniteLivedIntangibleAssetsNet",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "DebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 68799795,
+   "as_of": "2026-09-25"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 955700000.0,
+    "FY-1Q2": 955200000.0,
+    "FY-1Q3": 926600000.0,
+    "FY-1": 3841700000.0,
+    "FY-1Q3YTD": 2837500000.0,
+    "FYQ1": 923400000.0,
+    "FY-2": 3669900000.0
+   },
+   "cogs": {
+    "FY-1Q1": 587600000.0,
+    "FY-1Q2": 583000000.0,
+    "FY-1Q3": 573700000.0,
+    "FY-1": 2352900000.0,
+    "FY-1Q3YTD": 1744300000.0,
+    "FYQ1": 538100000.0
+   },
+   "sga": {
+    "FY-1Q1": 293800000.0,
+    "FY-1Q2": 298300000.0,
+    "FY-1Q3": 285500000.0,
+    "FY-1": 1178300000.0,
+    "FY-1Q3YTD": 877600000.0,
+    "FYQ1": 302500000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 53500000.0,
+    "FY-1Q2": 48500000.0,
+    "FY-1Q3": 44900000.0,
+    "FY-1": 198300000.0,
+    "FY-1Q3YTD": 146900000.0,
+    "FYQ1": 51800000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 18400000.0,
+    "FY-1Q2": 17900000.0,
+    "FY-1Q3": 17200000.0,
+    "FY-1": 69900000.0,
+    "FY-1Q3YTD": 53500000.0,
+    "FYQ1": 16200000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 28700000.0,
+    "FY-1Q2": 32500000.0,
+    "FY-1Q3": 29200000.0,
+    "FY-1": 128200000.0,
+    "FY-1Q3YTD": 90400000.0,
+    "FYQ1": 35200000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 7600000.0,
+    "FY-1Q2": 7300000.0,
+    "FY-1Q3": 5600000.0,
+    "FY-1": 32400000.0,
+    "FY-1Q3YTD": 20500000.0,
+    "FYQ1": 7600000.0
+   },
+   "net_income": {
+    "FY-1Q1": 20200000.0,
+    "FY-1Q2": 24200000.0,
+    "FY-1Q3": 23500000.0,
+    "FY-1": 91500000.0,
+    "FY-1Q3YTD": 67900000.0,
+    "FYQ1": 26600000.0
+   },
+   "da": {
+    "FYQ1YTD": 34500000.0,
+    "FY-1": 148300000.0,
+    "FY-1Q1": 35400000.0,
+    "FY-1Q2YTD": 72000000.0,
+    "FY-1Q3YTD": 110100000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 49100000.0,
+    "FY-1": 199900000.0
+   },
+   "capex": {
+    "FYQ1YTD": 32500000.0,
+    "FY-1": 122300000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -32100000.0,
+    "FY-1": -115600000.0
+   },
+   "cff": {
+    "FYQ1YTD": -4800000.0,
+    "FY-1": -117000000.0
+   },
+   "cash": {
+    "FY-1END": 167700000.0,
+    "FYQ1END": 178600000.0
+   },
+   "receivables": {
+    "FY-1END": 357400000.0,
+    "FYQ1END": 314300000.0
+   },
+   "inventory": {
+    "FY-1END": 488400000.0,
+    "FYQ1END": 514700000.0
+   },
+   "current_assets": {
+    "FY-1END": 1137200000.0,
+    "FYQ1END": 1140000000.0
+   },
+   "ppe": {
+    "FY-1END": 511300000.0,
+    "FYQ1END": 515400000.0
+   },
+   "goodwill": {
+    "FY-1END": 1161300000.0,
+    "FYQ1END": 1159400000.0
+   },
+   "intangibles": {
+    "FY-1END": 214000000.0,
+    "FYQ1END": 205200000.0
+   },
+   "total_assets": {
+    "FY-1END": 4000500000.0,
+    "FYQ1END": 4002900000.0
+   },
+   "payables": {
+    "FY-1END": 279100000.0,
+    "FYQ1END": 253500000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 25100000.0,
+    "FYQ1END": 28400000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 721100000.0,
+    "FYQ1END": 692300000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 1260600000.0,
+    "FYQ1END": 1270400000.0
+   },
+   "equity": {
+    "FY-1END": 1342600000.0,
+    "FYQ1END": 1356200000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 4000500000.0,
+    "FYQ1END": 4002900000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R3.htm",
+   "cash": "R5.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": []
+ },
+ {
+  "ticker": "FUL",
+  "cik": 39368,
+  "name": "FULLER H B CO",
+  "fiscal_year_end": "1128",
+  "target": {
+   "accession": "0001437749-26-031145",
+   "filed": "2026-09-24",
+   "period_end": "2026-08-29",
+   "primary_document": "ful20260831c_10q.htm",
+   "xbrl": true,
+   "release_accession": "0001437749-26-031113",
+   "release_filed": "2026-09-24",
+   "prior_accession": "0001437749-26-021677",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-09-24",
+  "calendar": {
+   "fy_start": "2025-11-30",
+   "quarter": 3,
+   "quarter_ends": [
+    "2026-02-28",
+    "2026-05-30",
+    "2026-08-29"
+   ],
+   "prev_quarter_ends": [
+    "2025-03-01",
+    "2025-05-31",
+    "2025-08-30",
+    "2025-11-29"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfRevenue",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "interest_expense": "InterestExpenseDebt",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "(untagged: 0) | LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 53829119,
+   "as_of": "2026-09-18"
+  },
+  "problems": [
+   "operating_income: no concept covers every period"
+  ],
+  "qualified": false,
+  "screen_qualified": false
+ },
+ {
+  "ticker": "HRL",
+  "cik": 48465,
+  "name": "HORMEL FOODS CORP /DE/",
+  "fiscal_year_end": "1025",
+  "target": {
+   "accession": "0000048465-26-000055",
+   "filed": "2026-08-27",
+   "period_end": "2026-07-26",
+   "primary_document": "hrl-20260726.htm",
+   "xbrl": true,
+   "release_accession": "0000048465-26-000053",
+   "release_filed": "2026-08-27",
+   "prior_accession": "0000048465-26-000026",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-08-27",
+  "calendar": {
+   "fy_start": "2025-10-27",
+   "quarter": 3,
+   "quarter_ends": [
+    "2026-01-25",
+    "2026-04-26",
+    "2026-07-26"
+   ],
+   "prev_quarter_ends": [
+    "2025-01-26",
+    "2025-04-27",
+    "2025-07-27",
+    "2025-10-26"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashAndCashEquivalentsAtCarryingValue",
+   "receivables": "(untagged: 0) | AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "MinorityInterest",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "scale": 1000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 2988813000.0,
+    "FY-1Q2": 2898810000.0,
+    "FY-1Q3": 3032876000.0,
+    "FY-1": 12106160000.0,
+    "FY-1Q3YTD": 8920499000.0,
+    "FYQ1": 3027317000.0,
+    "FYQ2": 2972600000.0,
+    "FYQ3": 2961333000.0,
+    "FY-2": 11920797000.0
+   },
+   "cogs": {
+    "FY-1Q1": 2513581000.0,
+    "FY-1Q2": 2414377000.0,
+    "FY-1Q3": 2545567000.0,
+    "FY-1": 10214344000.0,
+    "FY-1Q3YTD": 7473524000.0,
+    "FYQ1": 2557742000.0,
+    "FYQ2": 2454093000.0,
+    "FYQ3": 2489818000.0
+   },
+   "sga": {
+    "FY-1Q1": 263013000.0,
+    "FY-1Q2": 251432000.0,
+    "FY-1Q3": 258713000.0,
+    "FY-1": 996624000.0,
+    "FY-1Q3YTD": 773158000.0,
+    "FYQ1": 241698000.0,
+    "FYQ2": 318624000.0,
+    "FYQ3": 323501000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 228330000.0,
+    "FY-1Q2": 248352000.0,
+    "FY-1Q3": 239748000.0,
+    "FY-1": 718603000.0,
+    "FY-1Q3YTD": 716430000.0,
+    "FYQ1": 243697000.0,
+    "FYQ2": 217112000.0,
+    "FYQ3": 110904000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 19462000.0,
+    "FY-1Q2": 19516000.0,
+    "FY-1Q3": 19461000.0,
+    "FY-1": 78038000.0,
+    "FY-1Q3YTD": 58438000.0,
+    "FYQ1": 19728000.0,
+    "FYQ2": 19822000.0,
+    "FYQ3": 19635000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 218073000.0,
+    "FY-1Q2": 230489000.0,
+    "FY-1Q3": 236514000.0,
+    "FY-1": 663449000.0,
+    "FY-1Q3YTD": 685076000.0,
+    "FYQ1": 234312000.0,
+    "FYQ2": 206063000.0,
+    "FYQ3": 103157000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 47543000.0,
+    "FY-1Q2": 50747000.0,
+    "FY-1Q3": 52818000.0,
+    "FY-1": 185684000.0,
+    "FY-1Q3YTD": 151107000.0,
+    "FYQ1": 52542000.0,
+    "FYQ2": 48685000.0,
+    "FYQ3": 43638000.0
+   },
+   "net_income": {
+    "FY-1Q1": 170575000.0,
+    "FY-1Q2": 180017000.0,
+    "FY-1Q3": 183742000.0,
+    "FY-1": 478197000.0,
+    "FY-1Q3YTD": 534334000.0,
+    "FYQ1": 181801000.0,
+    "FYQ2": 157474000.0,
+    "FYQ3": 59573000.0
+   },
+   "da": {
+    "FYQ1YTD": 67095000.0,
+    "FYQ2YTD": 135921000.0,
+    "FYQ3YTD": 202348000.0,
+    "FY-1": 263901000.0,
+    "FY-1Q1": 65872000.0,
+    "FY-1Q2YTD": 129835000.0,
+    "FY-1Q3YTD": 194527000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 349214000.0,
+    "FYQ2YTD": 528153000.0,
+    "FYQ3YTD": 768752000.0,
+    "FY-1": 845251000.0
+   },
+   "capex": {
+    "FYQ1YTD": 68993000.0,
+    "FYQ2YTD": 151167000.0,
+    "FYQ3YTD": 219331000.0,
+    "FY-1": 310902000.0
+   },
+   "cfi": {
+    "FYQ1YTD": 7948000.0,
+    "FYQ2YTD": -50742000.0,
+    "FYQ3YTD": -112267000.0,
+    "FY-1": -298592000.0
+   },
+   "cff": {
+    "FYQ1YTD": -162433000.0,
+    "FYQ2YTD": -325416000.0,
+    "FYQ3YTD": -488435000.0,
+    "FY-1": -613996000.0
+   },
+   "cash": {
+    "FY-1END": 670679000.0,
+    "FYQ1END": 867906000.0,
+    "FYQ2END": 826750000.0,
+    "FYQ3END": 839639000.0
+   },
+   "receivables": {
+    "FY-1END": 784812000.0,
+    "FYQ1END": 696252000.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "inventory": {
+    "FY-1END": 1747279000.0,
+    "FYQ1END": 1647271000.0,
+    "FYQ2END": 1750914000.0,
+    "FYQ3END": 1801567000.0
+   },
+   "current_assets": {
+    "FY-1END": 3405656000.0,
+    "FYQ1END": 3388240000.0,
+    "FYQ2END": 3493610000.0,
+    "FYQ3END": 3526238000.0
+   },
+   "ppe": {
+    "FY-1END": 2238770000.0,
+    "FYQ1END": 2241482000.0,
+    "FYQ2END": 2166093000.0,
+    "FYQ3END": 2163025000.0
+   },
+   "goodwill": {
+    "FY-1END": 4924087000.0,
+    "FYQ1END": 4888532000.0,
+    "FYQ2END": 4871935000.0,
+    "FYQ3END": 4867763000.0
+   },
+   "intangibles": {
+    "FY-1END": 1647297000.0,
+    "FYQ1END": 1588104000.0,
+    "FYQ2END": 1585631000.0,
+    "FYQ3END": 1572850000.0
+   },
+   "total_assets": {
+    "FY-1END": 13393119000.0,
+    "FYQ1END": 13316433000.0,
+    "FYQ2END": 13344286000.0,
+    "FYQ3END": 13292014000.0
+   },
+   "payables": {
+    "FY-1END": 731578000.0,
+    "FYQ1END": 670938000.0,
+    "FYQ2END": 669380000.0,
+    "FYQ3END": 677999000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 6646000.0,
+    "FYQ1END": 6485000.0,
+    "FYQ2END": 505335000.0,
+    "FYQ3END": 505634000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 1380796000.0,
+    "FYQ1END": 1272917000.0,
+    "FYQ2END": 1802791000.0,
+    "FYQ3END": 1873991000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 2850778000.0,
+    "FYQ1END": 2851007000.0,
+    "FYQ2END": 2351004000.0,
+    "FYQ3END": 2349489000.0
+   },
+   "equity": {
+    "FY-1END": 7901171000.0,
+    "FYQ1END": 7938500000.0,
+    "FYQ2END": 7949320000.0,
+    "FYQ3END": 7843444000.0
+   },
+   "nci": {
+    "FY-1END": 14644000.0,
+    "FYQ1END": 14707000.0,
+    "FYQ2END": 14556000.0,
+    "FYQ3END": 16210000.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 13393119000.0,
+    "FYQ1END": 13316433000.0,
+    "FYQ2END": 13344286000.0,
+    "FYQ3END": 13292014000.0
+   }
+  },
+  "problems": [
+   "cover reports 0 share counts (need exactly one class)",
+   "prior filing's cover share count missing or not one class"
+  ],
+  "qualified": false,
+  "screen_qualified": false
+ },
+ {
+  "ticker": "TTC",
+  "cik": 737758,
+  "name": "TORO CO",
+  "fiscal_year_end": "1031",
+  "target": {
+   "accession": "0000737758-26-000043",
+   "filed": "2026-09-03",
+   "period_end": "2026-07-31",
+   "primary_document": "ttc-20260731.htm",
+   "xbrl": true,
+   "release_accession": "0000737758-26-000041",
+   "release_filed": "2026-09-03",
+   "prior_accession": "0000737758-26-000018",
+   "prior_form": "10-Q"
+  },
+  "public": "2026-09-03",
+  "calendar": {
+   "fy_start": "2025-11-01",
+   "quarter": 3,
+   "quarter_ends": [
+    "2026-01-30",
+    "2026-05-01",
+    "2026-07-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-01-31",
+    "2025-05-02",
+    "2025-08-01",
+    "2025-10-31"
+   ]
+  },
+  "notes": [],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "InterestExpenseNonoperating",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "DepreciationDepletionAndAmortization",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "receivables": "ReceivablesNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "DebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 94663378,
+   "as_of": "2026-08-27"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 995000000.0,
+    "FY-1Q2": 1317900000.0,
+    "FY-1Q3": 1131300000.0,
+    "FY-1": 4510400000.0,
+    "FY-1Q3YTD": 3444200000.0,
+    "FYQ1": 1036300000.0,
+    "FYQ2": 1424700000.0,
+    "FYQ3": 1225800000.0,
+    "FY-2": 4583800000.0
+   },
+   "cogs": {
+    "FY-1Q1": 659400000.0,
+    "FY-1Q2": 881200000.0,
+    "FY-1Q3": 749500000.0,
+    "FY-1": 3005600000.0,
+    "FY-1Q3YTD": 2290100000.0,
+    "FYQ1": 699800000.0,
+    "FYQ2": 942000000.0,
+    "FYQ3": 807700000.0
+   },
+   "sga": {
+    "FY-1Q1": 257800000.0,
+    "FY-1Q2": 261900000.0,
+    "FY-1Q3": 235900000.0,
+    "FY-1": 1013800000.0,
+    "FY-1Q3YTD": 755600000.0,
+    "FYQ1": 249400000.0,
+    "FYQ2": 287700000.0,
+    "FYQ3": 259800000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 77800000.0,
+    "FY-1Q2": 174800000.0,
+    "FY-1Q3": 64800000.0,
+    "FY-1": 409900000.0,
+    "FY-1Q3YTD": 317400000.0,
+    "FYQ1": 87100000.0,
+    "FYQ2": 195000000.0,
+    "FYQ3": 115200000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 15000000.0,
+    "FY-1Q2": 15800000.0,
+    "FY-1Q3": 15100000.0,
+    "FY-1": 59100000.0,
+    "FY-1Q3YTD": 45900000.0,
+    "FYQ1": 14200000.0,
+    "FYQ2": 14800000.0,
+    "FYQ3": 13800000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": 66100000.0,
+    "FY-1Q2": 168700000.0,
+    "FY-1Q3": 57800000.0,
+    "FY-1": 377600000.0,
+    "FY-1Q3YTD": 292600000.0,
+    "FYQ1": 86900000.0,
+    "FYQ2": 183400000.0,
+    "FYQ3": 106900000.0
+   },
+   "income_tax": {
+    "FY-1Q1": 13300000.0,
+    "FY-1Q2": 31900000.0,
+    "FY-1Q3": 4300000.0,
+    "FY-1": 61500000.0,
+    "FY-1Q3YTD": 49500000.0,
+    "FYQ1": 19000000.0,
+    "FYQ2": 38000000.0,
+    "FYQ3": 29900000.0
+   },
+   "net_income": {
+    "FY-1Q1": 52800000.0,
+    "FY-1Q2": 136800000.0,
+    "FY-1Q3": 53500000.0,
+    "FY-1": 316100000.0,
+    "FY-1Q3YTD": 243100000.0,
+    "FYQ1": 67900000.0,
+    "FYQ2": 145400000.0,
+    "FYQ3": 77000000.0
+   },
+   "da": {
+    "FYQ1YTD": 34200000.0,
+    "FYQ2YTD": 72000000.0,
+    "FYQ3YTD": 101300000.0,
+    "FY-1": 142900000.0,
+    "FY-1Q1": 32100000.0,
+    "FY-1Q2YTD": 65200000.0,
+    "FY-1Q3YTD": 98100000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 26100000.0,
+    "FYQ2YTD": 293500000.0,
+    "FYQ3YTD": 476200000.0,
+    "FY-1": 662000000.0
+   },
+   "capex": {
+    "FYQ1YTD": 11500000.0,
+    "FYQ2YTD": 28000000.0,
+    "FYQ3YTD": 51100000.0,
+    "FY-1": 83700000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -210400000.0,
+    "FYQ2YTD": -226700000.0,
+    "FYQ3YTD": -248200000.0,
+    "FY-1": -77400000.0
+   },
+   "cff": {
+    "FYQ1YTD": 25100000.0,
+    "FYQ2YTD": -232400000.0,
+    "FYQ3YTD": -396500000.0,
+    "FY-1": -446100000.0
+   },
+   "cash": {
+    "FY-1END": 341000000.0,
+    "FYQ1END": 189000000.0,
+    "FYQ2END": 180400000.0,
+    "FYQ3END": 175300000.0
+   },
+   "receivables": {
+    "FY-1END": 378200000.0,
+    "FYQ1END": 486100000.0,
+    "FYQ2END": 575100000.0,
+    "FYQ3END": 496100000.0
+   },
+   "inventory": {
+    "FY-1END": 920800000.0,
+    "FYQ1END": 983700000.0,
+    "FYQ2END": 923400000.0,
+    "FYQ3END": 882700000.0
+   },
+   "current_assets": {
+    "FY-1END": 1705100000.0,
+    "FYQ1END": 1736500000.0,
+    "FYQ2END": 1760200000.0,
+    "FYQ3END": 1657500000.0
+   },
+   "ppe": {
+    "FY-1END": 615800000.0,
+    "FYQ1END": 636500000.0,
+    "FYQ2END": 623000000.0,
+    "FYQ3END": 588800000.0
+   },
+   "goodwill": {
+    "FY-1END": 450900000.0,
+    "FYQ1END": 592100000.0,
+    "FYQ2END": 591000000.0,
+    "FYQ3END": 576500000.0
+   },
+   "intangibles": {
+    "FY-1END": 390300000.0,
+    "FYQ1END": 445700000.0,
+    "FYQ2END": 433800000.0,
+    "FYQ3END": 439500000.0
+   },
+   "total_assets": {
+    "FY-1END": 3438800000.0,
+    "FYQ1END": 3702500000.0,
+    "FYQ2END": 3706600000.0,
+    "FYQ3END": 3536000000.0
+   },
+   "payables": {
+    "FY-1END": 367600000.0,
+    "FYQ1END": 437000000.0,
+    "FYQ2END": 551800000.0,
+    "FYQ3END": 463600000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 0.0,
+    "FYQ1END": 10000000.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "current_liabilities": {
+    "FY-1END": 912400000.0,
+    "FYQ1END": 1028500000.0,
+    "FYQ2END": 1131200000.0,
+    "FYQ3END": 1052000000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 921500000.0,
+    "FYQ1END": 1061700000.0,
+    "FYQ2END": 1016800000.0,
+    "FYQ3END": 962000000.0
+   },
+   "equity": {
+    "FY-1END": 1453300000.0,
+    "FYQ1END": 1419200000.0,
+    "FYQ2END": 1368100000.0,
+    "FYQ3END": 1336300000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 3438800000.0,
+    "FYQ1END": 3702500000.0,
+    "FYQ2END": 3706600000.0,
+    "FYQ3END": 3536000000.0
+   }
+  },
+  "problems": [],
+  "qualified": false,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "shares in Millions, $ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R5.htm",
+   "cash": "R7.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": [
+   "da (DepreciationDepletionAndAmortization) 101,300,000 not on the cash page"
+  ]
+ },
+ {
+  "ticker": "SJM",
+  "cik": 91419,
+  "name": "J M SMUCKER Co",
+  "fiscal_year_end": "0430",
+  "target": {
+   "accession": "0000091419-26-000080",
+   "filed": "2026-08-26",
+   "period_end": "2026-07-31",
+   "primary_document": "sjm-20260731.htm",
+   "xbrl": true,
+   "release_accession": "0000091419-26-000079",
+   "release_filed": "2026-08-26",
+   "prior_accession": "0000091419-26-000050",
+   "prior_form": "10-K"
+  },
+  "public": "2026-08-26",
+  "calendar": {
+   "fy_start": "2026-05-01",
+   "quarter": 1,
+   "quarter_ends": [
+    "2026-07-31"
+   ],
+   "prev_quarter_ends": [
+    "2025-07-31",
+    "2025-10-31",
+    "2026-01-31",
+    "2026-04-30"
+   ]
+  },
+  "notes": [
+   "short_term_debt dropped: DebtCurrent already includes it"
+  ],
+  "concepts": {
+   "revenue": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "cogs": "CostOfGoodsAndServicesSold",
+   "sga": "SellingGeneralAndAdministrativeExpense",
+   "operating_income": "OperatingIncomeLoss",
+   "interest_expense": "-InterestIncomeExpenseNonoperatingNet",
+   "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "income_tax": "IncomeTaxExpenseBenefit",
+   "net_income": "NetIncomeLoss",
+   "da": "Depreciation+AmortizationOfIntangibleAssets",
+   "cfo": "NetCashProvidedByUsedInOperatingActivities",
+   "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "cfi": "NetCashProvidedByUsedInInvestingActivities",
+   "cff": "NetCashProvidedByUsedInFinancingActivities",
+   "cash": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "receivables": "AccountsReceivableNetCurrent",
+   "inventory": "InventoryNet",
+   "current_assets": "AssetsCurrent",
+   "ppe": "PropertyPlantAndEquipmentNet",
+   "goodwill": "Goodwill",
+   "intangibles": "IntangibleAssetsNetExcludingGoodwill",
+   "total_assets": "Assets",
+   "payables": "AccountsPayableCurrent",
+   "short_term_debt": "",
+   "current_ltd": "LongTermDebtCurrent",
+   "current_liabilities": "LiabilitiesCurrent",
+   "long_term_debt": "LongTermDebtNoncurrent",
+   "equity": "StockholdersEquity",
+   "nci": "",
+   "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
+  },
+  "shares": {
+   "value": 106823183,
+   "as_of": "2026-08-19"
+  },
+  "scale": 100000,
+  "values": {
+   "revenue": {
+    "FY-1Q1": 2113300000.0,
+    "FY-1Q2": 2330100000.0,
+    "FY-1Q3": 2339400000.0,
+    "FY-1": 9050900000.0,
+    "FY-1Q3YTD": 6782800000.0,
+    "FYQ1": 2219300000.0,
+    "FY-2": 8726100000.0
+   },
+   "cogs": {
+    "FY-1Q1": 1638600000.0,
+    "FY-1Q2": 1460200000.0,
+    "FY-1Q3": 1511600000.0,
+    "FY-1": 6016400000.0,
+    "FY-1Q3YTD": 4610400000.0,
+    "FYQ1": 1239700000.0
+   },
+   "sga": {
+    "FY-1Q1": 377400000.0,
+    "FY-1Q2": 398200000.0,
+    "FY-1Q3": 363200000.0,
+    "FY-1": 1496600000.0,
+    "FY-1Q3YTD": 1138800000.0,
+    "FYQ1": 410500000.0
+   },
+   "operating_income": {
+    "FY-1Q1": 45600000.0,
+    "FY-1Q2": 418500000.0,
+    "FY-1Q3": -548400000.0,
+    "FY-1": 360200000.0,
+    "FY-1Q3YTD": -84300000.0,
+    "FYQ1": 511600000.0
+   },
+   "interest_expense": {
+    "FY-1Q1": 100200000.0,
+    "FY-1Q2": 98600000.0,
+    "FY-1Q3": 94500000.0,
+    "FY-1": 381200000.0,
+    "FY-1Q3YTD": 293300000.0,
+    "FYQ1": 82300000.0
+   },
+   "pretax_income": {
+    "FY-1Q1": -56500000.0,
+    "FY-1Q2": 318400000.0,
+    "FY-1Q3": -651900000.0,
+    "FY-1": -62400000.0,
+    "FY-1Q3YTD": -390000000.0,
+    "FYQ1": 427900000.0
+   },
+   "income_tax": {
+    "FY-1Q1": -12600000.0,
+    "FY-1Q2": 77100000.0,
+    "FY-1Q3": 72300000.0,
+    "FY-1": 76300000.0,
+    "FY-1Q3YTD": 136800000.0,
+    "FYQ1": 103600000.0
+   },
+   "net_income": {
+    "FY-1Q1": -43900000.0,
+    "FY-1Q2": 241300000.0,
+    "FY-1Q3": -724200000.0,
+    "FY-1": -138700000.0,
+    "FY-1Q3YTD": -526800000.0,
+    "FYQ1": 324300000.0
+   },
+   "da": {
+    "FYQ1YTD": 127500000.0,
+    "FY-1": 557000000.0,
+    "FY-1Q1": 135200000.0,
+    "FY-1Q2YTD": 278500000.0,
+    "FY-1Q3YTD": 422600000.0
+   },
+   "cfo": {
+    "FYQ1YTD": 425700000.0,
+    "FY-1": 1473600000.0
+   },
+   "capex": {
+    "FYQ1YTD": 88400000.0,
+    "FY-1": 317400000.0
+   },
+   "cfi": {
+    "FYQ1YTD": -85800000.0,
+    "FY-1": -258800000.0
+   },
+   "cff": {
+    "FYQ1YTD": -354000000.0,
+    "FY-1": -1226500000.0
+   },
+   "cash": {
+    "FY-1END": 58600000.0,
+    "FYQ1END": 43200000.0
+   },
+   "receivables": {
+    "FY-1END": 656300000.0,
+    "FYQ1END": 615700000.0
+   },
+   "inventory": {
+    "FY-1END": 1126500000.0,
+    "FYQ1END": 1186500000.0
+   },
+   "current_assets": {
+    "FY-1END": 1973100000.0,
+    "FYQ1END": 1991200000.0
+   },
+   "ppe": {
+    "FY-1END": 3032100000.0,
+    "FYQ1END": 3016900000.0
+   },
+   "goodwill": {
+    "FY-1END": 5205000000.0,
+    "FYQ1END": 5200000000.0
+   },
+   "intangibles": {
+    "FY-1END": 5683700000.0,
+    "FYQ1END": 5625000000.0
+   },
+   "total_assets": {
+    "FY-1END": 16219400000.0,
+    "FYQ1END": 16203200000.0
+   },
+   "payables": {
+    "FY-1END": 1175100000.0,
+    "FYQ1END": 1205100000.0
+   },
+   "short_term_debt": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "current_ltd": {
+    "FY-1END": 150000000.0,
+    "FYQ1END": 150000000.0
+   },
+   "current_liabilities": {
+    "FY-1END": 2538200000.0,
+    "FYQ1END": 2288800000.0
+   },
+   "long_term_debt": {
+    "FY-1END": 6392800000.0,
+    "FYQ1END": 6394300000.0
+   },
+   "equity": {
+    "FY-1END": 5543800000.0,
+    "FYQ1END": 5750800000.0
+   },
+   "nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
+   "total_liabilities_equity": {
+    "FY-1END": 16219400000.0,
+    "FYQ1END": 16203200000.0
+   }
+  },
+  "problems": [],
+  "qualified": true,
+  "screen_qualified": true,
+  "page_units": {
+   "cover": "",
+   "income": "$ in Millions",
+   "balance": "$ in Millions",
+   "cash": "$ in Millions"
+  },
+  "page_scale": 1000000,
+  "pages": {
+   "cover": "R1.htm",
+   "income": "R2.htm",
+   "balance": "R4.htm",
+   "cash": "R5.htm"
+  },
+  "page_checked_lines": 27,
+  "page_problems": []
+ }
+]

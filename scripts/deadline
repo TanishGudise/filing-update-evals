@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+# Run a command with a wall-clock deadline (macOS has no `timeout`). The command runs in its
+# own process group; when the deadline passes, the whole group gets SIGKILL and this exits 124.
+# Usage: scripts/deadline <seconds> <command> [args...]
+use strict;
+use warnings;
+use POSIX ();
+
+my $seconds = shift @ARGV;
+die "usage: deadline <seconds> <command> [args...]\n" unless defined $seconds && $seconds =~ /^\d+$/ && @ARGV;
+
+my $pid = fork();
+die "deadline: fork failed: $!\n" unless defined $pid;
+if ($pid == 0) {
+    POSIX::setpgid(0, 0);
+    exec { $ARGV[0] } @ARGV or die "deadline: cannot run $ARGV[0]: $!\n";
+}
+POSIX::setpgid($pid, $pid);
+my $expired = 0;
+$SIG{ALRM} = sub { $expired = 1; print STDERR "deadline: $seconds s passed, killing process group $pid\n"; kill 'KILL', -$pid; };
+$SIG{INT} = $SIG{TERM} = sub { kill 'TERM', -$pid; };
+alarm $seconds;
+my $status;
+while (1) {
+    my $done = waitpid($pid, 0);
+    if ($done == $pid) { $status = $?; last; }
+    last if $done == -1;
+}
+alarm 0;
+exit 124 if $expired;
+exit(($status & 127) ? 128 + ($status & 127) : $status >> 8);
