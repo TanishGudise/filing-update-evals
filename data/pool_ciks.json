@@ -118,5 +118,13 @@
  "SJM": {
   "cik": 91419,
   "name": "J M SMUCKER Co"
+ },
+ "FAST": {
+  "cik": 815556,
+  "name": "FASTENAL CO"
+ },
+ "MKC": {
+  "cik": 63754,
+  "name": "MCCORMICK & CO INC"
  }
 }

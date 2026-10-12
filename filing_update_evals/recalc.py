@@ -93,8 +93,23 @@ def _minimal_env(home: Path) -> dict[str, str]:
     }
 
 
+def _sandbox_prefix(home: Path) -> list[str]:
+    """With FUE_SANDBOX_SOFFICE=1, run LibreOffice inside the loopback-only sandbox profile."""
+    if os.environ.get("FUE_SANDBOX_SOFFICE") != "1":
+        return []
+    sandbox = shutil.which("sandbox-exec")
+    if sandbox is None:
+        raise RuntimeError("FUE_SANDBOX_SOFFICE=1 but sandbox-exec is not available")
+    from filing_update_evals.netguard import SANDBOX_PROFILE
+
+    profile = home / "loopback.sb"
+    profile.write_text(SANDBOX_PROFILE)
+    return [sandbox, "-f", str(profile)]
+
+
 def _run_soffice(profile: Path, inputs: list[Path], outdir: Path, home: Path) -> tuple[bool, str, bool]:
     cmd = [
+        *_sandbox_prefix(home),
         soffice_path(),
         f"-env:UserInstallation={profile.as_uri()}",
         "--headless",

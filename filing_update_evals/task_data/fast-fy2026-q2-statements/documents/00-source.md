@@ -1,0 +1,1 @@
+Source: FASTENAL CO, Form 10-Q for the quarter ended June 30, 2026, filed 2026-07-16 (SEC accession 0000815556-26-000041; https://www.sec.gov/Archives/edgar/data/815556/000081555626000041). Tables as SEC EDGAR renders them from the filing's XBRL.

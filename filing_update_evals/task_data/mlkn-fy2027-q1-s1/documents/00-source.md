@@ -1,0 +1,1 @@
+Source: MILLERKNOLL, INC., Form 10-Q for the quarter ended August 29, 2026, filed 2026-09-28 (SEC accession 0000066382-26-000156; https://www.sec.gov/Archives/edgar/data/66382/000006638226000156). Tables as SEC EDGAR renders them from the filing's XBRL.

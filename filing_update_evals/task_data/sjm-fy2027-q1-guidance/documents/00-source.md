@@ -1,0 +1,1 @@
+Source: J M SMUCKER Co, earnings release furnished as Exhibit 99.1 to Form 8-K filed 2026-08-26 (SEC accession 0000091419-26-000079; https://www.sec.gov/Archives/edgar/data/91419/000009141926000079/sjm20260826exhibit991.htm).

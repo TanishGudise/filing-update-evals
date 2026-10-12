@@ -1,0 +1,1 @@
+Source: GENTEX CORP, earnings release furnished as Exhibit 99.1 to Form 8-K filed 2026-07-24 (SEC accession 0000355811-26-000044; https://www.sec.gov/Archives/edgar/data/355811/000035581126000044/exhibit99106302026.htm).

@@ -1,0 +1,1 @@
+Source: J M SMUCKER Co, Form 10-Q for the quarter ended July 31, 2026, filed 2026-08-26 (SEC accession 0000091419-26-000080; https://www.sec.gov/Archives/edgar/data/91419/000009141926000080). Tables as SEC EDGAR renders them from the filing's XBRL.

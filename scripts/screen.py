@@ -192,8 +192,15 @@ def screen_one(ticker: str, cik: int) -> dict:
     return result
 
 
-def main() -> int:
+def main(argv: list[str]) -> int:
     pool = json.loads((REPO / "data" / "pool_ciks.json").read_text())
+    if argv and argv[0] == "--hardset":  # the hand-built set: screened for the record, kept regardless
+        order = tomllib.loads((REPO / "data" / "hardset.toml").read_text())["tickers"]
+        results = [screen_one(t, pool[t]["cik"]) for t in order]
+        (REPO / "data" / "screen_hardset.json").write_text(json.dumps(results, indent=1, default=str) + "\n")
+        for r in results:
+            print(r["ticker"], "qualified" if r["qualified"] else r["problems"], r.get("notes"))
+        return 0
     order = tomllib.loads((REPO / "data" / "pool.toml").read_text())["tickers"]
     results = [screen_one(t, pool[t]["cik"]) for t in order if t in pool]
     (REPO / "data" / "screen.json").write_text(json.dumps(results, indent=1, default=str) + "\n")
@@ -223,4 +230,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

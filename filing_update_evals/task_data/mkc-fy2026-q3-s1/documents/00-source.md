@@ -1,0 +1,1 @@
+Source: MCCORMICK & CO INC, Form 10-Q for the quarter ended August 31, 2026, filed 2026-10-01 (SEC accession 0000063754-26-000329; https://www.sec.gov/Archives/edgar/data/63754/000006375426000329). Tables as SEC EDGAR renders them from the filing's XBRL.

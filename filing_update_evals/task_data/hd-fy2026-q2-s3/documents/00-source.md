@@ -1,0 +1,1 @@
+Source: HOME DEPOT, INC., Form 10-Q for the quarter ended August 2, 2026, filed 2026-08-25 (SEC accession 0001628280-26-058715; https://www.sec.gov/Archives/edgar/data/354950/000162828026058715). Tables as SEC EDGAR renders them from the filing's XBRL.

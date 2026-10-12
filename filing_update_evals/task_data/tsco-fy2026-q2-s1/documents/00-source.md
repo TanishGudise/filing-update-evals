@@ -1,0 +1,1 @@
+Source: TRACTOR SUPPLY CO /DE/, Form 10-Q for the quarter ended June 27, 2026, filed 2026-08-06 (SEC accession 0000916365-26-000059; https://www.sec.gov/Archives/edgar/data/916365/000091636526000059). Tables as SEC EDGAR renders them from the filing's XBRL.

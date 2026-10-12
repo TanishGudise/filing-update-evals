@@ -112,13 +112,16 @@ class _Parser(HTMLParser):
         self._row: list[tuple[str, bool]] = []
         self._depth = 0
         self._skip = 0
+        self._tables = 0  # only the first table is the statement; later ones are SEC's definitions
 
     def handle_starttag(self, tag, attrs):
         if tag in ("script", "style"):
             self._skip += 1
         if tag == "table":
             self._depth += 1
-        if self._depth != 1:
+            if self._depth == 1:
+                self._tables += 1
+        if self._depth != 1 or self._tables != 1:
             return
         if tag == "tr":
             self._row = []
@@ -133,7 +136,7 @@ class _Parser(HTMLParser):
         if tag == "table":
             self._depth -= 1
             return
-        if self._depth != 1:
+        if self._depth != 1 or self._tables != 1:
             return
         if tag in ("td", "th") and self._in_cell:
             self._in_cell = False
@@ -167,3 +170,24 @@ def parse_rpage(html: bytes) -> Table:
     parser.feed(html.decode("utf-8", errors="replace"))
     parser.close()
     return parser.table
+
+
+def to_markdown(table: Table, heading: str, keep: tuple[str, ...] | None = None) -> str:
+    """A rendered statement as a markdown table: its title and units, header rows and every row
+    (or, with `keep`, only rows whose label contains one of those words)."""
+    lines = [f"### {heading}", "", f"{table.title}" + (f" ({table.unit})" if table.unit else ""), ""]
+    width = max([len(cells) for _, cells in table.rows] + [len(h) for h in table.header_rows] + [1])
+    headers = [h + [""] * (width - len(h)) for h in table.header_rows] or [[""] * width]
+    if len(headers) > 1 and len(headers[0]) < width:
+        headers[0] = headers[0] + [""] * (width - len(headers[0]))
+    top = headers[0]
+    lines.append("| | " + " | ".join(top) + " |")
+    lines.append("|---" * (width + 1) + "|")
+    for extra in headers[1:]:
+        lines.append("| | " + " | ".join(extra) + " |")
+    for label, cells in table.rows:
+        if keep is not None and not any(word.lower() in label.lower() for word in keep):
+            continue
+        cells = cells + [""] * (width - len(cells))
+        lines.append(f"| {label} | " + " | ".join(cells) + " |")
+    return "\n".join(lines)

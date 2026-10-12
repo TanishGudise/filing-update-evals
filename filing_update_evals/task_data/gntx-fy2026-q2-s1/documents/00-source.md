@@ -1,0 +1,1 @@
+Source: GENTEX CORP, Form 10-Q for the quarter ended June 30, 2026, filed 2026-08-04 (SEC accession 0000355811-26-000048; https://www.sec.gov/Archives/edgar/data/355811/000035581126000048). Tables as SEC EDGAR renders them from the filing's XBRL.

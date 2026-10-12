@@ -1,0 +1,1 @@
+Source: ROLLINS INC, Form 10-Q for the quarter ended June 30, 2026, filed 2026-07-23 (SEC accession 0000084839-26-000040; https://www.sec.gov/Archives/edgar/data/84839/000008483926000040). Tables as SEC EDGAR renders them from the filing's XBRL.

@@ -1,0 +1,1 @@
+Source: ROSS STORES, INC., Form 10-Q for the quarter ended August 1, 2026, filed 2026-09-01 (SEC accession 0000745732-26-000041; https://www.sec.gov/Archives/edgar/data/745732/000074573226000041). Tables as SEC EDGAR renders them from the filing's XBRL.

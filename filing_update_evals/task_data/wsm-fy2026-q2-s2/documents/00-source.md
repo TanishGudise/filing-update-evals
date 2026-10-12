@@ -1,0 +1,1 @@
+Source: WILLIAMS SONOMA INC, Form 10-Q for the quarter ended August 2, 2026, filed 2026-08-28 (SEC accession 0000719955-26-000208; https://www.sec.gov/Archives/edgar/data/719955/000071995526000208). Tables as SEC EDGAR renders them from the filing's XBRL.

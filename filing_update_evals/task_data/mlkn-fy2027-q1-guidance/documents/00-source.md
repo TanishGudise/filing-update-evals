@@ -1,0 +1,1 @@
+Source: MILLERKNOLL, INC., earnings release furnished as Exhibit 99.1 to Form 8-K filed 2026-09-22 (SEC accession 0000066382-26-000150; https://www.sec.gov/Archives/edgar/data/66382/000006638226000150/mlkn8k_08292026ex991.htm).

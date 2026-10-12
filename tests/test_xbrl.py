@@ -178,12 +178,34 @@ def test_restated_required_line_fails_but_proxy_statements_are_ignored():
     assert any("net_income" in p and "restated" in p for p in problems)
 
 
-def test_untagged_balance_is_zero_but_missing_flows_are_not():
-    _, lines, problems, _ = mapped(facts({"InventoryNet": (["FY-1END", "FYQ2END"], 80)}))
-    assert not problems
+def test_untagged_balance_is_zero_only_with_evidence():
+    # The Q1 10-Q tags inventory in its comparative column (prior year end) but not at its own
+    # quarter end: the line is on that balance sheet, blank this quarter, so it is 0.
+    comparative = {
+        "end": "2025-12-31",
+        "val": 80,
+        "accn": "0000000001-26-000010",
+        "form": "10-Q",
+        "filed": "2026-04-30",
+    }
+    _, lines, problems, notes = mapped(
+        facts({"InventoryNet": (["FY-1END", "FYQ2END"], 80)}, extra=[("InventoryNet", comparative)])
+    )
+    assert not problems and not notes
     assert lines["inventory"].values == {"FY-1END": 80, "FYQ1END": 0.0, "FYQ2END": 80}
+    # Without that evidence the filer may have re-tagged the line: it is folded, not zeroed.
+    _, lines, problems, notes = mapped(facts({"InventoryNet": (["FY-1END", "FYQ2END"], 80)}))
+    assert not problems and lines["inventory"].concept == "" and any("inventory folded" in n for n in notes)
+
+
+def test_missing_flows_are_never_zero():
     _, _, problems, _ = mapped(facts({"NetIncomeLoss": ([k for k in DURATION if k != "FY-1Q2"], 150)}))
     assert any(p.startswith("net_income") for p in problems)
+
+
+def test_debt_lines_are_never_folded():
+    _, _, problems, _ = mapped(facts({"LongTermDebtNoncurrent": (["FY-1END", "FYQ2END"], 500)}))
+    assert any(p.startswith("long_term_debt") for p in problems)
 
 
 def test_debt_current_absorbs_short_term_borrowings():
@@ -191,3 +213,14 @@ def test_debt_current_absorbs_short_term_borrowings():
     assert lines["current_ltd"].concept == "DebtCurrent"
     assert set(lines["short_term_debt"].values.values()) == {0.0}
     assert any("short_term_debt dropped" in n for n in notes)
+
+
+def test_long_term_debt_current_is_not_debt_current():
+    # "LongTermDebtCurrent" contains the text "DebtCurrent" but is only the current portion of
+    # long-term debt: short-term borrowings stay their own line.
+    _, lines, _, notes = mapped(
+        facts({"LongTermDebtCurrent": (INSTANT, 70), "ShortTermBorrowings": (INSTANT, 20)})
+    )
+    assert lines["current_ltd"].concept == "LongTermDebtCurrent"
+    assert set(lines["short_term_debt"].values.values()) == {20}
+    assert not notes

@@ -20,6 +20,17 @@ import threading
 
 _LOOPBACK_NAMES = {"localhost", "localhost.localdomain", "ip6-localhost", "ip6-loopback"}
 
+SANDBOX_PROFILE = """(version 1)
+(allow default)
+; Loopback only: no outbound IP traffic except to this machine, and no DNS.
+(deny network-outbound)
+(allow network-outbound (remote ip "localhost:*"))
+(allow network-outbound (remote unix-socket))
+(deny network-outbound (literal "/private/var/run/mDNSResponder"))
+"""
+"""The macOS sandbox profile scripts/guard/loopback.sb holds, and recalc.py wraps LibreOffice in
+when FUE_SANDBOX_SOFFICE=1 (agent runs, whose own process may reach a model API)."""
+
 _lock = threading.Lock()
 _installed = False
 _allowed_hosts: set[str] = set()

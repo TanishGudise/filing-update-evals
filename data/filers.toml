@@ -1,7 +1,6 @@
 # Filers in the generated task set, chosen from the screen (data/screen.md) by a fixed rule:
-#  1. passed every screen gate and the statement-page check (17 of 30 candidates);
-#  2. dropped unless cost of goods sold and SG&A each map to their own line (GGG and IDXX split
-#     SG&A into several lines; DRI tags neither);
-#  3. at most four January-fiscal-year retailers, keeping the most varied (HD, LOW with negative
-#     equity, DG and ROST in thousands); BBY, ULTA and WSM dropped.
-selected = ["ROL", "GNTX", "TSCO", "HD", "LOW", "DG", "ROST", "GIS", "CAG", "MLKN", "SJM"]
+#  1. passed every screen gate and the statement-page check (13 of 30 candidates);
+#  2. dropped unless cost of goods sold and SG&A each map to their own line (IDXX splits SG&A);
+#  3. at most four January-fiscal-year retailers, two reporting in $M and two in $K, earliest
+#     public date first: HD, BBY ($M); ROST, WSM ($K). DG and ULTA dropped.
+selected = ["ROL", "GNTX", "TSCO", "HD", "BBY", "ROST", "WSM", "GIS", "MLKN", "SJM"]

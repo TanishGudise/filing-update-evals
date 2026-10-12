@@ -1,0 +1,1 @@
+Source: BEST BUY CO INC, earnings release furnished as Exhibit 99.1 to Form 8-K filed 2026-08-27 (SEC accession 0000764478-26-000037; https://www.sec.gov/Archives/edgar/data/764478/000076447826000037/bby-fy27q2xexx99.htm).

@@ -190,6 +190,7 @@ class Fact:
     form: str
     filed: dt.date
     fp: str
+    fy: int | None = None
 
 
 def _d(text: str | None) -> dt.date | None:
@@ -227,9 +228,24 @@ class CompanyFacts:
                         r["form"],
                         _d(r["filed"]),
                         r.get("fp", ""),
+                        r.get("fy"),
                     )
                     for r in rows
                 ]
+
+        ends: dict[str, dt.date] = {}
+        for concept, rows in self.facts.items():
+            if concept in ("EntityCommonStockSharesOutstanding", "EntityPublicFloat"):
+                continue
+            for f in rows:
+                if f.form in PERIODIC_FORMS and (f.accn not in ends or f.end > ends[f.accn]):
+                    ends[f.accn] = f.end
+        self.period_end = ends
+        """Accession -> the period end the filing reports (its latest balance sheet date)."""
+
+    def home_filings(self, end: dt.date) -> list[str]:
+        """The periodic filings whose own period ends on `end`."""
+        return [accn for accn, e in self.period_end.items() if e == end]
 
     @classmethod
     def load(cls, path: Path) -> CompanyFacts:
@@ -281,6 +297,7 @@ class LineValue:
     """The concepts used, joined with " | " (a sum of concepts is joined with "+"); "" if absent."""
     values: dict[str, float] = field(default_factory=dict)  # period key -> value
     by_period: dict[str, str] = field(default_factory=dict)  # period key -> concept used
+    sources: dict[str, str] = field(default_factory=dict)  # period key -> accession of the value
 
 
 class ScreenError(Exception):
@@ -403,6 +420,19 @@ def _value(
     return total, distinct
 
 
+def _source(cf: CompanyFacts, name: str, p: Period, up_to: dt.date) -> str:
+    """Accession number of the filing the value was read from (the latest one reporting it)."""
+    accns = []
+    for part in name.split("+"):
+        facts = cf.reported(part.lstrip("-"), p.start, p.end, up_to)
+        if facts:
+            accns.append(sorted(facts, key=lambda f: f.filed)[-1].accn)
+    return "+".join(dict.fromkeys(accns))
+
+
+DEBT_LINES = ("short_term_debt", "current_ltd", "long_term_debt")
+"""Optional, but never folded: the equity bridge needs every debt line."""
+
 RENAMES = (frozenset({"InterestExpense", "InterestExpenseNonoperating"}),)
 """Concepts a filer may switch between from one year to the next (a US GAAP taxonomy rename).
 Any other mix of concepts within one line would change what the line means across periods."""
@@ -413,7 +443,7 @@ def _name(candidate: str | tuple[str, ...]) -> str:
 
 
 def map_lines(
-    cf: CompanyFacts, cal: Calendar, target_filed: dt.date
+    cf: CompanyFacts, cal: Calendar, target_filed: dt.date, overrides: dict[str, list[str]] | None = None
 ) -> tuple[dict[str, LineValue], list[str], list[str]]:
     """Read each line's value for every period it needs. Returns (lines, problems, notes).
 
@@ -422,12 +452,19 @@ def map_lines(
     differently by two periodic filings is a restatement. An optional balance sheet line with
     no value on some dates is 0 on those dates (filers often leave a zero balance untagged). An
     optional line that is still incomplete, or restated, is folded into the model's derived
-    "other" line instead of dropping the filer; a required line in that state fails it."""
+    "other" line instead of dropping the filer; a required line in that state fails it.
+
+    `overrides` (the hand-built set only) replaces a line's candidates with concepts a person
+    checked against the filer's statements; those may be stitched across periods."""
     ps = periods(cal)
     out: dict[str, LineValue] = {}
     problems: list[str] = []
     notes: list[str] = []
     for line, (kind, candidates, required) in LINES.items():
+        groups = RENAMES
+        if overrides and line in overrides:
+            candidates = tuple(overrides[line])
+            groups = (frozenset(candidates),)
         want = needed(line, ps)
         table: dict[str, dict[str, tuple[float, bool]]] = {}
         for candidate in candidates:
@@ -445,21 +482,37 @@ def map_lines(
                 chosen = {p.key: name for p in want}
                 break
         if not chosen:
-            for group in RENAMES:
+            for group in groups:
                 names = [n for n in table if n in group]
                 stitched = {p.key: next((n for n in names if p.key in table[n]), None) for p in want}
                 if names and all(stitched.values()):
                     chosen = {k: v for k, v in stitched.items() if v}
                     break
         if not chosen and kind == "instant" and table:
-            name = max(table, key=lambda n: len(table[n]))  # zero-fill the dates it doesn't tag
-            chosen = {p.key: name if p.key in table[name] else "(untagged: 0)" for p in want}
+            # A balance the filer leaves untagged on some dates is 0 there only if the filing for
+            # that date still tags the line on another date (its comparative column): the line
+            # is on that statement, just blank. (scripts/pages.py also checks the target date
+            # shows no number.) Otherwise the filer re-tagged the line, and that's no zero.
+            name = max(table, key=lambda n: len(table[n]))
+            by_key = {p.key: p for p in want}
+
+            def blank_on_statement(key: str, name: str = name, by_key: dict = by_key) -> bool:
+                p = by_key[key]
+                homes = set(cf.home_filings(p.end))
+                return any(
+                    f.accn in homes and f.end != p.end and f.start is None
+                    for f in cf.facts.get(name.lstrip("-"), [])
+                )
+
+            missing = [p.key for p in want if p.key not in table[name]]
+            if all(blank_on_statement(key) for key in missing):
+                chosen = {p.key: name if p.key in table[name] else "(untagged: 0)" for p in want}
 
         if not chosen:
             if not table and not required:
                 out[line] = LineValue("", {p.key: 0.0 for p in want})
                 continue
-            if required:
+            if required or line in DEBT_LINES:
                 problems.append(
                     f"{line}: no concept covers every period" if table else f"{line}: no concept found"
                 )
@@ -471,15 +524,17 @@ def map_lines(
         values = {k: (table[n][k][0] if n in table else 0.0) for k, n in chosen.items()}
         restated = any(table[n][k][1] for k, n in chosen.items() if n in table)
         if restated:
-            if required:
+            if required or line in DEBT_LINES:
                 problems.append(f"{line}: a value was restated between filings")
                 continue
             notes.append(f"{line} folded into other (restated between filings)")
             out[line] = LineValue("", {p.key: 0.0 for p in want})
             continue
-        out[line] = LineValue(" | ".join(sorted(set(chosen.values()))), values, chosen)
+        by_key = {p.key: p for p in want}
+        sources = {k: _source(cf, n, by_key[k], target_filed) for k, n in chosen.items() if n in table}
+        out[line] = LineValue(" | ".join(sorted(set(chosen.values()))), values, chosen, sources)
     # DebtCurrent is all current debt: short-term borrowings are part of it, not a second line.
-    if "DebtCurrent" in out.get("current_ltd", LineValue("")).concept and "short_term_debt" in out:
+    if "DebtCurrent" in out.get("current_ltd", LineValue("")).by_period.values() and "short_term_debt" in out:
         if out["short_term_debt"].concept:
             notes.append("short_term_debt dropped: DebtCurrent already includes it")
         out["short_term_debt"] = LineValue("", {key: 0.0 for key in out["short_term_debt"].values})
