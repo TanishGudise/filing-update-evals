@@ -264,7 +264,7 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | SJM | bs.short_term_debt | Short-term borrowings | Short-term borrowings | ST debt |  |
 | SJM | bs.current_ltd | Current portion of long-term debt | Current portion of long-term debt | Current LTD |  |
 | SJM | bs.current_liabilities | Total Current Liabilities | Total current liabilities | Total CL |  |
-| SJM | bs.long_term_debt | Long-term debt, less current portion | Long-term debt | LT debt |  |
+| SJM | bs.long_term_debt | Long-term debt, less current portion | Long-term debt | LT debt | reviewed: Same meaning: "Long-term debt" sits next to its own current-portion row. |
 | SJM | bs.equity | Total Shareholders’ Equity | Shareholders' equity (company) | Equity |  |
 | SJM | bs.total_liabilities_equity | Total Liabilities and Shareholders’ Equity | Total liabilities and equity | Total L&E |  |
 | FAST | is.revenue | Net sales | Revenue | Rev |  |
@@ -321,4 +321,4 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | MKC | bs.nci | Non-controlling interests | Non-controlling interests | NCI |  |
 | MKC | bs.total_liabilities_equity | Total liabilities and shareholders’ equity | Total liabilities and equity | Total L&E |  |
 
-8 qualifiers carried into the generic labels, 8 reviewed as making no difference, 0 unreviewed.
+8 qualifiers carried into the generic labels, 9 reviewed as making no difference, 0 unreviewed.

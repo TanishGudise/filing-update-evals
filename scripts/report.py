@@ -1,5 +1,5 @@
 """Turn run results (runs/<name>/results.jsonl) into the tables the README quotes. Every number in
-the README's results section comes from this script's output (outputs/results.md).
+the README's results tables comes from this script's output (outputs/results.md).
 
 Two scores per rollout:
   strict          1 if every check passed (what the grader reports)
@@ -133,6 +133,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("runs", nargs="+", type=Path)
     parser.add_argument("--out", type=Path, default=REPO / "outputs" / "results.md")
+    parser.add_argument("--title", default="Results")
+    parser.add_argument("--note", default="", help="a paragraph printed under the title")
     args = parser.parse_args(argv)
     rows, source = load(args.runs)
     meta = task_meta()
@@ -141,7 +143,8 @@ def main(argv: list[str] | None = None) -> int:
         groups[(r["model"], r["mode"])].append(r)
     keys = sorted(groups)
 
-    lines = ["# Results", "", f"Runs: {', '.join(str(p) for p in args.runs)}. {len(rows)} rollouts.", ""]
+    lines = [f"# {args.title}", ""] + ([args.note, ""] if args.note else [])
+    lines += [f"Runs: {', '.join(str(p) for p in args.runs)}. {len(rows)} rollouts.", ""]
     for path in args.runs[1:]:
         taken = sorted(task for task, p in source.items() if p == path)
         if taken:

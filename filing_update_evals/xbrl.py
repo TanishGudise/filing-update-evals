@@ -450,14 +450,16 @@ DEBT_LINES = ("short_term_debt", "current_ltd", "long_term_debt", "redeemable_nc
 line. A filer that tags none of them at all has a zero line; scripts/pages.py then checks the
 balance sheet shows no such row with a number."""
 
-RENAMES = (
-    frozenset({"InterestExpense", "InterestExpenseNonoperating"}),
-    frozenset({"InterestExpense", "-InterestIncomeExpenseNonoperatingNet"}),
-)
-"""Concepts a filer may switch between from one year to the next for the same statement line: a
-US GAAP taxonomy rename, or a re-tag of a net interest line (General Mills' "Interest, net").
-Stitched only where the two agree on every period both report. Any other mix of concepts within
-one line would change what the line means across periods."""
+RENAMES = (frozenset({"InterestExpense", "InterestExpenseNonoperating"}),)
+"""A US GAAP taxonomy rename: a filer may switch from one concept to the other between years."""
+
+RETAGS = (frozenset({"InterestExpense", "-InterestIncomeExpenseNonoperatingNet"}),)
+"""Two concepts a filer may use for the same statement line in different filings (General Mills'
+"Interest, net"). Unlike a rename, they don't mean the same thing in general, so a re-tag is
+stitched only where the filer tagged at least one period both ways, with the same value.
+
+Any stitched pair must agree on every period both report. Any other mix of concepts within one
+line would change what the line means across periods."""
 
 
 def _name(candidate: str | tuple[str, ...]) -> str:
@@ -480,7 +482,7 @@ def map_lines(
     """Read each line's value for every period it needs. Returns (lines, problems, notes).
 
     A line uses the first candidate concept that has a value for every period, or else a pair of
-    concepts in RENAMES that agree on every period both report, one per period. A value reported
+    concepts in RENAMES or RETAGS (see there), one per period. A value reported
     differently by two periodic filings is a restatement. An optional balance sheet line with
     no value on some dates is 0 on those dates (filers often leave a zero balance untagged). An
     optional line that is still incomplete, or restated, is folded into the model's derived
@@ -493,7 +495,7 @@ def map_lines(
     problems: list[str] = []
     notes: list[str] = []
     for line, (kind, candidates, required) in LINES.items():
-        groups = RENAMES
+        groups = RENAMES + RETAGS
         if overrides and line in overrides:
             candidates = tuple(overrides[line])
             groups = (frozenset(candidates),)
@@ -517,12 +519,16 @@ def map_lines(
             for group in groups:
                 names = [n for n in table if n in group]
                 stitched = {p.key: next((n for n in names if p.key in table[n]), None) for p in want}
-                agree = all(
-                    abs(table[a][key][0] - table[b][key][0]) < 0.5
+                shared = [
+                    (a, b, key)
                     for a in names
                     for b in names
+                    if a < b
                     for key in set(table[a]) & set(table[b])
-                )
+                ]
+                agree = all(abs(table[a][key][0] - table[b][key][0]) < 0.5 for a, b, key in shared)
+                if group in RETAGS and not shared:
+                    agree = False  # nothing shows the two tags are the same line
                 if names and all(stitched.values()) and agree:
                     chosen = {k: v for k, v in stitched.items() if v}
                     break

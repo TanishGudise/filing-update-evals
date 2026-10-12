@@ -5,6 +5,8 @@ A filer label is flagged when it carries a qualifier that decides which reported
 the row: something excluded or included, a narrower or combined line, gross against net interest,
 or units. Each flag must be either carried into the generic labels (styles._qualify) or reviewed
 below as making no difference to the figure (the statement has a single row it can come from).
+The audit covers the typed statement rows; the Inputs/Drivers assumptions and the valuation rows
+keep their generic labels.
 
 Usage: scripts/guarded .venv/bin/python -I scripts/audit_labels.py
 """
@@ -28,7 +30,7 @@ REPO = Path(__file__).resolve().parent.parent
 
 QUALIFIER = re.compile(
     r"exclu|includ|and after-tax|and equity in|consolidated operations|amortizable|indefinite"
-    r"|short-term borrowings and|interest income|thousand|million|per share",
+    r"|short-term borrowings and|interest income|less current|thousand|million|per share",
     re.I,
 )
 
@@ -43,6 +45,7 @@ REVIEWED = {
     ("ROST", "interest_expense"): SIGN,
     ("WSM", "interest_expense"): SIGN,
     ("HD", "long_term_debt"): 'Same meaning: "Long-term debt" sits next to its own current-portion row.',
+    ("SJM", "long_term_debt"): 'Same meaning: "Long-term debt" sits next to its own current-portion row.',
 }
 
 

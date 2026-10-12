@@ -162,6 +162,12 @@ def test_net_interest_retag_is_stitched_only_where_the_tags_agree():
         facts({"InterestExpense": (old, 10), "InterestIncomeExpenseNonoperatingNet": (new, -12)})
     )
     assert lines["interest_expense"].folded and any("interest_expense folded" in n for n in notes)
+    # They never tag the same period: nothing shows they are the same line, so it is folded.
+    only_new = [k for k in DURATION if k.startswith("FYQ")]
+    _, lines, _, notes = mapped(
+        facts({"InterestExpense": (old, 10), "InterestIncomeExpenseNonoperatingNet": (only_new, -25)})
+    )
+    assert lines["interest_expense"].folded and any("interest_expense folded" in n for n in notes)
 
 
 def test_other_concept_mixes_are_folded_not_stitched():

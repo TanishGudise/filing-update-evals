@@ -33,14 +33,32 @@ def test_regenerating_a_task_reproduces_it(tmp_path, task_id, ticker, style):
         assert filecmp.cmp(committed / name, folder / name, shallow=False), name
 
 
-def test_accepted_readings_retype_folded_lines_only():
-    for spec in SPECS:
-        sources = json.loads((spec.folder / "sources.json").read_text())
-        for reading in spec.accepted:
-            for edit in spec.parse(reading.edits):
-                ref = f"{edit.sheet}!{edit.ref}"
-                assert sources["cells"][ref]["concept"] == "(folded into other)", (spec.id, ref)
-                assert sources["accepted"][ref]["accession"] == spec.accession, (spec.id, ref)
+@needs_raw
+def test_a_folded_line_shown_on_the_statement_becomes_an_accepted_reading():
+    # General Mills' interest as it was before the re-tag was stitched: folded into "other", with
+    # the new quarter's "Interest, net" on the income statement.
+    data = json.loads((REPO / "data" / "filers" / "GIS.json").read_text())
+    line = data["lines"]["interest_expense"]
+    data["lines"]["interest_expense"] = {
+        "concept": "",
+        "values": {key: 0.0 for key in line["values"]},
+        "sources": {},
+        "by_period": {},
+        "folded": "tags change",
+        "reported": {
+            "period": "FYQ1",
+            "concept": "-InterestIncomeExpenseNonoperatingNet",
+            "value": line["values"]["FYQ1"],
+            "accession": data["target"]["accession"],
+            "label": "Interest, net",
+        },
+    }
+    task = generate_update(data, "S1", REPO / "raw")
+    assert [(name, changes) for name, _, changes in task.accepted] == [
+        ("interest_expense_as_reported", {("IS", "H12"): 142.2})
+    ]
+    assert "interest_expense_as_reported" in dict(task.alternates)
+    assert task.sources["accepted"]["IS!H12"]["label"] == "Interest, net"
 
 
 def test_general_mills_interest_is_stitched_not_folded():

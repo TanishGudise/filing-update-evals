@@ -293,7 +293,7 @@ def _qualify(out: dict[str, dict[str, str]], data: dict, short: bool) -> None:
     generic ones (scripts/audit_labels.py)."""
     filer = data.get("labels", {})
     interest = filer.get("interest_expense") or ""
-    if interest and not re.search(r"\bnet\b", interest, re.I):
+    if interest and not re.search(r"\bnet\b(?! of)", interest, re.I):
         # Gross interest expense; interest income is on its own line, which "net" would invite.
         out["is"]["interest_expense"] = "Int exp" if short else "Interest expense"
     qualifier = "excluding amortization of intangible assets"
@@ -308,7 +308,7 @@ def _qualify(out: dict[str, dict[str, str]], data: dict, short: bool) -> None:
             out["cf"]["da"] = f"Depreciation and amortization, {qualifier}"
             out["ytd"]["da"] = f"Depreciation and amortization, {qualifier}, year to date (as reported)"
         out["val"]["da"] = f"Depreciation and amortization, {qualifier}"
-    if "amortizable" in (filer.get("intangibles") or "").lower():
+    if re.search(r"(?<!non-)(?<!non)\bamortizable\b", filer.get("intangibles") or "", re.I):
         # Indefinite-lived intangibles are a separate line (in other non-current assets here).
         out["bs"]["intangibles"] = (
             "Amortizable intangibles" if short else "Amortizable intangible assets, net"
