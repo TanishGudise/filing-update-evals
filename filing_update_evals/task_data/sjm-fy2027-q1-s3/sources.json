@@ -1,91 +1,709 @@
 {
  "cells": {
-  "Annual!C11": "OperatingIncomeLoss 0000091419-26-000050",
-  "Annual!C12": "-InterestIncomeExpenseNonoperatingNet 0000091419-26-000050",
-  "Annual!C14": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest 0000091419-26-000050",
-  "Annual!C15": "IncomeTaxExpenseBenefit 0000091419-26-000050",
-  "Annual!C17": "NetIncomeLoss 0000091419-26-000050",
-  "Annual!C22": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents 0000091419-26-000080",
-  "Annual!C23": "AccountsReceivableNetCurrent 0000091419-26-000080",
-  "Annual!C24": "InventoryNet 0000091419-26-000080",
-  "Annual!C26": "AssetsCurrent 0000091419-26-000080",
-  "Annual!C27": "PropertyPlantAndEquipmentNet 0000091419-26-000080",
-  "Annual!C28": "Goodwill 0000091419-26-000080",
-  "Annual!C29": "IntangibleAssetsNetExcludingGoodwill 0000091419-26-000080",
-  "Annual!C31": "Assets 0000091419-26-000080",
-  "Annual!C32": "AccountsPayableCurrent 0000091419-26-000080",
-  "Annual!C33": "ShortTermBorrowings 0000091419-26-000080",
-  "Annual!C34": "LongTermDebtCurrent 0000091419-26-000080",
-  "Annual!C36": "LiabilitiesCurrent 0000091419-26-000080",
-  "Annual!C37": "LongTermDebtNoncurrent 0000091419-26-000080",
-  "Annual!C40": "StockholdersEquity 0000091419-26-000080",
-  "Annual!C41": "absent",
-  "Annual!C43": "LiabilitiesAndStockholdersEquity 0000091419-26-000080",
-  "Annual!C6": "RevenueFromContractWithCustomerIncludingAssessedTax 0000091419-26-000050",
-  "Annual!C62": "NetCashProvidedByUsedInOperatingActivities 0000091419-26-000050",
-  "Annual!C63": "PaymentsToAcquirePropertyPlantAndEquipment 0000091419-26-000050",
-  "Annual!C64": "NetCashProvidedByUsedInInvestingActivities 0000091419-26-000050",
-  "Annual!C65": "NetCashProvidedByUsedInFinancingActivities 0000091419-26-000050",
-  "Annual!C66": "Depreciation+AmortizationOfIntangibleAssets 0000091419-26-000050",
-  "Annual!C7": "CostOfGoodsAndServicesSold 0000091419-26-000050",
-  "Annual!C9": "SellingGeneralAndAdministrativeExpense 0000091419-26-000050",
-  "Drivers!C5": "dei:EntityCommonStockSharesOutstanding 0000091419-26-000080",
-  "Quarterly!C11": "OperatingIncomeLoss 0000091419-26-000080",
-  "Quarterly!C12": "-InterestIncomeExpenseNonoperatingNet 0000091419-26-000080",
-  "Quarterly!C14": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest 0000091419-26-000080",
-  "Quarterly!C15": "IncomeTaxExpenseBenefit 0000091419-26-000080",
-  "Quarterly!C17": "NetIncomeLoss 0000091419-26-000080",
-  "Quarterly!C6": "RevenueFromContractWithCustomerIncludingAssessedTax 0000091419-26-000080",
-  "Quarterly!C66": "Depreciation+AmortizationOfIntangibleAssets 0000091419-26-000080",
-  "Quarterly!C7": "CostOfGoodsAndServicesSold 0000091419-26-000080",
-  "Quarterly!C9": "SellingGeneralAndAdministrativeExpense 0000091419-26-000080",
-  "Quarterly!D11": "OperatingIncomeLoss 0000091419-25-000106",
-  "Quarterly!D12": "-InterestIncomeExpenseNonoperatingNet 0000091419-25-000106",
-  "Quarterly!D14": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest 0000091419-25-000106",
-  "Quarterly!D15": "IncomeTaxExpenseBenefit 0000091419-25-000106",
-  "Quarterly!D17": "NetIncomeLoss 0000091419-26-000016",
-  "Quarterly!D6": "RevenueFromContractWithCustomerIncludingAssessedTax 0000091419-25-000106",
-  "Quarterly!D66": "Depreciation+AmortizationOfIntangibleAssets 0000091419-25-000106",
-  "Quarterly!D7": "CostOfGoodsAndServicesSold 0000091419-25-000106",
-  "Quarterly!D9": "SellingGeneralAndAdministrativeExpense 0000091419-25-000106",
-  "Quarterly!E11": "OperatingIncomeLoss 0000091419-26-000016",
-  "Quarterly!E12": "-InterestIncomeExpenseNonoperatingNet 0000091419-26-000016",
-  "Quarterly!E14": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest 0000091419-26-000016",
-  "Quarterly!E15": "IncomeTaxExpenseBenefit 0000091419-26-000016",
-  "Quarterly!E17": "NetIncomeLoss 0000091419-26-000016",
-  "Quarterly!E6": "RevenueFromContractWithCustomerIncludingAssessedTax 0000091419-26-000016",
-  "Quarterly!E66": "Depreciation+AmortizationOfIntangibleAssets 0000091419-26-000016",
-  "Quarterly!E7": "CostOfGoodsAndServicesSold 0000091419-26-000016",
-  "Quarterly!E9": "SellingGeneralAndAdministrativeExpense 0000091419-26-000016",
-  "Quarterly!G11": "OperatingIncomeLoss 0000091419-26-000080",
-  "Quarterly!G12": "-InterestIncomeExpenseNonoperatingNet 0000091419-26-000080",
-  "Quarterly!G14": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest 0000091419-26-000080",
-  "Quarterly!G15": "IncomeTaxExpenseBenefit 0000091419-26-000080",
-  "Quarterly!G17": "NetIncomeLoss 0000091419-26-000080",
-  "Quarterly!G22": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents 0000091419-26-000080",
-  "Quarterly!G23": "AccountsReceivableNetCurrent 0000091419-26-000080",
-  "Quarterly!G24": "InventoryNet 0000091419-26-000080",
-  "Quarterly!G26": "AssetsCurrent 0000091419-26-000080",
-  "Quarterly!G27": "PropertyPlantAndEquipmentNet 0000091419-26-000080",
-  "Quarterly!G28": "Goodwill 0000091419-26-000080",
-  "Quarterly!G29": "IntangibleAssetsNetExcludingGoodwill 0000091419-26-000080",
-  "Quarterly!G31": "Assets 0000091419-26-000080",
-  "Quarterly!G32": "AccountsPayableCurrent 0000091419-26-000080",
-  "Quarterly!G33": "ShortTermBorrowings 0000091419-26-000080",
-  "Quarterly!G34": "LongTermDebtCurrent 0000091419-26-000080",
-  "Quarterly!G36": "LiabilitiesCurrent 0000091419-26-000080",
-  "Quarterly!G37": "LongTermDebtNoncurrent 0000091419-26-000080",
-  "Quarterly!G40": "StockholdersEquity 0000091419-26-000080",
-  "Quarterly!G41": "absent",
-  "Quarterly!G43": "LiabilitiesAndStockholdersEquity 0000091419-26-000080",
-  "Quarterly!G6": "RevenueFromContractWithCustomerIncludingAssessedTax 0000091419-26-000080",
-  "Quarterly!G62": "NetCashProvidedByUsedInOperatingActivities 0000091419-26-000080",
-  "Quarterly!G63": "PaymentsToAcquirePropertyPlantAndEquipment 0000091419-26-000080",
-  "Quarterly!G64": "NetCashProvidedByUsedInInvestingActivities 0000091419-26-000080",
-  "Quarterly!G65": "NetCashProvidedByUsedInFinancingActivities 0000091419-26-000080",
-  "Quarterly!G66": "Depreciation+AmortizationOfIntangibleAssets 0000091419-26-000080",
-  "Quarterly!G7": "CostOfGoodsAndServicesSold 0000091419-26-000080",
-  "Quarterly!G9": "SellingGeneralAndAdministrativeExpense 0000091419-26-000080"
+  "Annual!C11": {
+   "accession": "0000091419-26-000050",
+   "concept": "OperatingIncomeLoss",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C12": {
+   "accession": "0000091419-26-000050",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C14": {
+   "accession": "0000091419-26-000050",
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C15": {
+   "accession": "0000091419-26-000050",
+   "concept": "IncomeTaxExpenseBenefit",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C17": {
+   "accession": "0000091419-26-000050",
+   "concept": "NetIncomeLoss",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C22": {
+   "accession": "0000091419-26-000080",
+   "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C23": {
+   "accession": "0000091419-26-000080",
+   "concept": "AccountsReceivableNetCurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C24": {
+   "accession": "0000091419-26-000080",
+   "concept": "InventoryNet",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C26": {
+   "accession": "0000091419-26-000080",
+   "concept": "AssetsCurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C27": {
+   "accession": "0000091419-26-000080",
+   "concept": "PropertyPlantAndEquipmentNet",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C28": {
+   "accession": "0000091419-26-000080",
+   "concept": "Goodwill",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C29": {
+   "accession": "0000091419-26-000080",
+   "concept": "IntangibleAssetsNetExcludingGoodwill",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C31": {
+   "accession": "0000091419-26-000080",
+   "concept": "Assets",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C32": {
+   "accession": "0000091419-26-000080",
+   "concept": "AccountsPayableCurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C33": {
+   "accession": "0000091419-26-000080",
+   "concept": "ShortTermBorrowings",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C34": {
+   "accession": "0000091419-26-000080",
+   "concept": "LongTermDebtCurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C36": {
+   "accession": "0000091419-26-000080",
+   "concept": "LiabilitiesCurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C37": {
+   "accession": "0000091419-26-000080",
+   "concept": "LongTermDebtNoncurrent",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C40": {
+   "accession": "",
+   "concept": "",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C41": {
+   "accession": "0000091419-26-000080",
+   "concept": "StockholdersEquity",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C42": {
+   "accession": "",
+   "concept": "",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C44": {
+   "accession": "0000091419-26-000080",
+   "concept": "LiabilitiesAndStockholdersEquity",
+   "end": "2026-04-30",
+   "period": "FY-1END",
+   "sign": 1,
+   "start": null
+  },
+  "Annual!C6": {
+   "accession": "0000091419-26-000050",
+   "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C63": {
+   "accession": "0000091419-26-000050",
+   "concept": "NetCashProvidedByUsedInOperatingActivities",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C64": {
+   "accession": "0000091419-26-000050",
+   "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": -1,
+   "start": "2025-05-01"
+  },
+  "Annual!C65": {
+   "accession": "0000091419-26-000050",
+   "concept": "NetCashProvidedByUsedInInvestingActivities",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C66": {
+   "accession": "0000091419-26-000050",
+   "concept": "NetCashProvidedByUsedInFinancingActivities",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C67": {
+   "accession": "0000091419-26-000050",
+   "concept": "Depreciation+AmortizationOfIntangibleAssets",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C7": {
+   "accession": "0000091419-26-000050",
+   "concept": "CostOfGoodsAndServicesSold",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Annual!C9": {
+   "accession": "0000091419-26-000050",
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "end": "2026-04-30",
+   "period": "FY-1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Drivers!C5": {
+   "accession": "0000091419-26-000080",
+   "concept": "dei:EntityCommonStockSharesOutstanding",
+   "end": "2026-08-19",
+   "period": "cover",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!C11": {
+   "accession": "0000091419-26-000080",
+   "concept": "OperatingIncomeLoss",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C12": {
+   "accession": "0000091419-26-000080",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C14": {
+   "accession": "0000091419-26-000080",
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C15": {
+   "accession": "0000091419-26-000080",
+   "concept": "IncomeTaxExpenseBenefit",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C17": {
+   "accession": "0000091419-26-000080",
+   "concept": "NetIncomeLoss",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C6": {
+   "accession": "0000091419-26-000080",
+   "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C67": {
+   "accession": "0000091419-26-000080",
+   "concept": "Depreciation+AmortizationOfIntangibleAssets",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C7": {
+   "accession": "0000091419-26-000080",
+   "concept": "CostOfGoodsAndServicesSold",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!C9": {
+   "accession": "0000091419-26-000080",
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "end": "2025-07-31",
+   "period": "FY-1Q1",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!D11": {
+   "accession": "0000091419-25-000106",
+   "concept": "OperatingIncomeLoss",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D12": {
+   "accession": "0000091419-25-000106",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D14": {
+   "accession": "0000091419-25-000106",
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D15": {
+   "accession": "0000091419-25-000106",
+   "concept": "IncomeTaxExpenseBenefit",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D17": {
+   "accession": "0000091419-26-000016",
+   "concept": "NetIncomeLoss",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D6": {
+   "accession": "0000091419-25-000106",
+   "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D67": {
+   "accession": "0000091419-25-000106",
+   "concept": "Depreciation+AmortizationOfIntangibleAssets",
+   "end": "2025-10-31",
+   "period": "FY-1Q2YTD",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!D7": {
+   "accession": "0000091419-25-000106",
+   "concept": "CostOfGoodsAndServicesSold",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!D9": {
+   "accession": "0000091419-25-000106",
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "end": "2025-10-31",
+   "period": "FY-1Q2",
+   "sign": 1,
+   "start": "2025-08-01"
+  },
+  "Quarterly!E11": {
+   "accession": "0000091419-26-000016",
+   "concept": "OperatingIncomeLoss",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E12": {
+   "accession": "0000091419-26-000016",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E14": {
+   "accession": "0000091419-26-000016",
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E15": {
+   "accession": "0000091419-26-000016",
+   "concept": "IncomeTaxExpenseBenefit",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E17": {
+   "accession": "0000091419-26-000016",
+   "concept": "NetIncomeLoss",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E6": {
+   "accession": "0000091419-26-000016",
+   "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E67": {
+   "accession": "0000091419-26-000016",
+   "concept": "Depreciation+AmortizationOfIntangibleAssets",
+   "end": "2026-01-31",
+   "period": "FY-1Q3YTD",
+   "sign": 1,
+   "start": "2025-05-01"
+  },
+  "Quarterly!E7": {
+   "accession": "0000091419-26-000016",
+   "concept": "CostOfGoodsAndServicesSold",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!E9": {
+   "accession": "0000091419-26-000016",
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "end": "2026-01-31",
+   "period": "FY-1Q3",
+   "sign": 1,
+   "start": "2025-11-01"
+  },
+  "Quarterly!G11": {
+   "accession": "0000091419-26-000080",
+   "concept": "OperatingIncomeLoss",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G12": {
+   "accession": "0000091419-26-000080",
+   "concept": "-InterestIncomeExpenseNonoperatingNet",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G14": {
+   "accession": "0000091419-26-000080",
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G15": {
+   "accession": "0000091419-26-000080",
+   "concept": "IncomeTaxExpenseBenefit",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G17": {
+   "accession": "0000091419-26-000080",
+   "concept": "NetIncomeLoss",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G22": {
+   "accession": "0000091419-26-000080",
+   "concept": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G23": {
+   "accession": "0000091419-26-000080",
+   "concept": "AccountsReceivableNetCurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G24": {
+   "accession": "0000091419-26-000080",
+   "concept": "InventoryNet",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G26": {
+   "accession": "0000091419-26-000080",
+   "concept": "AssetsCurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G27": {
+   "accession": "0000091419-26-000080",
+   "concept": "PropertyPlantAndEquipmentNet",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G28": {
+   "accession": "0000091419-26-000080",
+   "concept": "Goodwill",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G29": {
+   "accession": "0000091419-26-000080",
+   "concept": "IntangibleAssetsNetExcludingGoodwill",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G31": {
+   "accession": "0000091419-26-000080",
+   "concept": "Assets",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G32": {
+   "accession": "0000091419-26-000080",
+   "concept": "AccountsPayableCurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G33": {
+   "accession": "0000091419-26-000080",
+   "concept": "ShortTermBorrowings",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G34": {
+   "accession": "0000091419-26-000080",
+   "concept": "LongTermDebtCurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G36": {
+   "accession": "0000091419-26-000080",
+   "concept": "LiabilitiesCurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G37": {
+   "accession": "0000091419-26-000080",
+   "concept": "LongTermDebtNoncurrent",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G40": {
+   "accession": "",
+   "concept": "",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G41": {
+   "accession": "0000091419-26-000080",
+   "concept": "StockholdersEquity",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G42": {
+   "accession": "",
+   "concept": "",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G44": {
+   "accession": "0000091419-26-000080",
+   "concept": "LiabilitiesAndStockholdersEquity",
+   "end": "2026-07-31",
+   "period": "FYQ1END",
+   "sign": 1,
+   "start": null
+  },
+  "Quarterly!G6": {
+   "accession": "0000091419-26-000080",
+   "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G63": {
+   "accession": "0000091419-26-000080",
+   "concept": "NetCashProvidedByUsedInOperatingActivities",
+   "end": "2026-07-31",
+   "period": "FYQ1YTD",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G64": {
+   "accession": "0000091419-26-000080",
+   "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "end": "2026-07-31",
+   "period": "FYQ1YTD",
+   "sign": -1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G65": {
+   "accession": "0000091419-26-000080",
+   "concept": "NetCashProvidedByUsedInInvestingActivities",
+   "end": "2026-07-31",
+   "period": "FYQ1YTD",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G66": {
+   "accession": "0000091419-26-000080",
+   "concept": "NetCashProvidedByUsedInFinancingActivities",
+   "end": "2026-07-31",
+   "period": "FYQ1YTD",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G67": {
+   "accession": "0000091419-26-000080",
+   "concept": "Depreciation+AmortizationOfIntangibleAssets",
+   "end": "2026-07-31",
+   "period": "FYQ1YTD",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G7": {
+   "accession": "0000091419-26-000080",
+   "concept": "CostOfGoodsAndServicesSold",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  },
+  "Quarterly!G9": {
+   "accession": "0000091419-26-000080",
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "end": "2026-07-31",
+   "period": "FYQ1",
+   "sign": 1,
+   "start": "2026-05-01"
+  }
  },
  "public": "2026-08-26",
  "target": {

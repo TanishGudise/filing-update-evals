@@ -45,8 +45,8 @@ def to_workbook(cells: dict[tuple[str, str], object], sheets: tuple[str, ...]) -
     return wb
 
 
-def sources(m: M.Logical, lay: S.Layout) -> dict[str, str]:
-    """`Sheet!A1` -> the XBRL concept and accession of each typed filing number."""
+def sources(m: M.Logical, lay: S.Layout) -> dict[str, dict]:
+    """`Sheet!A1` -> where each typed filing number comes from (see model.Cell.source)."""
     return {
         f"{lay.place[key][0]}!{lay.place[key][1]}": cell.source
         for key, cell in m.cells.items()

@@ -78,6 +78,7 @@ BS_LINES = (
     "long_term_debt",
     "other_noncurrent_liabilities",
     "total_liabilities",
+    "redeemable_nci",
     "equity",
     "nci",
     "total_equity",
@@ -98,6 +99,7 @@ BS_TYPED = (
     "current_ltd",
     "current_liabilities",
     "long_term_debt",
+    "redeemable_nci",
     "equity",
     "nci",
     "total_liabilities_equity",
@@ -185,8 +187,9 @@ class Formula:
 class Cell:
     content: float | str | Formula
     unit: str = AMOUNT
-    source: str = ""
-    """For a typed number from a filing: the concept and accession it came from."""
+    source: dict | None = None
+    """For a typed number from a filing: concept, accession, period (key, start, end) and sign
+    (-1 where the model types the negative of the tagged value, e.g. capex as an outflow)."""
 
 
 @dataclass
@@ -196,7 +199,9 @@ class Logical:
     last: int = 0
     plugs: bool = False
 
-    def set(self, section: str, line: str, col: str, content, unit: str = AMOUNT, source: str = "") -> None:
+    def set(
+        self, section: str, line: str, col: str, content, unit: str = AMOUNT, source: dict | None = None
+    ) -> None:
         self.cells[(section, line, col)] = Cell(content, unit, source)
 
 
@@ -295,10 +300,20 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
     v = {line: body["values"] for line, body in data["lines"].items()}
     src = {line: body for line, body in data["lines"].items()}
 
-    def typed(section: str, line: str, col: str, key: str, value: float, unit: str = AMOUNT) -> None:
+    def typed(
+        section: str, line: str, col: str, key: str, value: float, unit: str = AMOUNT, sign: int = 1
+    ) -> None:
         body = src[line]
-        concept = body["by_period"].get(key, body["concept"]) or "absent"
-        m.set(section, line, col, float(value), unit, f"{concept} {body['sources'].get(key, '')}".strip())
+        start, end = data["periods"][key]
+        source = {
+            "concept": body["by_period"].get(key, body["concept"]) or "",
+            "accession": body["sources"].get(key, ""),
+            "period": key,
+            "start": start,
+            "end": end,
+            "sign": sign,
+        }
+        m.set(section, line, col, float(value), unit, source)
 
     # Inputs ------------------------------------------------------------------------------
     d = drivers(data)
@@ -310,7 +325,15 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
         "V",
         float(shares["value"]),
         SHARES,
-        f"dei:EntityCommonStockSharesOutstanding {shares['accession']}",
+        {
+            "concept": "dei:EntityCommonStockSharesOutstanding",
+            "accession": shares["accession"],
+            "period": "cover",
+            "start": None,
+            "end": shares["as_of"],
+            "sign": 1,
+            **({"classes": shares["classes"]} if "classes" in shares else {}),
+        },
     )
     for name in (
         "growth_fy",
@@ -343,7 +366,9 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
         typed("ytd", "da", col, key, v["da"][key])
         if col in ("PY", *C):
             typed("ytd", "cfo", col, key, v["cfo"][key])
-            typed("ytd", "capex", col, key, -v["capex"][key])  # an outflow, as the statement shows it
+            typed(
+                "ytd", "capex", col, key, -v["capex"][key], sign=-1
+            )  # an outflow, as the statement shows it
             typed("ytd", "cfi", col, key, v["cfi"][key])
             typed("ytd", "cff", col, key, v["cff"][key])
 
@@ -462,7 +487,7 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
                 "other_noncurrent_liabilities",
                 col,
                 Formula(
-                    f"{{total_liabilities_equity@{col}}}-{{current_liabilities@{col}}}-{{long_term_debt@{col}}}-{{equity@{col}}}-{{nci@{col}}}"
+                    f"{{total_liabilities_equity@{col}}}-{{current_liabilities@{col}}}-{{long_term_debt@{col}}}-{{redeemable_nci@{col}}}-{{equity@{col}}}-{{nci@{col}}}"
                 ),
             )
         else:
@@ -482,6 +507,7 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
                 "other_current_liabilities",
                 "long_term_debt",
                 "other_noncurrent_liabilities",
+                "redeemable_nci",
                 "nci",
             ):
                 m.set("bs", line, col, Formula(f"{{{line}@{prev}}}"))
@@ -516,14 +542,16 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
                 "total_liabilities_equity",
                 col,
                 Formula(
-                    f"{{current_liabilities@{col}}}+{{long_term_debt@{col}}}+{{other_noncurrent_liabilities@{col}}}+{{equity@{col}}}+{{nci@{col}}}"
+                    f"{{current_liabilities@{col}}}+{{long_term_debt@{col}}}+{{other_noncurrent_liabilities@{col}}}+{{redeemable_nci@{col}}}+{{equity@{col}}}+{{nci@{col}}}"
                 ),
             )
         m.set(
             "bs",
             "total_liabilities",
             col,
-            Formula(f"{{total_liabilities_equity@{col}}}-{{equity@{col}}}-{{nci@{col}}}"),
+            Formula(
+                f"{{total_liabilities_equity@{col}}}-{{redeemable_nci@{col}}}-{{equity@{col}}}-{{nci@{col}}}"
+            ),
         )
         m.set("bs", "total_equity", col, Formula(f"{{equity@{col}}}+{{nci@{col}}}"))
         m.set("bs", "check", col, Formula(f"{{total_assets@{col}}}-{{total_liabilities_equity@{col}}}"))
@@ -633,7 +661,7 @@ def build(data: dict, last: int, plugs: bool = False) -> Logical:
         "current_ltd": Formula(f"{{bs.current_ltd@{at}}}"),
         "long_term_debt": Formula(f"{{bs.long_term_debt@{at}}}"),
         "net_debt": Formula("{short_term_debt@V}+{current_ltd@V}+{long_term_debt@V}-{cash@V}"),
-        "nci": Formula(f"{{bs.nci@{at}}}"),
+        "nci": Formula(f"{{bs.nci@{at}}}+{{bs.redeemable_nci@{at}}}"),
         "equity_value": Formula("{enterprise_value@V}-{net_debt@V}-{nci@V}"),
         "shares": Formula("{inp.shares}"),
         "per_share": Formula("{equity_value@V}/{shares@V}"),

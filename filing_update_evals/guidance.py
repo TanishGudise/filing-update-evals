@@ -100,7 +100,7 @@ def guidance_task(data: dict, spec: dict, raw: Path) -> GeneratedTask:
     scope = sorted(changed, key=_sort_key(lay.sheets))
     filing = [places[name] for name, _ in inputs]
 
-    # Perturbations: the guided figures move; the reported quarters and the prior year move.
+    # Perturbation 1: the guided figures move.
     def perturb(cells: list[tuple[str, str]], factors) -> str:
         lines = []
         for i, place in enumerate(cells):
@@ -108,13 +108,8 @@ def guidance_task(data: dict, spec: dict, raw: Path) -> GeneratedTask:
             lines.append(f"{_ref(place)} = {number_text(round(value * factors[i % len(factors)], 6))}")
         return "\n".join(lines)
 
-    history = [rev(f"C{j}") for j in range(1, k + 1)] + [
-        lay.place[("is", "revenue", c)] for c in ("P1", "P2", "P3", "PY")
-    ]
-    perturbations = [
-        ("the guided figures move", perturb(filing, (1.02, 0.99, 1.03, 0.98))),
-        ("reported revenue moves", perturb(history, (1.04, 0.97, 1.05))),
-    ]
+    # Perturbation 2 (every other figure the rule reads) is derived when the task is written.
+    perturbations = [("the guided figures move", perturb(filing, (1.02, 0.99, 1.03, 0.98)))]
 
     cheats: list[tuple[str, dict, list[str], bool]] = []
     units = dict(ref_cells)

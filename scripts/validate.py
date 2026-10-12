@@ -22,6 +22,10 @@ Usage: scripts/guarded .venv/bin/python scripts/validate.py [--runs 20] [--task 
 
 from __future__ import annotations
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import argparse
 import asyncio
 import io
@@ -34,6 +38,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/crosscheck.py
 from crosscheck import crosscheck
 
 from filing_update_evals import styles as S

@@ -7,6 +7,10 @@ Usage: scripts/guarded .venv/bin/python -I scripts/generate.py [TICKER ...] [--s
 
 from __future__ import annotations
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import argparse
 import json
 import sys

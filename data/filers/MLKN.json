@@ -1,4 +1,50 @@
 {
+ "periods": {
+  "FY-1Q1": [
+   "2025-06-01",
+   "2025-08-30"
+  ],
+  "FY-1Q2": [
+   "2025-08-31",
+   "2025-11-29"
+  ],
+  "FY-1Q3": [
+   "2025-11-30",
+   "2026-02-28"
+  ],
+  "FY-1": [
+   "2025-06-01",
+   "2026-05-30"
+  ],
+  "FY-2": [
+   "2024-06-02",
+   "2025-05-31"
+  ],
+  "FY-1Q2YTD": [
+   "2025-06-01",
+   "2025-11-29"
+  ],
+  "FY-1Q3YTD": [
+   "2025-06-01",
+   "2026-02-28"
+  ],
+  "FY-1END": [
+   null,
+   "2026-05-30"
+  ],
+  "FYQ1": [
+   "2026-05-31",
+   "2026-08-29"
+  ],
+  "FYQ1YTD": [
+   "2026-05-31",
+   "2026-08-29"
+  ],
+  "FYQ1END": [
+   null,
+   "2026-08-29"
+  ]
+ },
  "ticker": "MLKN",
  "name": "MILLERKNOLL, INC.",
  "cik": 66382,
@@ -84,6 +130,7 @@
   "current_liabilities": "Total current liabilities",
   "long_term_debt": "Long-term debt",
   "equity": "Total Stockholders' Equity",
+  "redeemable_nci": "Redeemable noncontrolling interests",
   "total_liabilities_equity": "Total Liabilities, Redeemable Noncontrolling Interests, and Stockholders' Equity"
  },
  "lines": {
@@ -592,6 +639,21 @@
    "by_period": {
     "FY-1END": "StockholdersEquity",
     "FYQ1END": "StockholdersEquity"
+   }
+  },
+  "redeemable_nci": {
+   "concept": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+   "values": {
+    "FY-1END": 63300000.0,
+    "FYQ1END": 63800000.0
+   },
+   "sources": {
+    "FY-1END": "0000066382-26-000156",
+    "FYQ1END": "0000066382-26-000156"
+   },
+   "by_period": {
+    "FY-1END": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+    "FYQ1END": "RedeemableNoncontrollingInterestEquityCarryingAmount"
    }
   },
   "nci": {

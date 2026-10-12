@@ -1,4 +1,62 @@
 {
+ "periods": {
+  "FY-1Q1": [
+   "2025-01-01",
+   "2025-03-31"
+  ],
+  "FY-1Q2": [
+   "2025-04-01",
+   "2025-06-30"
+  ],
+  "FY-1Q3": [
+   "2025-07-01",
+   "2025-09-30"
+  ],
+  "FY-1": [
+   "2025-01-01",
+   "2025-12-31"
+  ],
+  "FY-2": [
+   "2024-01-01",
+   "2024-12-31"
+  ],
+  "FY-1Q2YTD": [
+   "2025-01-01",
+   "2025-06-30"
+  ],
+  "FY-1Q3YTD": [
+   "2025-01-01",
+   "2025-09-30"
+  ],
+  "FY-1END": [
+   null,
+   "2025-12-31"
+  ],
+  "FYQ1": [
+   "2026-01-01",
+   "2026-03-31"
+  ],
+  "FYQ1YTD": [
+   "2026-01-01",
+   "2026-03-31"
+  ],
+  "FYQ1END": [
+   null,
+   "2026-03-31"
+  ],
+  "FYQ2": [
+   "2026-04-01",
+   "2026-06-30"
+  ],
+  "FYQ2YTD": [
+   "2026-01-01",
+   "2026-06-30"
+  ],
+  "FYQ2END": [
+   null,
+   "2026-06-30"
+  ]
+ },
  "ticker": "GNTX",
  "name": "GENTEX CORP",
  "cik": 355811,
@@ -45,9 +103,7 @@
   "income": "R3.htm",
   "cash": "R7.htm"
  },
- "notes": [
-  "nci folded into other (no single concept covers every period)"
- ],
+ "notes": [],
  "shares": {
   "current": {
    "value": 210683331,
@@ -85,6 +141,8 @@
   "short_term_debt": "Short-term debt",
   "current_liabilities": "Total current liabilities",
   "equity": "TOTAL SHAREHOLDERS' INVESTMENT",
+  "redeemable_nci": "REDEEMABLE NON-CONTROLLING INTEREST",
+  "nci": null,
   "total_liabilities_equity": "TOTAL LIABILITIES, REDEEMABLE NON-CONTROLLING INTEREST, AND SHAREHOLDERS' INVESTMENT"
  },
  "lines": {
@@ -650,15 +708,40 @@
     "FYQ2END": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
    }
   },
+  "redeemable_nci": {
+   "concept": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+   "values": {
+    "FY-1END": 3102213.0,
+    "FYQ1END": 3021490.0,
+    "FYQ2END": 2832783.0
+   },
+   "sources": {
+    "FY-1END": "0000355811-26-000048",
+    "FYQ1END": "0000355811-26-000026",
+    "FYQ2END": "0000355811-26-000048"
+   },
+   "by_period": {
+    "FY-1END": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+    "FYQ1END": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+    "FYQ2END": "RedeemableNoncontrollingInterestEquityCarryingAmount"
+   }
+  },
   "nci": {
-   "concept": "",
+   "concept": "(untagged: 0) | MinorityInterest",
    "values": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
     "FYQ2END": 0.0
    },
-   "sources": {},
-   "by_period": {}
+   "sources": {
+    "FY-1END": "0000355811-26-000026",
+    "FYQ1END": "0000355811-26-000026"
+   },
+   "by_period": {
+    "FY-1END": "MinorityInterest",
+    "FYQ1END": "MinorityInterest",
+    "FYQ2END": "(untagged: 0)"
+   }
   },
   "total_liabilities_equity": {
    "concept": "LiabilitiesAndStockholdersEquity",

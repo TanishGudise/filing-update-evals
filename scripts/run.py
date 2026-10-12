@@ -96,6 +96,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-turns", type=int, default=40)
     parser.add_argument("--jobs", type=int, default=4)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--runs-dir", type=Path, default=REPO / "runs")
     parser.add_argument(
         "--count-tokens",
         action="store_true",
@@ -114,7 +115,7 @@ def main(argv: list[str] | None = None) -> int:
         caps |= {k: float(v) for k, v in (item.split("=") for item in args.rollout_cap.split(","))}
     modes = args.modes.split(",")
     specs = select(args.tasks)
-    out = REPO / "runs" / args.name
+    out = args.runs_dir / args.name
     plan = [
         (run, mode, model, spec)
         for run in range(args.runs)
@@ -127,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
     worst = 0.0
     for _, mode, model, spec in plan:
         if mode == "single":
-            bound = len(SYSTEM_PROMPT + spec.prompt_path.read_text()) // 3 + 1_000
+            bound = len(SYSTEM_PROMPT + spec.prompt_path.read_text()) + 1_000
             if bound > MAX_INPUT_TOKENS:
                 raise SystemExit(f"{spec.id}: prompt bound {bound} tokens over {MAX_INPUT_TOKENS}")
             worst += worst_case(model, bound, 32_000)
@@ -136,6 +137,12 @@ def main(argv: list[str] | None = None) -> int:
     shape = f"{len(specs)} tasks x {len(models)} models x {len(modes)} modes x {args.runs} runs"
     print(f"{len(plan)} rollouts ({shape})")
     print(f"worst case if every rollout hit its bound: ${worst:,.2f}; hard cap ${args.cap:,.2f}")
+    if args.cap < worst / args.runs:
+        print(
+            "note: the cap is below one pass's worst case, so the cap may stop a pass part-way. Rollouts "
+            "the cap stops before their first request aren't recorded and run again next time; a rollout "
+            "it stops part-way is recorded with stop=budget and also runs again next time."
+        )
     if args.dry_run:
         for run, mode, model, spec in plan[:12]:
             print(f"  run {run} {mode:6} {model:18} {spec.id}")
@@ -178,14 +185,16 @@ def main(argv: list[str] | None = None) -> int:
         (out / "token_counts.json").write_text(json.dumps(rows, indent=1) + "\n")
         return 0
     os.environ["FUE_SANDBOX_SOFFICE"] = "1"
-    client = anthropic.Anthropic(api_key=api_key(), max_retries=2, timeout=600)
+    # SDK retries off: the runner retries itself, and every attempt reserves its worst case first.
+    client = anthropic.Anthropic(api_key=api_key(), max_retries=0, timeout=600)
     ledger = Ledger(out / "ledger.json", args.cap)
     results_path = out / "results.jsonl"
     done = set()
     if results_path.exists():
         for line in results_path.read_text().splitlines():
             r = json.loads(line)
-            done.add((r["run"], r["mode"], r["model"], r["task"]))
+            if r["stop"] != "budget":  # a rollout the cap stopped runs again next time
+                done.add((r["run"], r["mode"], r["model"], r["task"]))
 
     def one(item):
         run, mode, model, spec = item
@@ -199,7 +208,7 @@ def main(argv: list[str] | None = None) -> int:
                 model,
                 run=run,
                 ledger=ledger,
-                rollout_cap_usd=args.rollout_cap,
+                rollout_cap_usd=caps[model],
                 max_turns=args.max_turns,
                 effort=args.effort,
                 transcript=transcript,
@@ -208,6 +217,9 @@ def main(argv: list[str] | None = None) -> int:
             rollout = run_single(
                 spec, client, model, run=run, ledger=ledger, effort=args.effort, transcript=transcript
             )
+        if rollout.stop == "budget" and rollout.turns == 0:
+            print(f"{rollout.task} {model} {mode} run {run}: not started (cap reached); runs next time")
+            return None
         with open(results_path, "a") as f:
             f.write(json.dumps(asdict(rollout)) + "\n")
         outcome = f"{rollout.score:.0f} {rollout.category} {rollout.stop} ${rollout.cost_usd:.4f}"

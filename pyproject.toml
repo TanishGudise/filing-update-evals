@@ -38,3 +38,5 @@ select = ["E", "F", "I", "B", "UP"]
 [tool.ruff.lint.per-file-ignores]
 # The model's formula templates read better as one line per cell than wrapped.
 "filing_update_evals/model.py" = ["E501"]
+# Scripts install the network guard before importing anything else.
+"scripts/*.py" = ["E402"]

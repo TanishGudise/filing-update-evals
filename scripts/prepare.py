@@ -11,6 +11,10 @@ Usage: scripts/guarded .venv/bin/python -I scripts/prepare.py [TICKER ...]
 
 from __future__ import annotations
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import datetime as dt
 import json
 import sys
@@ -29,6 +33,7 @@ HINTS = {
     "total_liabilities_equity": "liabilit",
     "total_assets": "asset",
     "equity": "equity",
+    "redeemable_nci": "redeemable",
     "current_assets": "current asset",
     "current_liabilities": "current liabilit",
 }
@@ -114,7 +119,12 @@ def prepare(r: dict, override: dict | None = None) -> dict:
         assert len(facts) == 1, (r["ticker"], accn, facts)
         return {"value": facts[0].val, "as_of": facts[0].end.isoformat(), "accession": accn}
 
+    from filing_update_evals.xbrl import periods
+
     return {
+        "periods": {
+            p.key: [p.start.isoformat() if p.start else None, p.end.isoformat()] for p in periods(cal)
+        },
         "ticker": r["ticker"],
         "name": r["name"],
         "cik": cik,

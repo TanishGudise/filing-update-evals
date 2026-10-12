@@ -58,6 +58,7 @@ STANDARD = {
         "long_term_debt": "Long-term debt",
         "other_noncurrent_liabilities": "Other non-current liabilities",
         "total_liabilities": "Total liabilities",
+        "redeemable_nci": "Redeemable non-controlling interests",
         "equity": "Shareholders' equity (company)",
         "nci": "Non-controlling interests",
         "total_equity": "Total equity",
@@ -112,7 +113,7 @@ STANDARD = {
         "current_ltd": "Current portion of long-term debt (latest reported balance sheet)",
         "long_term_debt": "Long-term debt (latest reported balance sheet)",
         "net_debt": "Net debt",
-        "nci": "Non-controlling interests (latest reported balance sheet)",
+        "nci": "Non-controlling interests, incl. redeemable (latest reported balance sheet)",
         "equity_value": "Equity value",
         "shares": "Shares outstanding",
         "per_share": "Equity value per share ($)",
@@ -156,6 +157,7 @@ ABBREVIATED = {
         "long_term_debt": "LT debt",
         "other_noncurrent_liabilities": "Other NCL",
         "total_liabilities": "Total liabilities",
+        "redeemable_nci": "Redeemable NCI",
         "equity": "Equity",
         "nci": "NCI",
         "total_equity": "Total equity",
@@ -508,7 +510,7 @@ def _ref(sheet: str, coord: str, here: str, absolute: bool = False) -> str:
 
 
 def render(template: str, section: str, lay: Layout, here: str) -> str:
-    """A formula template -> an Excel formula on sheet `here`."""
+    """A formula template -> a spreadsheet formula on sheet `here`."""
 
     def replace(match: re.Match) -> str:
         sec, line, col, col2 = match.groups()

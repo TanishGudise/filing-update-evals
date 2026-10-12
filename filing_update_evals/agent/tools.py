@@ -63,8 +63,8 @@ TOOLS = [
         "description": (
             "Set or clear cells. One change per line, `Sheet!Cell = new content`: `= =formula` sets a "
             "formula, `= 1234.5` a number, `= text` a label, nothing after `=` clears the cell. A range "
-            "such as `E7:H7` fills like Excel's fill handle. Lines apply in order. If any line is invalid "
-            "or uses a function that isn't allowed, nothing is written."
+            "such as `E7:H7` fills like a spreadsheet's fill handle. Lines apply in order. If any line is "
+            "invalid or uses a function that isn't allowed, nothing is written."
         ),
         "input_schema": {
             "type": "object",

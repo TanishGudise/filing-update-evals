@@ -14,6 +14,10 @@ Usage: python scripts/report.py runs/<name> [runs/<name2> ...] [--out outputs/re
 
 from __future__ import annotations
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import argparse
 import json
 import random
@@ -36,12 +40,14 @@ CATEGORIES = (
 
 
 def load(paths: list[Path]) -> list[dict]:
-    rows = []
+    """Every rollout's latest result (a rollout the cap stopped and that ran again appears twice)."""
+    latest: dict[tuple, dict] = {}
     for path in paths:
         for line in (path / "results.jsonl").read_text().splitlines():
             if line.strip():
-                rows.append(json.loads(line))
-    return rows
+                r = json.loads(line)
+                latest[(str(path), r["run"], r["mode"], r["model"], r["task"])] = r
+    return list(latest.values())
 
 
 def task_meta() -> dict[str, dict]:

@@ -61,6 +61,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -241,6 +242,11 @@
     "FYQ1END": 3930000000.0,
     "FYQ2END": 4131000000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 405000000.0,
     "FYQ1END": 413000000.0,
@@ -333,6 +339,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermLineOfCredit",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -513,6 +520,11 @@
     "FYQ1END": 1381688000.0,
     "FYQ2END": 1429597000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -625,6 +637,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -669,9 +682,7 @@
     "2025-12-31"
    ]
   },
-  "notes": [
-   "nci folded into other (no single concept covers every period)"
-  ],
+  "notes": [],
   "concepts": {
    "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
    "cogs": "CostOfGoodsAndServicesSold",
@@ -700,7 +711,8 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "",
    "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
-   "nci": "",
+   "redeemable_nci": "RedeemableNoncontrollingInterestEquityCarryingAmount",
+   "nci": "(untagged: 0) | MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
   "shares": {
@@ -880,6 +892,11 @@
     "FYQ1END": 2502585166.0,
     "FYQ2END": 2538100758.0
    },
+   "redeemable_nci": {
+    "FY-1END": 3102213.0,
+    "FYQ1END": 3021490.0,
+    "FYQ2END": 2832783.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -907,7 +924,7 @@
    "income": "R3.htm",
    "cash": "R7.htm"
   },
-  "page_checked_lines": 25,
+  "page_checked_lines": 26,
   "page_problems": []
  },
  {
@@ -996,6 +1013,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -1176,6 +1194,11 @@
     "FYQ1END": 1511260000.0,
     "FYQ2END": 1554180000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -1267,6 +1290,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -1339,6 +1363,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -1412,6 +1437,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -1592,6 +1618,11 @@
     "FYQ1END": 1556103000.0,
     "FYQ2END": 1612575000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -1685,6 +1716,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -1865,6 +1897,11 @@
     "FYQ1END": 2513749000.0,
     "FYQ2END": 2631565000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -1955,6 +1992,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -2135,6 +2173,11 @@
     "FYQ1END": 8843284000.0,
     "FYQ2END": 9288648000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -2225,6 +2268,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -2405,6 +2449,11 @@
     "FYQ1END": 6305003000.0,
     "FYQ2END": 6743184000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -2496,6 +2545,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -2569,6 +2619,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -2749,6 +2800,11 @@
     "FYQ1END": 13874000000.0,
     "FYQ2END": 16617000000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -2838,6 +2894,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -2911,6 +2968,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -3091,6 +3149,11 @@
     "FYQ1END": 3083000000.0,
     "FYQ2END": 3183000000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -3181,6 +3244,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -3361,6 +3425,11 @@
     "FYQ1END": 2580955000.0,
     "FYQ2END": 2643741000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -3451,6 +3520,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -3631,6 +3701,11 @@
     "FYQ1END": 1869804000.0,
     "FYQ2END": 2140914000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -3722,6 +3797,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -3875,6 +3951,10 @@
     "FY-1END": 5139887000.0,
     "FYQ1END": 5204532000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0
@@ -3966,6 +4046,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4119,6 +4200,10 @@
     "FY-1END": 7368400000.0,
     "FYQ1END": 7450400000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
    "nci": {
     "FY-1END": 12200000.0,
     "FYQ1END": 13400000.0
@@ -4205,6 +4290,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4277,6 +4363,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4430,6 +4517,10 @@
     "FY-1END": 1824900000.0,
     "FYQ1END": 1806700000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0
@@ -4518,6 +4609,7 @@
    "current_ltd": "LongTermDebtAndCapitalLeaseObligationsCurrent",
    "current_liabilities": "LiabilitiesCurrent",
    "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4589,6 +4681,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4661,6 +4754,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtAndCapitalLeaseObligations",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "RedeemableNoncontrollingInterestEquityCarryingAmount",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4814,6 +4908,10 @@
     "FY-1END": 1342600000.0,
     "FYQ1END": 1356200000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 63300000.0,
+    "FYQ1END": 63800000.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0
@@ -4839,7 +4937,7 @@
    "balance": "R3.htm",
    "cash": "R5.htm"
   },
-  "page_checked_lines": 27,
+  "page_checked_lines": 28,
   "page_problems": []
  },
  {
@@ -4897,9 +4995,12 @@
    "intangibles": "IntangibleAssetsNetExcludingGoodwill",
    "total_assets": "Assets",
    "payables": "AccountsPayableCurrent",
+   "short_term_debt": "(untagged: 0) | ShortTermBankLoansAndNotesPayable",
+   "current_ltd": "(untagged: 0) | LongTermDebtCurrent",
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -4908,9 +5009,7 @@
    "as_of": "2026-09-18"
   },
   "problems": [
-   "operating_income: no concept covers every period",
-   "short_term_debt: no concept covers every period",
-   "current_ltd: no concept covers every period"
+   "operating_income: no concept covers every period"
   ],
   "qualified": false,
   "screen_qualified": false
@@ -4978,6 +5077,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "MinorityInterest",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -5181,6 +5281,12 @@
     "FYQ2END": 7949320000.0,
     "FYQ3END": 7843444000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
    "nci": {
     "FY-1END": 14644000.0,
     "FYQ1END": 14707000.0,
@@ -5262,6 +5368,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -5469,6 +5576,12 @@
     "FYQ2END": 1368100000.0,
     "FYQ3END": 1336300000.0
    },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
    "nci": {
     "FY-1END": 0.0,
     "FYQ1END": 0.0,
@@ -5562,6 +5675,7 @@
    "current_liabilities": "LiabilitiesCurrent",
    "long_term_debt": "LongTermDebtNoncurrent",
    "equity": "StockholdersEquity",
+   "redeemable_nci": "",
    "nci": "",
    "total_liabilities_equity": "LiabilitiesAndStockholdersEquity"
   },
@@ -5714,6 +5828,10 @@
    "equity": {
     "FY-1END": 5543800000.0,
     "FYQ1END": 5750800000.0
+   },
+   "redeemable_nci": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0
    },
    "nci": {
     "FY-1END": 0.0,

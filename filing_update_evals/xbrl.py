@@ -172,6 +172,15 @@ LINES: dict[str, tuple[str, tuple[str | tuple[str, ...], ...], bool]] = {
         ("StockholdersEquity", "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"),
         True,
     ),
+    "redeemable_nci": (
+        "instant",
+        (
+            "RedeemableNoncontrollingInterestEquityCarryingAmount",
+            "RedeemableNoncontrollingInterestEquityFairValue",
+            "RedeemableNoncontrollingInterestEquityCommonCarryingAmount",
+        ),
+        False,
+    ),
     "nci": ("instant", ("MinorityInterest",), False),
     "total_liabilities_equity": ("instant", ("LiabilitiesAndStockholdersEquity",), True),
 }
@@ -430,8 +439,10 @@ def _source(cf: CompanyFacts, name: str, p: Period, up_to: dt.date) -> str:
     return "+".join(dict.fromkeys(accns))
 
 
-DEBT_LINES = ("short_term_debt", "current_ltd", "long_term_debt")
-"""Optional, but never folded: the equity bridge needs every debt line."""
+DEBT_LINES = ("short_term_debt", "current_ltd", "long_term_debt", "redeemable_nci", "nci")
+"""Optional, but never folded: the equity bridge needs every debt and non-controlling-interest
+line. A filer that tags none of them at all has a zero line; scripts/pages.py then checks the
+balance sheet shows no such row with a number."""
 
 RENAMES = (frozenset({"InterestExpense", "InterestExpenseNonoperating"}),)
 """Concepts a filer may switch between from one year to the next (a US GAAP taxonomy rename).
@@ -489,10 +500,11 @@ def map_lines(
                     chosen = {k: v for k, v in stitched.items() if v}
                     break
         if not chosen and kind == "instant" and table:
-            # A balance the filer leaves untagged on some dates is 0 there only if the filing for
-            # that date still tags the line on another date (its comparative column): the line
-            # is on that statement, just blank. (scripts/pages.py also checks the target date
-            # shows no number.) Otherwise the filer re-tagged the line, and that's no zero.
+            # A balance the filer leaves untagged on some dates is 0 there only with evidence: the
+            # filing for that date still tags the line on another date (its comparative column),
+            # so the line is on that statement, just blank; or the line was 0 on every date it
+            # was tagged. (scripts/pages.py also checks the target date shows no number.)
+            # Otherwise the filer may have re-tagged the line, and that's no zero.
             name = max(table, key=lambda n: len(table[n]))
             by_key = {p.key: p for p in want}
 
@@ -505,7 +517,8 @@ def map_lines(
                 )
 
             missing = [p.key for p in want if p.key not in table[name]]
-            if all(blank_on_statement(key) for key in missing):
+            always_zero = all(value == 0 for value, _ in table[name].values())
+            if always_zero or all(blank_on_statement(key) for key in missing):
                 chosen = {p.key: name if p.key in table[name] else "(untagged: 0)" for p in want}
 
         if not chosen:

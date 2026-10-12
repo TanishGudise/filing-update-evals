@@ -5,6 +5,10 @@ downloaded ticker map. Writes data/pool_ciks.json.
 Usage: scripts/guarded .venv/bin/python -I scripts/pool_urls.py > raw-urls.txt
 """
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import json
 import sys
 import tomllib

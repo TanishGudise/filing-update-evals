@@ -18,6 +18,10 @@ Usage: scripts/guarded .venv/bin/python -I scripts/screen.py
 
 from __future__ import annotations
 
+from filing_update_evals.netguard import install
+
+install()  # offline: loopback only, even when run with python -I
+
 import datetime as dt
 import json
 import sys
@@ -154,6 +158,7 @@ def screen_one(ticker: str, cik: int) -> dict:
                 v["total_liabilities_equity"][key]
                 - v["current_liabilities"][key]
                 - v["long_term_debt"][key]
+                - v["redeemable_nci"][key]
                 - v["equity"][key]
                 - v["nci"][key]
             )
