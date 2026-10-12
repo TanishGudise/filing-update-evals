@@ -146,6 +146,24 @@ def test_taxonomy_rename_is_stitched():
     assert lines["interest_expense"].values["FY-1Q1"] == 10 and lines["interest_expense"].values["FYQ2"] == 12
 
 
+def test_net_interest_retag_is_stitched_only_where_the_tags_agree():
+    old = [k for k in DURATION if k.startswith(("FY-1", "FY-2"))]
+    new = [k for k in DURATION if k.startswith("FYQ") or k == "FY-1Q1"]
+    # Both tag FY-1Q1 (the new filing's comparative column) with the same value: stitched.
+    _, lines, problems, notes = mapped(
+        facts({"InterestExpense": (old, 10), "InterestIncomeExpenseNonoperatingNet": (new, -10)})
+    )
+    assert not problems and not notes
+    assert lines["interest_expense"].concept == "-InterestIncomeExpenseNonoperatingNet | InterestExpense"
+    _, same, _, _ = mapped(facts({"InterestExpense": (DURATION, 10)}))
+    assert lines["interest_expense"].values == same["interest_expense"].values
+    # They disagree on FY-1Q1: not the same line, so it is folded.
+    _, lines, _, notes = mapped(
+        facts({"InterestExpense": (old, 10), "InterestIncomeExpenseNonoperatingNet": (new, -12)})
+    )
+    assert lines["interest_expense"].folded and any("interest_expense folded" in n for n in notes)
+
+
 def test_other_concept_mixes_are_folded_not_stitched():
     old = [k for k in DURATION if k.startswith(("FY-1", "FY-2"))]
     new = [k for k in DURATION if k.startswith("FYQ")]

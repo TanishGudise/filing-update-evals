@@ -36,9 +36,13 @@ HINTS = {
     "redeemable_nci": "redeemable",
     "current_assets": "current asset",
     "current_liabilities": "current liabilit",
+    "cfo": "operating",
+    "cfi": "investing",
+    "cff": "financing",
 }
-"""Some numbers appear on two rows (total assets = total liabilities and equity); the hint picks
-the row the line belongs to."""
+"""Some numbers appear on two rows (total assets = total liabilities and equity; investing cash
+flow = capital expenditures when that is the only investing item); the hint picks the row the
+line belongs to."""
 
 
 FOLD_WORDS = {

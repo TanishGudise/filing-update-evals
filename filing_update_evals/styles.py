@@ -287,11 +287,48 @@ def _dates(data: dict) -> dict[str, str]:
     return out
 
 
+def _qualify(out: dict[str, dict[str, str]], data: dict, short: bool) -> None:
+    """Generic labels (S1, S3) that would drop or misstate a qualifier on the filer's own statement
+    label, which decides the figure to type. outputs/labels.md lists every filer label next to the
+    generic ones (scripts/audit_labels.py)."""
+    filer = data.get("labels", {})
+    interest = filer.get("interest_expense") or ""
+    if interest and not re.search(r"\bnet\b", interest, re.I):
+        # Gross interest expense; interest income is on its own line, which "net" would invite.
+        out["is"]["interest_expense"] = "Int exp" if short else "Interest expense"
+    qualifier = "excluding amortization of intangible assets"
+    if qualifier in (filer.get("da") or "").lower():
+        # The statement also shows intangible amortization on its own line.
+        if short:
+            out["is"]["da"] = "D&A excl. intangibles amort. (CF stmt)"
+            out["cf"]["da"] = "D&A excl. intangibles amort."
+            out["ytd"]["da"] = "D&A excl. intangibles amort. YTD (reported)"
+        else:
+            out["is"]["da"] = f"Memo: depreciation and amortization, {qualifier} (cash flow statement)"
+            out["cf"]["da"] = f"Depreciation and amortization, {qualifier}"
+            out["ytd"]["da"] = f"Depreciation and amortization, {qualifier}, year to date (as reported)"
+        out["val"]["da"] = f"Depreciation and amortization, {qualifier}"
+    if "amortizable" in (filer.get("intangibles") or "").lower():
+        # Indefinite-lived intangibles are a separate line (in other non-current assets here).
+        out["bs"]["intangibles"] = (
+            "Amortizable intangibles" if short else "Amortizable intangible assets, net"
+        )
+    if "short-term borrowings and" in (filer.get("current_ltd") or "").lower():
+        out["bs"]["current_ltd"] = (
+            "ST borrowings & current LTD"
+            if short
+            else "Short-term borrowings and current portion of long-term debt"
+        )
+
+
 def _labels(style: str, data: dict) -> dict[str, dict[str, str]]:
     if style == "S3":
         out = {sec: dict(STANDARD[sec]) | ABBREVIATED.get(sec, {}) for sec in STANDARD}
+        _qualify(out, data, short=True)
         return out
     out = {sec: dict(lines) for sec, lines in STANDARD.items()}
+    if style == "S1":
+        _qualify(out, data, short=False)
     if style == "S2":  # the filer's own words wherever a line maps to one statement line
         filer = data["labels"]
         for line, label in filer.items():

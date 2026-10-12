@@ -90,9 +90,7 @@
   "balance": "R4.htm",
   "cash": "R8.htm"
  },
- "notes": [
-  "interest_expense folded into other (no single concept covers every period)"
- ],
+ "notes": [],
  "shares": {
   "current": {
    "value": 534687144,
@@ -110,6 +108,7 @@
   "cogs": "Cost of sales",
   "sga": "Selling, general, and administrative expenses",
   "operating_income": "Operating profit",
+  "interest_expense": "Interest, net",
   "pretax_income": "Earnings before income taxes and after-tax earnings from joint ventures",
   "income_tax": "Income taxes",
   "net_income": "Net earnings attributable to General Mills",
@@ -248,24 +247,30 @@
    }
   },
   "interest_expense": {
-   "concept": "",
+   "concept": "-InterestIncomeExpenseNonoperatingNet | InterestExpense",
    "values": {
-    "FY-1Q1": 0.0,
-    "FY-1Q2": 0.0,
-    "FY-1Q3": 0.0,
-    "FY-1": 0.0,
-    "FY-1Q3YTD": 0.0,
-    "FYQ1": 0.0
+    "FY-1Q1": 132800000.0,
+    "FY-1Q2": 125900000.0,
+    "FY-1Q3": 128400000.0,
+    "FY-1": 538600000.0,
+    "FY-1Q3YTD": 387100000.0,
+    "FYQ1": 142200000.0
    },
-   "sources": {},
-   "by_period": {},
-   "folded": "tags change",
-   "reported": {
-    "period": "FYQ1",
-    "concept": "-InterestIncomeExpenseNonoperatingNet",
-    "value": 142200000.0,
-    "accession": "0001628280-26-063201",
-    "label": "Interest, net"
+   "sources": {
+    "FY-1Q1": "0001193125-25-206304",
+    "FY-1Q2": "0001628280-25-057598",
+    "FY-1Q3": "0001628280-26-019398",
+    "FY-1": "0001628280-26-046466",
+    "FY-1Q3YTD": "0001628280-26-019398",
+    "FYQ1": "0001628280-26-063201"
+   },
+   "by_period": {
+    "FY-1Q1": "InterestExpense",
+    "FY-1Q2": "InterestExpense",
+    "FY-1Q3": "InterestExpense",
+    "FY-1": "-InterestIncomeExpenseNonoperatingNet",
+    "FY-1Q3YTD": "InterestExpense",
+    "FYQ1": "-InterestIncomeExpenseNonoperatingNet"
    }
   },
   "pretax_income": {

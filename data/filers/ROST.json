@@ -128,7 +128,7 @@
   "da": "Depreciation and amortization",
   "cfo": "Net cash provided by operating activities",
   "capex": "Additions to property and equipment",
-  "cfi": "Additions to property and equipment",
+  "cfi": "Net cash used in investing activities",
   "cff": "Net cash used in financing activities",
   "cash": "Cash and cash equivalents",
   "receivables": "Accounts receivable",

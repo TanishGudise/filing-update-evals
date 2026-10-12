@@ -36,4 +36,4 @@
 - `wsm-fy2026-q2-s2`: 31 filing cells checked
 - `wsm-fy2026-q2-s3`: 31 filing cells checked
 
-998 filing cells checked against the cited XBRL fact (concept, accession, period and sign); 108 of them are lines the filer doesn't report on that date (0) and 9 are lines folded into the model's other line (0). 3 figures typed by accepted readings checked the same way. 17 guidance quotes checked word for word. 0 problems.
+998 filing cells checked against the cited XBRL fact (concept, accession, period and sign); 108 of them are lines the filer doesn't report on that date (0) and 6 are lines folded into the model's other line (0). 0 figures typed by accepted readings checked the same way. 17 guidance quotes checked word for word. 0 problems.
