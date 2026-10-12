@@ -293,7 +293,7 @@ def _qualify(out: dict[str, dict[str, str]], data: dict, short: bool) -> None:
     generic ones (scripts/audit_labels.py)."""
     filer = data.get("labels", {})
     interest = filer.get("interest_expense") or ""
-    if interest and not re.search(r"\bnet\b(?! of)", interest, re.I):
+    if interest and not re.search(r"\bnet\b(?! of capitalized)", interest, re.I):
         # Gross interest expense; interest income is on its own line, which "net" would invite.
         out["is"]["interest_expense"] = "Int exp" if short else "Interest expense"
     qualifier = "excluding amortization of intangible assets"
