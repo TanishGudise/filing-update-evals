@@ -87,7 +87,7 @@ def main(argv: list[str]) -> int:
         for check, problems in record.get("details", {}).items():
             if problems:
                 out.append(f"- {check}: " + "; ".join(problems[:4]))
-        if r["mode"] == "agent":
+        if r["mode"].startswith("agent"):
             xlsx = stem.with_suffix(".xlsx")
             if not xlsx.exists():
                 out += ["", "(no workbook saved)", ""]

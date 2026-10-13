@@ -26,6 +26,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from filing_update_evals.agent.runner import (
+    ARMS,
     MAX_INPUT_TOKENS,
     PRICES,
     Ledger,
@@ -84,7 +85,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--name", required=True, help="run name: results go to runs/<name>/")
     parser.add_argument("--models", required=True)
-    parser.add_argument("--modes", default="agent", help="agent,single")
+    parser.add_argument(
+        "--modes", default="agent", help="agent,single (agent+scope, agent+review: the harness arms)"
+    )
     parser.add_argument("--tasks", default="pilot")
     parser.add_argument("--runs", type=int, default=1)
     parser.add_argument("--cap", type=float, required=True, help="hard cap for the whole run, USD")
@@ -115,6 +118,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.rollout_cap:
         caps |= {k: float(v) for k, v in (item.split("=") for item in args.rollout_cap.split(","))}
     modes = args.modes.split(",")
+    bad = [m for m in modes if m != "single" and not (m.startswith("agent") and m.partition("+")[2] in ARMS)]
+    if bad:
+        raise SystemExit(f"unknown modes {bad}: use single, agent, agent+scope or agent+review")
     specs = select(args.tasks)
     out = args.runs_dir / args.name
     plan = [
@@ -218,7 +224,7 @@ def main(argv: list[str] | None = None) -> int:
         if (run, mode, model, spec.id) in done:
             return None
         transcript = out / "transcripts" / f"{spec.id}--{model}--{mode}--{run}.json"
-        if mode == "agent":
+        if mode.startswith("agent"):
             rollout = run_agent(
                 spec,
                 client,
@@ -229,6 +235,7 @@ def main(argv: list[str] | None = None) -> int:
                 max_turns=args.max_turns,
                 effort=args.effort,
                 transcript=transcript,
+                arm=mode.partition("+")[2],
             )
         else:
             rollout = run_single(
