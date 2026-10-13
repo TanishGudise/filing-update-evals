@@ -4,8 +4,8 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-raw/
-runs/
-scratch/
+/raw/
+/runs/
+/scratch/
 *.egg-info/
 .DS_Store

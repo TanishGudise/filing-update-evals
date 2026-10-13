@@ -96,8 +96,10 @@ def all_correct(scores: dict[str, list[float]]) -> float:
 
 
 def bootstrap(values: list[float], seed: int = 0) -> tuple[float, float]:
+    """95% percentile interval of the mean; the same for the same values in any order."""
     if len(values) < 2:
         return float("nan"), float("nan")
+    values = sorted(values)
     rng = random.Random(seed)
     means = sorted(statistics.mean(rng.choice(values) for _ in values) for _ in range(DRAWS))
     return means[int(0.025 * DRAWS)], means[int(0.975 * DRAWS) - 1]
