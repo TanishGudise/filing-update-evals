@@ -100,6 +100,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-turns", type=int, default=40)
     parser.add_argument("--jobs", type=int, default=4)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--rerun-errors",
+        action="store_true",
+        help="also rerun rollouts an API error ended part-way (e.g. the machine slept mid-request)",
+    )
     parser.add_argument("--runs-dir", type=Path, default=REPO / "runs")
     parser.add_argument(
         "--count-tokens",
@@ -208,7 +213,9 @@ def main(argv: list[str] | None = None) -> int:
             r = json.loads(line)
             # A rollout the run's cap stopped, or that an API error ended before any response, never
             # tested the model: it runs again next time (the latest result replaces it).
-            if r["stop"] != "budget" and not (r["stop"] == "error" and r["turns"] == 0):
+            if r["stop"] != "budget" and not (
+                r["stop"] == "error" and (r["turns"] == 0 or args.rerun_errors)
+            ):
                 done.add((r["run"], r["mode"], r["model"], r["task"]))
 
     def one(item):
