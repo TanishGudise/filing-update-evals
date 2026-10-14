@@ -14,3 +14,5 @@ __pycache__/
 examples/*/task/
 # Built by the README's bring-your-own quickstart
 demo-task/
+# Made by scripts/third_party.py
+examples/third-party/*/built/
