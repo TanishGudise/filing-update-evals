@@ -9,3 +9,6 @@ __pycache__/
 /scratch/
 *.egg-info/
 .DS_Store
+
+# Built by the demos in examples/README.md
+examples/*/task/

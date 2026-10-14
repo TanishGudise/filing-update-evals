@@ -4,11 +4,11 @@ checks build models through here."""
 
 from __future__ import annotations
 
-from filing_update_evals import arch_a
+from filing_update_evals import arch_a, arch_b
 from filing_update_evals import model as M
 from filing_update_evals import styles as S
 
-ARCHITECTURES = {arch_a.STYLE: "segment-driven revenue"}
+ARCHITECTURES = {arch_a.STYLE: "segment-driven revenue", arch_b.STYLE: "balance-sheet-driven cash flow"}
 
 
 def prepare(data: dict, style: str, which: str = "task") -> dict:
@@ -22,10 +22,14 @@ def prepare(data: dict, style: str, which: str = "task") -> dict:
 def logical(data: dict, style: str, last: int) -> M.Logical:
     if style == arch_a.STYLE:
         return arch_a.build(data, last)
+    if style == arch_b.STYLE:
+        return arch_b.build(data, last)
     return M.build(data, last, style == "S3")
 
 
 def layout(style: str, data: dict) -> S.Layout:
     if style == arch_a.STYLE:
         return arch_a.layout(data)
+    if style == arch_b.STYLE:
+        return arch_b.layout(data)
     return S.layout(style, data)

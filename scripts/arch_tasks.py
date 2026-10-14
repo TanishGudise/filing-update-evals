@@ -3,8 +3,10 @@
 
   A  segment-driven revenue, for every filer whose revenue breakdown passes the screen
      (scripts/segments.py; data/segments/screen.md)
+  B  a cash flow statement derived from the balance sheet, for the seven first-quarter filers
+     of the firm-memory experiment
 
-Usage: scripts/guarded .venv/bin/python -I scripts/arch_tasks.py A
+Usage: scripts/guarded .venv/bin/python -I scripts/arch_tasks.py A|B
 """
 
 from __future__ import annotations
@@ -32,6 +34,8 @@ def filers(style: str) -> list[str]:
             for p in (REPO / "data" / "segments").glob("*.json")
             if json.loads(p.read_text()).get("qualified")
         )
+    if style == "B":
+        return ["GIS", "MLKN", "SJM", "LZB", "MDT", "MEI", "KFY"]
     raise ValueError(style)
 
 

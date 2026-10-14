@@ -163,7 +163,7 @@ def static_problems(spec: TaskSpec) -> list[str]:
     lay = architectures.layout(spec.style, data)
     base = reference.values[0]
     for (section, line, col), (sheet, coord) in lay.place.items():
-        if (section, line) == ("bs", "check"):
+        if (section, line) in (("bs", "check"), ("cf", "check_cash")):  # check_cash: architecture B
             value = base.get(sheet, {}).get(coord)
             if not is_number(value) or abs(value) > 1e-6:
                 problems.append(f"reference doesn't balance at {col} ({sheet}!{coord} = {value})")

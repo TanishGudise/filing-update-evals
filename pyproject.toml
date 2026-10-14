@@ -17,6 +17,9 @@ charts = [
 
 [project.scripts]
 fue-grade = "filing_update_evals.cli:main"
+fue-build-task = "filing_update_evals.byo_cli:build_main"
+fue-grade-byo = "filing_update_evals.byo_cli:grade_main"
+fue-gate = "filing_update_evals.byo_cli:gate_main"
 
 [dependency-groups]
 dev = ["ruff>=0.6", "pytest>=8", "pytest-timeout>=2.3"]

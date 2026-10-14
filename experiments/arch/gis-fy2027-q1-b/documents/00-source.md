@@ -1,0 +1,1 @@
+Source: GENERAL MILLS INC, Form 10-Q for the quarter ended August 30, 2026, filed 2026-09-23 (SEC accession 0001628280-26-063201; https://www.sec.gov/Archives/edgar/data/40704/000162828026063201). Tables as SEC EDGAR renders them from the filing's XBRL.
