@@ -6,8 +6,10 @@ entity (the parser would otherwise expand them). Parts that make LibreOffice rea
 workbook (macros, external links, data connections, query tables, embedded objects) reject it.
 
 After parsing: every template sheet must be present, no defined names (a name can hide a
-function call that no cell shows), no array or data-table formulas, and every formula in every
-cell passes the same function allowlist as the edits format. Conditional formats and data
+function call that no cell shows) except, for a bring-your-own task, the firm workbook's own names
+with their own definitions, no array or data-table formulas, and every formula in every cell passes
+the same function allowlist as the edits format (plus, for a bring-your-own task, the functions the
+firm's updated workbook already uses). Conditional formats and data
 validations can't change a value, so they are dropped rather than evaluated.
 """
 
