@@ -16,6 +16,8 @@ from filing_update_evals.tasks import get_spec
 
 
 def main(argv: list[str]) -> int:
+    if len(argv) != 2:
+        sys.exit(__doc__)
     task_id, out = argv
     spec = get_spec(task_id)
     wb = spec.load_task_workbook()
