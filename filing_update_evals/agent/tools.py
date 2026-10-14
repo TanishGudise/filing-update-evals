@@ -181,7 +181,10 @@ class Workspace:
                 problem = formula_problem(edit.content, allowed_functions(self.spec.folder))
                 if problem:
                     return f"Nothing written: {edit.sheet}!{edit.ref}: {problem}"
-        changed = apply_edits(self.wb, parsed)
+        try:
+            changed = apply_edits(self.wb, parsed)
+        except EditError as exc:
+            return f"Nothing written: {exc}"
         self.cells_written += len(changed)
         self.stale = True
         if changed:
@@ -271,6 +274,8 @@ class Workspace:
             return handlers[name](**(arguments or {})), False
         except TypeError as exc:
             return f"Bad arguments for {name}: {exc}", True
+        except Exception as exc:  # a tool error is the model's to read, not the run's end
+            return f"{name} failed: {type(exc).__name__}: {exc}", True
 
     def workbook_bytes(self) -> bytes:
         buf = io.BytesIO()

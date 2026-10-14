@@ -7,9 +7,11 @@ workbook (macros, external links, data connections, query tables, embedded objec
 
 After parsing: every template sheet must be present, no defined names (a name can hide a
 function call that no cell shows) except, for a bring-your-own task, the firm workbook's own names
-with their own definitions, no array or data-table formulas, and every formula in every cell passes
-the same function allowlist as the edits format (plus, for a bring-your-own task, the functions the
-firm's updated workbook already uses). Conditional formats and data
+with their own definitions, no array or data-table formulas (a bring-your-own task whose firm
+workbook has array formulas allows them, under the same allowlist and no larger than its largest),
+and every formula in every cell
+passes the same function allowlist as the edits format (plus, for a bring-your-own task, the
+functions the firm's updated workbook already uses). Conditional formats and data
 validations can't change a value, so they are dropped rather than evaluated.
 """
 
@@ -22,11 +24,13 @@ from pathlib import Path
 
 import openpyxl
 from openpyxl.formatting.formatting import ConditionalFormattingList
+from openpyxl.utils.cell import range_boundaries
 from openpyxl.workbook.workbook import Workbook
 from openpyxl.worksheet.datavalidation import DataValidationList
 from openpyxl.worksheet.formula import ArrayFormula, DataTableFormula
 
 from filing_update_evals.edits import ALLOWED_FUNCTIONS, function_names, normalize_formula
+from filing_update_evals.sheet import stored_cells
 
 MAX_FILE_BYTES = 20 * 1024 * 1024
 MAX_ENTRIES = 2000
@@ -72,6 +76,12 @@ def defined_names(wb: Workbook) -> dict[str, str]:
     return out
 
 
+def check_file(data: bytes) -> None:
+    """The checks made before anything parses the file: size and part limits, no DTDs or entities,
+    no macros, links to other files, data connections, query tables or embedded objects."""
+    _check_zip(data)
+
+
 def _check_zip(data: bytes) -> None:
     if len(data) > MAX_FILE_BYTES:
         raise Rejected(f"file larger than {MAX_FILE_BYTES} bytes")
@@ -101,6 +111,7 @@ def load_submission(
     *,
     extra_functions: frozenset[str] = frozenset(),
     allowed_names: dict[str, list[str]] | None = None,
+    array_cells: int = 0,
 ) -> Workbook:
     data = source if isinstance(source, bytes) else Path(source).read_bytes()
     _check_zip(data)
@@ -119,17 +130,28 @@ def load_submission(
     for ws in wb.worksheets:
         ws.conditional_formatting = ConditionalFormattingList()
         ws.data_validations = DataValidationList()
-        for row in ws.iter_rows():
-            for cell in row:
-                value = cell.value
-                if isinstance(value, ArrayFormula | DataTableFormula):
+        for cell in stored_cells(ws):
+            value = cell.value
+            if isinstance(value, ArrayFormula) and array_cells:
+                problem = formula_problem(value.text or "", extra_functions)
+                if problem:
+                    raise Rejected(f"{ws.title}!{cell.coordinate}: {problem}")
+                try:
+                    min_col, min_row, max_col, max_row = range_boundaries(value.ref or cell.coordinate)
+                except ValueError as exc:
+                    raise Rejected(f"{ws.title}!{cell.coordinate}: array range {value.ref!r}") from exc
+                if (max_col - min_col + 1) * (max_row - min_row + 1) > array_cells:
                     raise Rejected(
-                        f"{ws.title}!{cell.coordinate}: array and data-table formulas are not allowed"
+                        f"{ws.title}!{cell.coordinate}: array formula over {value.ref}, larger than the "
+                        f"firm workbook's largest ({array_cells} cells)"
                     )
-                if isinstance(value, str) and value.startswith("="):
-                    problem = formula_problem(value, extra_functions)
-                    if problem:
-                        raise Rejected(f"{ws.title}!{cell.coordinate}: {problem}")
-                    # Same normalization as the edits path (case, `_xlfn.` prefixes).
-                    cell.value = normalize_formula(value)
+                continue
+            if isinstance(value, ArrayFormula | DataTableFormula):
+                raise Rejected(f"{ws.title}!{cell.coordinate}: array and data-table formulas are not allowed")
+            if isinstance(value, str) and value.startswith("="):
+                problem = formula_problem(value, extra_functions)
+                if problem:
+                    raise Rejected(f"{ws.title}!{cell.coordinate}: {problem}")
+                # Same normalization as the edits path (case, `_xlfn.` prefixes).
+                cell.value = normalize_formula(value)
     return wb

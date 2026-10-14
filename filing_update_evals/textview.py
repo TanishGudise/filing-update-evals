@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from openpyxl.workbook.workbook import Workbook
 
+from filing_update_evals.sheet import stored_cells
+
 
 def format_value(value) -> str:
     if value is None:
@@ -25,7 +27,10 @@ def render(formulas: Workbook, values: dict[str, dict[str, object]], skip: tuple
             continue
         ws, vs = formulas[name], values.get(name, {})
         out.append(f"### Sheet `{name}`\n")
-        for row in ws.iter_rows():
+        rows: dict[int, list] = {}
+        for cell in stored_cells(ws):
+            rows.setdefault(cell.row, []).append(cell)
+        for number, row in rows.items():
             parts = []
             for cell in row:
                 if cell.value is None:
@@ -38,7 +43,7 @@ def render(formulas: Workbook, values: dict[str, dict[str, object]], skip: tuple
                 else:
                     parts.append(f"{col}: {format_value(cell.value)}")
             if parts:
-                out.append(f"{row[0].row} | " + " | ".join(parts))
+                out.append(f"{number} | " + " | ".join(parts))
         if ws.max_row == 1 and ws["A1"].value is None:
             out.append("(empty)")
         out.append("")

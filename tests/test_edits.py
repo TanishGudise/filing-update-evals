@@ -62,8 +62,11 @@ def test_comments_and_blank_lines_are_ignored():
     [
         "IS F5 = 1",  # no sheet separator
         "Notes!A1 = x",  # unknown sheet
-        "IS!AA5 = 1",  # outside A:Z
-        "IS!F201 = 1",  # outside the row limit
+        "IS!XFE5 = 1",  # past the sheet's last column (XFD)
+        "IS!F1048577 = 1",  # past the sheet's last row
+        "IS!AAAA1 = 1",  # four column letters
+        "IS!A0 = 1",  # row 0
+        "IS!A1:XFD1048576 = 1",  # a whole sheet: rejected by its size, before anything expands it
         "IS!J5:F5 = 1",  # reversed range
         "IS!F5 = " + "x" * 1001,  # too long
         "IS!A1:Z200 = 1\nBS!A1:Z200 = 1",  # too many cells
@@ -72,6 +75,26 @@ def test_comments_and_blank_lines_are_ignored():
 def test_malformed_lines_reject_the_whole_reply(text):
     with pytest.raises(EditError):
         parse_edit_lines(text, SHEET_NAMES)
+
+
+def test_any_cell_of_the_sheet_can_be_written():
+    """No grid limit inside the sheet: a firm's model can be wide and long."""
+    assert cells("IS!AA5 = 1\nIS!XFD1048576 = 2\nBS!ZZ300:AAB300 = =ZY300+$A$1") == [
+        ("IS", "AA5", 1),
+        ("IS", "XFD1048576", 2),
+        ("BS", "ZZ300", "=ZY300+$A$1"),
+        ("BS", "AAA300", "=ZZ300+$A$1"),
+        ("BS", "AAB300", "=AAA300+$A$1"),
+    ]
+    wb = build_base_workbook()
+    apply_edits(wb, parse_edit_lines("IS!AB250 = 7", SHEET_NAMES))
+    assert wb["IS"]["AB250"].value == 7
+
+
+def test_the_cell_cap_counts_every_line():
+    assert len(cells("IS!A1:A5000 = 1")) == 5000
+    with pytest.raises(EditError, match="more than 5000 cells"):
+        parse_edit_lines("IS!A1:A4999 = 1\nBS!B1:B2 = 1", SHEET_NAMES)
 
 
 def test_reply_blocks():
@@ -107,3 +130,20 @@ def test_spaced_calls_count_as_calls():
 def test_function_names_strip_prefixes():
     assert function_names("=_xlfn.ORG.LIBREOFFICE.RAND.NV()*SUM(A1:A2)") == ["ORG.LIBREOFFICE.RAND.NV", "SUM"]
     assert function_names("=IF(A1>0,_xlfn.IFNA(B1,0),0)") == ["IF", "IFNA"]
+
+
+def test_a_cell_inside_a_merged_range_is_refused_before_anything_is_written():
+    wb = build_base_workbook()
+    wb["IS"].merge_cells("A1:C1")
+    with pytest.raises(EditError, match="merged range A1:C1; write its first cell, A1"):
+        apply_edits(wb, parse_edit_lines("IS!F5 = 1\nIS!B1 = Fiscal 2024", SHEET_NAMES))
+    assert wb["IS"]["F5"].value is None
+
+
+def test_text_that_reads_as_something_else_is_quoted_in_an_edit_line():
+    from filing_update_evals.edits import parse_content
+    from filing_update_evals.generate import edit_text
+
+    for value in ("2024", "12%", "Revenue ", "Q1 2025", 2024, 3.5):
+        assert parse_content(edit_text(value)) == value
+    assert edit_text("2024") == '"2024"' and edit_text("Q1 2025") == "Q1 2025"

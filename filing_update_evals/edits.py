@@ -10,8 +10,9 @@ A reply contains one or more ```edits blocks. Each non-blank line sets one cell 
     CF!F6 =                         clear the cell
 
 Lines starting with `#` are comments. Edits apply in order, so a later edit to the same cell
-wins. Any line that doesn't parse, an unknown sheet, or a cell outside the grid rejects the
-whole reply: a half-applied answer would be graded on something the model didn't write.
+wins. Any line that doesn't parse, an unknown sheet, a cell outside an Excel sheet (A1:XFD1048576)
+or more than MAX_CELLS cells in one block rejects the whole reply: a half-applied answer would be graded
+on something the model didn't write.
 
 Formulas may only use the functions in ALLOWED_FUNCTIONS: deterministic arithmetic, logical,
 lookup and finance functions that LibreOffice evaluates from an xlsx file. Function names are
@@ -24,14 +25,23 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from openpyxl.cell.cell import MergedCell
 from openpyxl.formula.tokenizer import Token, Tokenizer
 from openpyxl.formula.translate import Translator
-from openpyxl.utils.cell import coordinate_from_string, get_column_letter, range_boundaries
+from openpyxl.utils.cell import (
+    column_index_from_string,
+    coordinate_from_string,
+    get_column_letter,
+    range_boundaries,
+)
+from openpyxl.utils.exceptions import CellCoordinatesException
 from openpyxl.workbook.workbook import Workbook
 
-MAX_ROW = 200
-MAX_COL = 26  # A..Z
+MAX_ROW = 1_048_576  # an Excel sheet's grid: A1:XFD1048576
+MAX_COL = 16_384
 MAX_CELLS = 5000
+"""The most cells one edits block (or one write_cells call) may set, counting every cell a range
+fills."""
 MAX_CONTENT_CHARS = 1000
 
 _BLOCK = re.compile(r"^[ \t]*```edits[ \t]*\n(?P<body>.*?)^[ \t]*```", re.MULTILINE | re.DOTALL)
@@ -188,6 +198,7 @@ def parse_edit_lines(text: str, sheets: list[str]) -> list[Edit]:
     """Parse the body of one edits block (or a task data file)."""
     by_lower = {name.lower(): name for name in sheets}
     edits: list[Edit] = []
+    total = 0
     for number, line in enumerate(text.splitlines(), start=1):
         stripped = line.strip()
         if not stripped or stripped.startswith("#"):
@@ -201,20 +212,25 @@ def parse_edit_lines(text: str, sheets: list[str]) -> list[Edit]:
             raise EditError(f"line {number}: unknown sheet {name!r}")
         ref = match["ref"].replace("$", "").upper()
         for part in ref.split(":"):
-            col, row = coordinate_from_string(part)
-            if not (1 <= row <= MAX_ROW) or len(col) > 1:
-                raise EditError(f"line {number}: {part} is outside A1:Z{MAX_ROW}")
+            try:
+                col, row = coordinate_from_string(part)
+            except CellCoordinatesException:  # more than three letters, row 0
+                raise EditError(f"line {number}: {part} is not a cell") from None
+            if not (1 <= row <= MAX_ROW) or column_index_from_string(col) > MAX_COL:
+                raise EditError(f"line {number}: {part} is outside the sheet (A1:XFD{MAX_ROW})")
         min_col, min_row, max_col, max_row = range_boundaries(ref)
         if min_col > max_col or min_row > max_row:
             raise EditError(f"line {number}: range {ref} is reversed")
+        # Count a range's cells before anything expands it: a whole-sheet range is 17 billion cells.
+        total += (max_col - min_col + 1) * (max_row - min_row + 1)
+        if total > MAX_CELLS:
+            raise EditError(f"more than {MAX_CELLS} cells edited")
         raw = match["content"]
         if raw.startswith(" "):
             raw = raw[1:]
         if len(raw) > MAX_CONTENT_CHARS:
             raise EditError(f"line {number}: content longer than {MAX_CONTENT_CHARS} characters")
         edits.append(Edit(sheet, ref, parse_content(raw)))
-    if sum(len(e.cells()) for e in edits) > MAX_CELLS:
-        raise EditError(f"more than {MAX_CELLS} cells edited")
     return edits
 
 
@@ -232,7 +248,17 @@ def parse_reply(reply: str, sheets: list[str]) -> list[Edit] | None:
 
 
 def apply_edits(wb: Workbook, edits: list[Edit]) -> dict[tuple[str, str], Value]:
-    """Apply edits in place; returns the final content of every edited cell."""
+    """Apply edits in place; returns the final content of every edited cell. A cell inside a merged
+    range other than its first can't hold content: EditError, before anything is written."""
+    for edit in edits:
+        ws = wb[edit.sheet]
+        for coord, _ in edit.cells():
+            if isinstance(ws[coord], MergedCell):
+                merged = next(str(r) for r in ws.merged_cells.ranges if coord in r)
+                raise EditError(
+                    f"{edit.sheet}!{coord} is inside the merged range {merged}; write its first cell, "
+                    f"{merged.split(':')[0]}"
+                )
     changed: dict[tuple[str, str], Value] = {}
     for edit in edits:
         ws = wb[edit.sheet]

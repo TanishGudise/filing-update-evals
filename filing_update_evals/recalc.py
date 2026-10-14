@@ -25,6 +25,8 @@ from pathlib import Path
 import openpyxl
 from openpyxl.workbook.workbook import Workbook
 
+from filing_update_evals.sheet import stored_cells
+
 RECALC_TIMEOUT_S = 60.0
 
 MAX_PARALLEL = max(1, os.cpu_count() or 1)
@@ -169,7 +171,7 @@ def read_values(path: Path) -> Values:
     wb = openpyxl.load_workbook(path, data_only=True)
     out: Values = {}
     for ws in wb.worksheets:
-        out[ws.title] = {c.coordinate: c.value for row in ws.iter_rows() for c in row if c.value is not None}
+        out[ws.title] = {c.coordinate: c.value for c in stored_cells(ws) if c.value is not None}
     return out
 
 

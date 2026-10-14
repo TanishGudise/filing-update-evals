@@ -59,6 +59,17 @@ def content_text(value: object) -> str:
     return str(value)
 
 
+def edit_text(value: object) -> str:
+    """A cell's content as an edit line writes it: text the edits format would read as something
+    else (a year typed as a header, "12%", a label with a trailing space) is quoted."""
+    from filing_update_evals.edits import parse_content
+
+    text = content_text(value)
+    if isinstance(value, str) and not value.startswith("=") and parse_content(text) != value:
+        return '"' + text + '"'
+    return text
+
+
 def _sort_key(sheets: tuple[str, ...]):
     def key(item):
         sheet, coord = item
@@ -79,7 +90,7 @@ def edits_text(before: dict, after: dict, sheets: tuple[str, ...], header: str =
     for sheet, coord in sorted(diff(before, after), key=_sort_key(sheets)):
         value = after.get((sheet, coord))
         ref = f"{quote_sheet(sheet)}!{coord}"
-        lines.append(f"{ref} = {content_text(value)}".rstrip() if value is not None else f"{ref} =")
+        lines.append(f"{ref} = {edit_text(value)}".rstrip() if value is not None else f"{ref} =")
     return "\n".join(lines) + "\n"
 
 
@@ -438,7 +449,8 @@ V2_FACTORS = (1.06, 0.95, 1.04, 0.97, 1.08, 0.93, 1.02, 0.99, 1.05, 0.96)
 
 
 def references(formula: str, here: str) -> list[tuple[str, str]]:
-    """Every cell a formula reads (ranges expanded), as (sheet, coordinate)."""
+    """Every cell a formula reads (ranges expanded), as (sheet, coordinate). An operand that isn't a
+    cell or a range (a defined name, a whole column) isn't followed."""
     from openpyxl.formula.tokenizer import Token, Tokenizer
 
     from filing_update_evals.tasks import expand
@@ -450,7 +462,10 @@ def references(formula: str, here: str) -> list[tuple[str, str]]:
         ref = token.value.replace("$", "")
         if "!" not in ref:
             ref = f"{here}!{ref}"
-        out.extend(expand(ref))
+        try:
+            out.extend(expand(ref))
+        except ValueError:
+            continue
     return out
 
 
