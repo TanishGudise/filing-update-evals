@@ -12,3 +12,5 @@ __pycache__/
 
 # Built by the demos in examples/README.md
 examples/*/task/
+# Built by the README's bring-your-own quickstart
+demo-task/
