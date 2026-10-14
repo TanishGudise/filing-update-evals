@@ -4,4 +4,4 @@
 - Author: Amgad Bashir.
 - License: MIT; the repository's license file, verbatim, is [`LICENSE`](LICENSE).
 - `original.xlsx` is that file unchanged (SHA-256 `2b40d0ef067f0f86c3fec38b1b8adf86a5a87794992a522aa5ecdf5425545488`, 35,758 bytes).
-- The file's own properties: created and last modified by Amgad Bashir (2026-02-08).
+- The file's own properties: created (2026-02-08) and last modified (2026-02-16) by Amgad Bashir.

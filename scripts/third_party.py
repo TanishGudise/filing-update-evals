@@ -33,7 +33,6 @@ import subprocess
 import sys
 import tempfile
 import time
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -175,8 +174,9 @@ def grade_case(name: str) -> dict:
             "details": [d for v in (res.details or {}).values() for d in v][:4],
         }
 
-    with ThreadPoolExecutor(3) as ex:
-        result["grades"] = list(ex.map(one, candidates))
+    # One at a time: LibreOffice gets 60 s per recalculation, and a large model graded in parallel
+    # with others can run out of it on a busy machine.
+    result["grades"] = [one(c) for c in candidates]
     return result
 
 
