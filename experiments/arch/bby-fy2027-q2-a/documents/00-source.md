@@ -1,0 +1,1 @@
+Source: BEST BUY CO INC, Form 10-Q for the quarter ended August 1, 2026, filed 2026-09-04 (SEC accession 0000764478-26-000042; https://www.sec.gov/Archives/edgar/data/764478/000076447826000042). Tables as SEC EDGAR renders them from the filing's XBRL.

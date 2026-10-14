@@ -43,7 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/crosscheck.py
 from crosscheck import crosscheck
 
-from filing_update_evals import styles as S
+from filing_update_evals import architectures
 from filing_update_evals.edits import apply_edits, format_reply
 from filing_update_evals.grader import (
     GradeResult,
@@ -157,8 +157,10 @@ def static_problems(spec: TaskSpec) -> list[str]:
     ]
     if errors:
         problems.append(f"reference has error cells: {errors[:5]}")
-    data = json.loads((REPO / "data" / "filers" / f"{spec.filer}.json").read_text())
-    lay = S.layout(spec.style, data)
+    data = architectures.prepare(
+        json.loads((REPO / "data" / "filers" / f"{spec.filer}.json").read_text()), spec.style
+    )
+    lay = architectures.layout(spec.style, data)
     base = reference.values[0]
     for (section, line, col), (sheet, coord) in lay.place.items():
         if (section, line) == ("bs", "check"):

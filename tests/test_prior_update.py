@@ -17,10 +17,14 @@ from filing_update_evals.prior_update import (
     render,
     task_texts,
 )
-from filing_update_evals.tasks import EXPERIMENT_TASKS_DIR, load_specs
+from filing_update_evals.tasks import ARCHITECTURE_TASKS_DIR, EXPERIMENT_TASKS_DIR, load_specs
 
 REPO = Path(__file__).resolve().parent.parent
-GENERATED = [s for s in (*load_specs(), *load_specs(EXPERIMENT_TASKS_DIR)) if s.group == "xbrl"]
+GENERATED = [
+    s
+    for s in (*load_specs(), *load_specs(EXPERIMENT_TASKS_DIR), *load_specs(ARCHITECTURE_TASKS_DIR))
+    if s.group == "xbrl"
+]
 
 
 @pytest.mark.parametrize("spec", GENERATED, ids=lambda s: s.id)

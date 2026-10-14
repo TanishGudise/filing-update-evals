@@ -20,8 +20,7 @@ from pathlib import Path
 
 from openpyxl.utils.cell import coordinate_from_string
 
-from filing_update_evals import model as M
-from filing_update_evals import styles as S
+from filing_update_evals import architectures
 from filing_update_evals.build import physical
 from filing_update_evals.generate import _sort_key, content_text, diff
 from filing_update_evals.grader import contents
@@ -54,10 +53,11 @@ def prior_update(
         if year_earlier is None:
             raise ValueError(f"{data['ticker']}: a first-quarter task needs the year-earlier data")
         src, last, same_year = year_earlier, year_earlier["quarter"], False
-    lay = S.layout(style, src)
-    plugs = style == "S3"
-    before = physical(M.build(src, last - 1, plugs), lay)
-    after = physical(M.build(src, last, plugs), lay)
+    if "breakdown" not in src:
+        src = architectures.prepare(src, style, "task" if same_year else "example")
+    lay = architectures.layout(style, src)
+    before = physical(architectures.logical(src, style, last - 1), lay)
+    after = physical(architectures.logical(src, style, last), lay)
     if "NI attrib. to co." not in task_texts:  # a published task, which predates the S3 label fix
         for cells in (before, after):
             for key, value in cells.items():
