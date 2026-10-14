@@ -574,7 +574,14 @@ def build_task(
         "filing": [p.name for p in filing_files(filing, raw)],
         "scales": scales,
         "functions": functions,
-        "defined_names": defined_names(wb_after),
+        # A name may point where it did before the update or where it does after (an inserted
+        # column moves it); any other definition is refused at intake.
+        "defined_names": {
+            name: sorted(
+                {t for t in (defined_names(wb_before).get(name), defined_names(wb_after).get(name)) if t}
+            )
+            for name in defined_names(wb_before) | defined_names(wb_after)
+        },
         "warnings": [w for ws in wb_after.worksheets if ws.title != SCRATCH for w in shape_warnings(ws)]
         + inserted(wb_after, al_before)
         + _reach_warning(targets),
@@ -623,9 +630,9 @@ def intake_options(spec: dict) -> dict:
     }
 
 
-def _names(spec: dict) -> dict[str, str]:
+def _names(spec: dict) -> dict[str, list[str]]:
     names = spec.get("defined_names") or {}
-    if not isinstance(names, dict):
+    if not isinstance(names, dict) or any(isinstance(v, str) for v in names.values()):
         raise ValueError("this task was built by an older fue-build-task: rebuild it")
     return names
 

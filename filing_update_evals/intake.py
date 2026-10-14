@@ -98,7 +98,7 @@ def load_submission(
     template_sheets: tuple[str, ...],
     *,
     extra_functions: frozenset[str] = frozenset(),
-    allowed_names: dict[str, str] | None = None,
+    allowed_names: dict[str, list[str]] | None = None,
 ) -> Workbook:
     data = source if isinstance(source, bytes) else Path(source).read_bytes()
     _check_zip(data)
@@ -111,8 +111,9 @@ def load_submission(
     if missing:
         raise Rejected(f"sheet missing: {missing[0]}")
     names = defined_names(wb)
-    if any((allowed_names or {}).get(name) != text for name, text in names.items()):
-        raise Rejected("defined names are not allowed")
+    for name, text in names.items():
+        if text not in (allowed_names or {}).get(name, ()):
+            raise Rejected(f"defined name not allowed: {name} = {text}")
     for ws in wb.worksheets:
         ws.conditional_formatting = ConditionalFormattingList()
         ws.data_validations = DataValidationList()
