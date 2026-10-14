@@ -31,4 +31,4 @@ uv run fue-grade-byo --task-dir examples/byo-inserted-column/task --xlsx example
 
 ## Privacy
 
-Building and grading are offline: the workbooks and the filing are read from disk, LibreOffice recalculates locally, and the process's network guard refuses every connection. An accession number is looked up only in the local SEC cache (`raw/`), never downloaded. During an agent run (`fue-gate`, `scripts/run.py`), the model reads the workbook through the model API, the one host the run may reach; the workbook files themselves are never uploaded anywhere.
+The workbooks and the filing are read from disk and nothing uploads them. Building and grading allow the Python process only loopback connections, and an accession number is looked up only in the local SEC cache (`raw/`), never downloaded. LibreOffice, which recalculates the workbooks, is a separate process: run the commands under `scripts/guarded` (macOS) or set `FUE_SANDBOX_SOFFICE=1` to keep it off the network too; the Harbor verifier runs with no network. During an agent run (`fue-gate`, `scripts/run.py`), the model reads the workbook through the model API, the one host the run may reach.

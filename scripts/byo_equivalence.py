@@ -92,9 +92,7 @@ def main(argv: list[str]) -> int:
     p.add_argument("--out", type=Path, default=REPO / "outputs" / "byo-equivalence.md")
     p.add_argument("tasks", nargs="*")
     args = p.parse_args(argv)
-    specs = [
-        s for s in load_specs(args.root) if (not args.tasks or s.id in args.tasks) and s.group != "guidance"
-    ]
+    specs = [s for s in load_specs(args.root) if not args.tasks or s.id in args.tasks]
     rows: list[dict] = []
     with tempfile.TemporaryDirectory(prefix="byo-eq-") as tmp, ThreadPoolExecutor(args.jobs) as pool:
         futures = []
@@ -110,15 +108,26 @@ def main(argv: list[str]) -> int:
     checks = sum(r["hand_checks"] == r["byo_checks"] for r in rows)
     expected = sum(r["byo"] == r["expected"] for r in rows)
     scope = sum(1 for s in {r["task"]: r["scope_same"] for r in rows}.values() if s)
+    flagged = {r["task"]: r["flagged"] for r in rows}
+    refused = sum(1 for n in flagged.values() if n)
     lines = [
         "# Bring-your-own build against the hand-built tasks",
         "",
-        f"{len(specs)} tasks ({args.root.relative_to(REPO)}), {n} graded candidates (oracle, no-op, "
+        f"{len(specs)} tasks ({args.root.resolve().relative_to(REPO)}), {n} graded candidates "
+        "(oracle, no-op, "
         "every cheat, every alternate), each graded by the hand-built task and by the task "
         "fue-build-task builds from its "
         "before and after workbooks and its filing documents.",
         "",
+        "Before and after share one layout in these tasks (the hand-built tasks never insert a column or "
+        "a row), so this tests the build's targets, tracing, perturbations and checks against the "
+        "hand-built grader, not the alignment; tests/test_byo.py tests the alignment.",
+        "",
         f"- Scope (target cells) identical to the hand-built task's: {scope} of {len(specs)} tasks",
+        f"- Builds that flag typed changes not traced to the filing (and so refuse without "
+        f"--keep-untraced, which the comparison uses): {refused} of {len(specs)} tasks, "
+        f"{sum(flagged.values())} cells (lines typed as 0, the quarter counter, figures the filing "
+        "shows only as parts of a sum)",
         f"- Score agrees: {score} of {n}",
         f"- Failure class agrees: {klass} of {n}",
         f"- Failed checks agree (values_variant_N pooled): {checks} of {n}",
