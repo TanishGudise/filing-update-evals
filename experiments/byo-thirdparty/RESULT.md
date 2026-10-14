@@ -103,7 +103,7 @@ The agent's edit tool (and the single-reply edits format it shares) now accepts 
 ## 6. Gates
 
 - Full test suite: 312 passed in the development environment; a fresh clone skips the 3 that need the downloaded SEC cache `raw/`, which isn't in the repository. Lint clean.
-- Fresh clone (this branch, a new environment, no `.env`, no API key): the README's quickstart builds the demo task and grades the analyst's update 1.0 and the untouched workbook 0.0 in 7 seconds (package cache warm); the third-party example in `examples/third-party/README.md` (Amazon) grades 1.0 and 0.0 in 11 seconds.
+- Fresh clone (this branch, a new environment, no `.env`, no API key): the README's quickstart builds the demo task and grades the analyst's update 1.0 and the untouched workbook 0.0 in 8 seconds (package cache warm); the third-party example in `examples/third-party/README.md` (Amazon) grades 1.0 and 0.0 in 18 seconds.
 - pr-review: __REVIEW__
 
 ## Adversarial answers (from the code review)
