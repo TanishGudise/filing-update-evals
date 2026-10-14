@@ -127,7 +127,7 @@ def main(argv: list[str]) -> int:
         f"- Builds that flag typed changes not traced to the filing (and so refuse without "
         f"--keep-untraced, which the comparison uses): {refused} of {len(specs)} tasks, "
         f"{sum(flagged.values())} cells (lines typed as 0, the quarter counter, figures the filing "
-        "shows only as parts of a sum)",
+        "shows only as parts of a sum, percentages typed as decimals)",
         f"- Score agrees: {score} of {n}",
         f"- Failure class agrees: {klass} of {n}",
         f"- Failed checks agree (values_variant_N pooled): {checks} of {n}",
