@@ -120,3 +120,13 @@ def test_every_alternate_scores_one_and_every_cheat_fails_as_tagged(task_id):
                 prefix,
                 result.failed_checks,
             )
+
+
+def test_s3_net_income_label_says_attributable_when_the_filer_has_minority_interests():
+    """Fixed after the firm-memory experiment; the published S3 tasks keep the old "NI"."""
+    from filing_update_evals import styles as S
+
+    for ticker, qualified in (("GNTX", True), ("GIS", True), ("MLKN", True), ("SJM", False), ("HD", False)):
+        data = json.loads((REPO / "data" / "filers" / f"{ticker}.json").read_text())
+        label = S._labels("S3", data)["is"]["net_income"]
+        assert label == ("NI attrib. to co." if qualified else "NI"), ticker

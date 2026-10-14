@@ -37,7 +37,7 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | GNTX | is.operating_income | Income from operations | Operating income | EBIT |  |
 | GNTX | is.pretax_income | INCOME BEFORE PROVISION FOR INCOME TAXES | Income before income taxes | EBT |  |
 | GNTX | is.income_tax | PROVISION FOR INCOME TAXES | Income tax expense | Tax |  |
-| GNTX | is.net_income | NET INCOME ATTRIBUTABLE TO GENTEX CORPORATION | Net income attributable to the company | NI |  |
+| GNTX | is.net_income | NET INCOME ATTRIBUTABLE TO GENTEX CORPORATION | Net income attributable to the company | NI attrib. to co. | carried |
 | GNTX | ytd.da | Depreciation and amortization | Depreciation and amortization, year to date (as reported) | D&A YTD (reported) |  |
 | GNTX | ytd.cfo | Net cash provided by operating activities | Cash from operating activities, year to date (as reported) | CFO YTD (reported) |  |
 | GNTX | ytd.capex | Plant and equipment additions | Capital expenditures, year to date (as reported) | Capex YTD (reported) |  |
@@ -190,7 +190,7 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | GIS | is.interest_expense | Interest, net | Interest expense, net | Int exp, net |  |
 | GIS | is.pretax_income | Earnings before income taxes and after-tax earnings from joint ventures | Income before income taxes | EBT | reviewed: One pre-tax line; joint-venture income comes after tax, in the model's other after-tax items. |
 | GIS | is.income_tax | Income taxes | Income tax expense | Tax |  |
-| GIS | is.net_income | Net earnings attributable to General Mills | Net income attributable to the company | NI |  |
+| GIS | is.net_income | Net earnings attributable to General Mills | Net income attributable to the company | NI attrib. to co. | carried |
 | GIS | ytd.da | Depreciation and amortization | Depreciation and amortization, year to date (as reported) | D&A YTD (reported) |  |
 | GIS | ytd.cfo | Net cash provided by operating activities | Cash from operating activities, year to date (as reported) | CFO YTD (reported) |  |
 | GIS | ytd.capex | Purchases of land, buildings, and equipment | Capital expenditures, year to date (as reported) | Capex YTD (reported) |  |
@@ -219,7 +219,7 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | MLKN | is.interest_expense | Interest expense | Interest expense | Int exp | carried |
 | MLKN | is.pretax_income | Earnings before income taxes | Income before income taxes | EBT |  |
 | MLKN | is.income_tax | Income tax expense | Income tax expense | Tax |  |
-| MLKN | is.net_income | Net earnings attributable to MillerKnoll, Inc. | Net income attributable to the company | NI |  |
+| MLKN | is.net_income | Net earnings attributable to MillerKnoll, Inc. | Net income attributable to the company | NI attrib. to co. | carried |
 | MLKN | ytd.da | Depreciation and amortization | Depreciation and amortization, year to date (as reported) | D&A YTD (reported) |  |
 | MLKN | ytd.cfo | Net Cash Provided by Operating Activities | Cash from operating activities, year to date (as reported) | CFO YTD (reported) |  |
 | MLKN | ytd.capex | Capital expenditures | Capital expenditures, year to date (as reported) | Capex YTD (reported) |  |
@@ -298,7 +298,7 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | MKC | is.interest_expense | Interest expense | Interest expense | Int exp | carried |
 | MKC | is.pretax_income | Income from consolidated operations before income taxes | Income before income taxes | EBT | reviewed: One pre-tax line; unconsolidated operations' income comes after tax, in the model's other after-tax items. |
 | MKC | is.income_tax | Income tax expense | Income tax expense | Tax |  |
-| MKC | is.net_income | Net income attributable to McCormick & Company | Net income attributable to the company | NI |  |
+| MKC | is.net_income | Net income attributable to McCormick & Company | Net income attributable to the company | NI attrib. to co. | carried |
 | MKC | ytd.da | Depreciation and amortization | Depreciation and amortization, year to date (as reported) | D&A YTD (reported) |  |
 | MKC | ytd.cfo | Net cash flow provided by operating activities | Cash from operating activities, year to date (as reported) | CFO YTD (reported) |  |
 | MKC | ytd.capex | Capital expenditures (including software) | Capital expenditures, year to date (as reported) | Capex YTD (reported) | reviewed: One capital expenditure line, which includes software. |
@@ -321,4 +321,4 @@ Every typed row's label on the filer's statement next to the generic labels the 
 | MKC | bs.nci | Non-controlling interests | Non-controlling interests | NCI |  |
 | MKC | bs.total_liabilities_equity | Total liabilities and shareholders’ equity | Total liabilities and equity | Total L&E |  |
 
-8 qualifiers carried into the generic labels, 9 reviewed as making no difference, 0 unreviewed.
+12 qualifiers carried into the generic labels, 9 reviewed as making no difference, 0 unreviewed.

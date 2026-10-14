@@ -3,7 +3,8 @@ labels. Offline. Writes outputs/labels.md and fails if a qualifier is unreviewed
 
 A filer label is flagged when it carries a qualifier that decides which reported figure belongs in
 the row: something excluded or included, a narrower or combined line, gross against net interest,
-or units. Each flag must be either carried into the generic labels (styles._qualify) or reviewed
+or units. Each flag must be either carried into the generic labels (styles._qualify; a flag counts
+as carried when the S1 or the S3 label for that filer differs from the generic one) or reviewed
 below as making no difference to the figure (the statement has a single row it can come from).
 The audit covers the typed statement rows; the Inputs/Drivers assumptions and the valuation rows
 keep their generic labels.
@@ -30,7 +31,7 @@ REPO = Path(__file__).resolve().parent.parent
 
 QUALIFIER = re.compile(
     r"exclu|includ|and after-tax|and equity in|consolidated operations|amortizable|indefinite"
-    r"|short-term borrowings and|interest income|less current|thousand|million|per share",
+    r"|short-term borrowings and|interest income|less current|attributable|thousand|million|per share",
     re.I,
 )
 
@@ -63,6 +64,7 @@ def main() -> int:
     tickers = tomllib.loads((REPO / "data" / "filers.toml").read_text())["selected"]
     tickers += tomllib.loads((REPO / "data" / "hardset.toml").read_text())["tickers"]
     generic = S._labels("S1", {"labels": {}})
+    generic3 = S._labels("S3", {"labels": {}})
     out = [
         "# Row labels: filer vs generic",
         "",
@@ -88,7 +90,7 @@ def main() -> int:
                 bool(re.search(r"\bnet\b", label, re.I)) != bool(re.search(r"\bnet\b", s1[sec][line], re.I))
             )
             note = ""
-            if s1[sec][line] != generic[sec][line]:
+            if s1[sec][line] != generic[sec][line] or s3[sec][line] != generic3[sec][line]:
                 note = "carried"
                 carried += 1
             elif flagged or net_gap:
