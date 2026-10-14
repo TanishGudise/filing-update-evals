@@ -131,7 +131,8 @@ class TaskSpec:
 def expand(ref: str) -> list[tuple[str, str]]:
     """`Sheet!A1` or `Sheet!A1:C3` -> [(sheet, coordinate), ...]."""
     sheet, cells = ref.rsplit("!", 1)
-    sheet = sheet.strip("'")
+    if len(sheet) > 1 and sheet[0] == sheet[-1] == "'":
+        sheet = sheet[1:-1].replace("''", "'")
     min_col, min_row, max_col, max_row = range_boundaries(cells.replace("$", ""))
     return [
         (sheet, f"{get_column_letter(c)}{r}")

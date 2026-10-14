@@ -62,6 +62,14 @@ def formula_problem(formula: str, extra: frozenset[str] = frozenset()) -> str | 
     return None
 
 
+def defined_names(wb: Workbook) -> dict[str, str]:
+    """Every defined name and what it refers to; a sheet's own names as `Sheet!name`."""
+    out = {name: d.attr_text for name, d in wb.defined_names.items()}
+    for ws in wb.worksheets:
+        out |= {f"{ws.title}!{name}": d.attr_text for name, d in ws.defined_names.items()}
+    return out
+
+
 def _check_zip(data: bytes) -> None:
     if len(data) > MAX_FILE_BYTES:
         raise Rejected(f"file larger than {MAX_FILE_BYTES} bytes")
@@ -90,7 +98,7 @@ def load_submission(
     template_sheets: tuple[str, ...],
     *,
     extra_functions: frozenset[str] = frozenset(),
-    allowed_names: frozenset[str] = frozenset(),
+    allowed_names: dict[str, str] | None = None,
 ) -> Workbook:
     data = source if isinstance(source, bytes) else Path(source).read_bytes()
     _check_zip(data)
@@ -102,8 +110,8 @@ def load_submission(
     missing = [name for name in template_sheets if name not in wb.sheetnames]
     if missing:
         raise Rejected(f"sheet missing: {missing[0]}")
-    names = set(wb.defined_names) | {n for ws in wb.worksheets for n in ws.defined_names}
-    if names - allowed_names:
+    names = defined_names(wb)
+    if any((allowed_names or {}).get(name) != text for name, text in names.items()):
         raise Rejected("defined names are not allowed")
     for ws in wb.worksheets:
         ws.conditional_formatting = ConditionalFormattingList()

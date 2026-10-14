@@ -36,8 +36,11 @@ MAX_CONTENT_CHARS = 1000
 
 _BLOCK = re.compile(r"^[ \t]*```edits[ \t]*\n(?P<body>.*?)^[ \t]*```", re.MULTILINE | re.DOTALL)
 _LINE = re.compile(
-    r"^'?(?P<sheet>[A-Za-z][A-Za-z0-9_]*)'?!(?P<ref>[A-Za-z$]+[0-9$]+(?::[A-Za-z$]+[0-9$]+)?)\s*=(?P<content>.*)$"
+    r"^(?:'(?P<quoted>(?:[^']|'')+)'|(?P<sheet>[A-Za-z][A-Za-z0-9_]*))!"
+    r"(?P<ref>[A-Za-z$]+[0-9$]+(?::[A-Za-z$]+[0-9$]+)?)\s*=(?P<content>.*)$"
 )
+"""`Sheet!A1 = content`; a sheet name with spaces or symbols in single quotes, an apostrophe in it
+doubled, as spreadsheets write it: `'Income Statement'!B3 = 1`."""
 _NUMBER = re.compile(r"^[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?$|^[+-]?\.\d+$")
 
 ALLOWED_FUNCTIONS = frozenset(
@@ -182,9 +185,10 @@ def parse_edit_lines(text: str, sheets: list[str]) -> list[Edit]:
         match = _LINE.match(stripped)
         if not match:
             raise EditError(f"line {number} is not `Sheet!Cell = content`: {stripped[:80]!r}")
-        sheet = by_lower.get(match["sheet"].lower())
+        name = match["quoted"].replace("''", "'") if match["quoted"] is not None else match["sheet"]
+        sheet = by_lower.get(name.lower())
         if sheet is None:
-            raise EditError(f"line {number}: unknown sheet {match['sheet']!r}")
+            raise EditError(f"line {number}: unknown sheet {name!r}")
         ref = match["ref"].replace("$", "").upper()
         for part in ref.split(":"):
             col, row = coordinate_from_string(part)
