@@ -115,7 +115,7 @@ def load_submission(
     names = defined_names(wb)
     for name, text in names.items():
         if text not in (allowed_names or {}).get(name, ()):
-            raise Rejected(f"defined name not allowed: {name} = {text}")
+            raise Rejected(f"defined names are not allowed: {name} = {text}")
     for ws in wb.worksheets:
         ws.conditional_formatting = ConditionalFormattingList()
         ws.data_validations = DataValidationList()
