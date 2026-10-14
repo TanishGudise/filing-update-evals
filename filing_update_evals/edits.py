@@ -41,6 +41,16 @@ _LINE = re.compile(
 )
 """`Sheet!A1 = content`; a sheet name with spaces or symbols in single quotes, an apostrophe in it
 doubled, as spreadsheets write it: `'Income Statement'!B3 = 1`."""
+
+
+def quote_sheet(sheet: str) -> str:
+    """A sheet name as an edit line (and a formula) writes it: quoted, an apostrophe doubled,
+    unless it is a plain name."""
+    if re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", sheet):
+        return sheet
+    return "'" + sheet.replace("'", "''") + "'"
+
+
 _NUMBER = re.compile(r"^[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?$|^[+-]?\.\d+$")
 
 ALLOWED_FUNCTIONS = frozenset(

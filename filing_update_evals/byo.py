@@ -48,7 +48,7 @@ from openpyxl.utils import get_column_letter
 from openpyxl.utils.cell import column_index_from_string, coordinate_from_string
 from openpyxl.workbook.workbook import Workbook
 
-from filing_update_evals.edits import ALLOWED_FUNCTIONS, MAX_COL, MAX_ROW, function_names
+from filing_update_evals.edits import ALLOWED_FUNCTIONS, MAX_COL, MAX_ROW, function_names, quote_sheet
 from filing_update_evals.grader import (
     GradeResult,
     _close,
@@ -577,12 +577,7 @@ def build_task(
         "defined_names": defined_names(wb_after),
         "warnings": [w for ws in wb_after.worksheets if ws.title != SCRATCH for w in shape_warnings(ws)]
         + inserted(wb_after, al_before)
-        + [
-            f"{r['cell']} is beyond A1:Z{MAX_ROW}, which the agent's edit tool can't write: "
-            "fue-gate can't run this task"
-            for r in targets
-            if _key(_cell(r["cell"]))[1] > MAX_ROW or _key(_cell(r["cell"]))[2] > MAX_COL
-        ],
+        + _reach_warning(targets),
     }
     (out / SPEC).write_text(json.dumps(spec, indent=1, default=str) + "\n")
     _write_task_files(out, spec, wb_before, wb_after, filing, raw, brief)
@@ -605,13 +600,34 @@ def build_task(
     return Built(out, targets, flagged, spec["excluded"])
 
 
+def _reach_warning(targets: list[dict]) -> list[str]:
+    far = [
+        r["cell"]
+        for r in targets
+        if _key(_cell(r["cell"]))[1] > MAX_ROW or _key(_cell(r["cell"]))[2] > MAX_COL
+    ]
+    if not far:
+        return []
+    return [
+        f"{len(far)} target cell(s) are beyond A1:Z{MAX_ROW} (e.g. {far[0]}), which the agent's edit tool "
+        "can't write: an agent run (fue-gate) can't pass this task"
+    ]
+
+
 def intake_options(spec: dict) -> dict:
     """What a candidate may contain beyond the repo's defaults: the functions and defined names
     the firm's own updated workbook already uses."""
     return {
         "extra_functions": frozenset(spec.get("functions", ())),
-        "allowed_names": dict(spec.get("defined_names") or {}),
+        "allowed_names": _names(spec),
     }
+
+
+def _names(spec: dict) -> dict[str, str]:
+    names = spec.get("defined_names") or {}
+    if not isinstance(names, dict):
+        raise ValueError("this task was built by an older fue-build-task: rebuild it")
+    return names
 
 
 def load_candidate(data: bytes, spec: dict) -> Workbook:
@@ -684,10 +700,7 @@ def _write_task_files(out: Path, spec: dict, wb_before, wb_after, filing: str, r
 
 def _quote_ref(ref: str) -> str:
     sheet, coord = _cell(ref)
-    if re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", sheet):
-        return f"{sheet}!{coord}"
-    quoted = sheet.replace("'", "''")
-    return f"'{quoted}'!{coord}"
+    return f"{quote_sheet(sheet)}!{coord}"
 
 
 def _write_report(out: Path, spec: dict) -> None:
