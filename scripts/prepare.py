@@ -39,10 +39,12 @@ HINTS = {
     "cfo": "operating",
     "cfi": "investing",
     "cff": "financing",
+    "ppe": "equipment",
+    "intangibles": "intangible",
 }
 """Some numbers appear on two rows (total assets = total liabilities and equity; investing cash
-flow = capital expenditures when that is the only investing item); the hint picks the row the
-line belongs to."""
+flow = capital expenditures when that is the only investing item; net PP&E = intangibles, as at
+Methode's third quarter of fiscal 2026); the hint picks the row the line belongs to."""
 
 
 FOLD_WORDS = {

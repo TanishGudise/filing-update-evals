@@ -14,19 +14,19 @@ import json
 import sys
 from pathlib import Path
 
-from filing_update_evals.prior_update import EXAMPLES, load_year_earlier, prior_update, render
-from filing_update_evals.tasks import load_specs
+from filing_update_evals.prior_update import EXAMPLES, load_year_earlier, prior_update, render, task_texts
+from filing_update_evals.tasks import EXPERIMENT_TASKS_DIR, load_specs
 
 REPO = Path(__file__).resolve().parent.parent
 
 
 def main() -> int:
     EXAMPLES.mkdir(parents=True, exist_ok=True)
-    for spec in load_specs():
+    for spec in (*load_specs(), *load_specs(EXPERIMENT_TASKS_DIR)):
         if spec.group != "xbrl":
             continue
         data = json.loads((REPO / "data" / "filers" / f"{spec.filer}.json").read_text())
-        update = prior_update(data, spec.style, load_year_earlier(spec.filer))
+        update = prior_update(data, spec.style, load_year_earlier(spec.filer), task_texts=task_texts(spec))
         text = render(update)
         (EXAMPLES / f"{spec.id}.md").write_text(text)
         print(

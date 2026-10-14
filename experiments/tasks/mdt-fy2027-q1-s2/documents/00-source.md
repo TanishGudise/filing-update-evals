@@ -1,0 +1,1 @@
+Source: Medtronic plc, Form 10-Q for the quarter ended July 31, 2026, filed 2026-09-03 (SEC accession 0001628280-26-060473; https://www.sec.gov/Archives/edgar/data/1613103/000162828026060473). Tables as SEC EDGAR renders them from the filing's XBRL.

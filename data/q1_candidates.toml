@@ -1,0 +1,9 @@
+# Candidates for replicating the firm-memory result on more first-quarter filers: fiscal years
+# ending about April to July, so the latest 10-Q is a first quarter made public after 2026-07-01.
+# Picked for plain three-statement layouts; nothing here is assumed to qualify. Screened by the
+# same rules as the main set (scripts/q1_replication.py); General Mills, MillerKnoll and Smucker
+# are already in it.
+tickers = [
+  "CTAS", "FDX", "CASY", "PAYX", "ORCL", "CALM", "AIR", "WOR",
+  "KFY", "LZB", "MEI", "AVAV", "NTAP", "MDT",
+]

@@ -1,0 +1,1 @@
+Source: METHODE ELECTRONICS INC, Form 10-Q for the quarter ended August 1, 2026, filed 2026-09-02 (SEC accession 0000065270-26-000045; https://www.sec.gov/Archives/edgar/data/65270/000006527026000045). Tables as SEC EDGAR renders them from the filing's XBRL.

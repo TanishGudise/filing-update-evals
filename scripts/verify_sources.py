@@ -93,7 +93,10 @@ def fact_problems(task: str, ref: str, src: dict, dollars: float, cf: CompanyFac
     return []
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    """With a folder argument, check that folder's tasks and write <folder>/sources.md instead."""
+    argv = sys.argv[1:] if argv is None else argv
+    root = Path(argv[0]) if argv else None
     problems: list[str] = []
     checked = 0
     zeros = 0
@@ -101,7 +104,7 @@ def main() -> int:
     accepted = 0
     facts_cache: dict[int, CompanyFacts] = {}
     lines = ["# Source check", ""]
-    for spec in load_specs():
+    for spec in load_specs(root) if root else load_specs():
         if spec.group == "guidance":
             continue
         data = json.loads((REPO / "data" / "filers" / f"{spec.filer}.json").read_text())
@@ -207,7 +210,7 @@ def main() -> int:
         f"the same way. {quotes} guidance quotes checked word for word. {len(problems)} problems.",
     ]
     lines += [f"- ❌ {p}" for p in problems]
-    out = REPO / "outputs" / "sources.md"
+    out = root / "sources.md" if root else REPO / "outputs" / "sources.md"
     out.parent.mkdir(exist_ok=True)
     out.write_text("\n".join(lines) + "\n")
     print(lines[-1 - len(problems)])

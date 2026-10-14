@@ -1,0 +1,1 @@
+Source: KORN FERRY, Form 10-Q for the quarter ended July 31, 2026, filed 2026-09-09 (SEC accession 0000056679-26-000031; https://www.sec.gov/Archives/edgar/data/56679/000005667926000031). Tables as SEC EDGAR renders them from the filing's XBRL.

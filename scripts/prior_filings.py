@@ -4,9 +4,11 @@ filer's most recent earlier 10-Q, the previous fiscal year's third quarter. (The
 year earlier would change the same cells with the same formulas as the task's answer.) Offline
 except for the downloads, which go through scripts/fetch.py (SEC only).
 
-  python -I scripts/prior_filings.py urls      print the SEC files still to download (the filing
-                                               index first, then its statement pages)
-  python -I scripts/prior_filings.py prepare   write data/prior/<ticker>.json with prepare()
+  python -I scripts/prior_filings.py urls [TICKER ...]     print the SEC files still to download
+                                                          (the filing index first, then its
+                                                          statement pages)
+  python -I scripts/prior_filings.py prepare [TICKER ...]  write data/prior/<ticker>.json
+Without tickers: the main set's first-quarter filers (General Mills, MillerKnoll, Smucker).
 
 Each filing is the latest 10-Q before the task's, found in the filer's SEC submissions file; its
 "prior" filing (for the share count) is the periodic filing before it.
@@ -60,13 +62,17 @@ def year_earlier(row: dict) -> dict:
     }
 
 
-def rows() -> list[dict]:
-    screen = {r["ticker"]: r for r in json.loads((REPO / "data" / "screen.json").read_text())}
-    return [year_earlier(screen[t]) for t in TICKERS]
+def rows(tickers: list[str]) -> list[dict]:
+    screen = {}
+    for name in ("screen.json", "q1_screen.json"):  # the main set's screen, then the replication's
+        path = REPO / "data" / name
+        if path.exists():
+            screen |= {r["ticker"]: r for r in json.loads(path.read_text())}
+    return [year_earlier(screen[t]) for t in tickers or TICKERS]
 
 
-def urls() -> int:
-    for r in rows():
+def urls(tickers: list[str]) -> int:
+    for r in rows(tickers):
         summary = base_url(r) + "/FilingSummary.xml"
         if not local(summary).exists():
             print(summary)
@@ -77,10 +83,10 @@ def urls() -> int:
     return 0
 
 
-def prepare_all() -> int:
+def prepare_all(tickers: list[str]) -> int:
     out = REPO / "data" / "prior"
     out.mkdir(parents=True, exist_ok=True)
-    for r in rows():
+    for r in rows(tickers):
         r["pages"] = reports_for(r)
         data = prepare(r)
         (out / f"{r['ticker']}.json").write_text(json.dumps(data, indent=1) + "\n")
@@ -91,4 +97,4 @@ def prepare_all() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit({"urls": urls, "prepare": prepare_all}[sys.argv[1]]())
+    sys.exit({"urls": urls, "prepare": prepare_all}[sys.argv[1]](sys.argv[2:]))

@@ -1,0 +1,856 @@
+{
+ "periods": {
+  "FY-1Q1": [
+   "2024-04-28",
+   "2024-07-27"
+  ],
+  "FY-1Q2": [
+   "2024-07-28",
+   "2024-10-26"
+  ],
+  "FY-1Q3": [
+   "2024-10-27",
+   "2025-01-25"
+  ],
+  "FY-1": [
+   "2024-04-28",
+   "2025-04-26"
+  ],
+  "FY-2": [
+   "2023-04-30",
+   "2024-04-27"
+  ],
+  "FY-1Q2YTD": [
+   "2024-04-28",
+   "2024-10-26"
+  ],
+  "FY-1Q3YTD": [
+   "2024-04-28",
+   "2025-01-25"
+  ],
+  "FY-1END": [
+   null,
+   "2025-04-26"
+  ],
+  "FYQ1": [
+   "2025-04-27",
+   "2025-07-26"
+  ],
+  "FYQ1YTD": [
+   "2025-04-27",
+   "2025-07-26"
+  ],
+  "FYQ1END": [
+   null,
+   "2025-07-26"
+  ],
+  "FYQ2": [
+   "2025-07-27",
+   "2025-10-25"
+  ],
+  "FYQ2YTD": [
+   "2025-04-27",
+   "2025-10-25"
+  ],
+  "FYQ2END": [
+   null,
+   "2025-10-25"
+  ],
+  "FYQ3": [
+   "2025-10-26",
+   "2026-01-24"
+  ],
+  "FYQ3YTD": [
+   "2025-04-27",
+   "2026-01-24"
+  ],
+  "FYQ3END": [
+   null,
+   "2026-01-24"
+  ]
+ },
+ "ticker": "LZB",
+ "name": "LA-Z-BOY INC",
+ "cik": 57131,
+ "fiscal_year_end": "0424",
+ "fy": 2026,
+ "quarter": 3,
+ "calendar": {
+  "fy_start": "2025-04-27",
+  "quarter_ends": [
+   "2025-07-26",
+   "2025-10-25",
+   "2026-01-24"
+  ],
+  "prev_start": "2024-04-28",
+  "prev_quarter_ends": [
+   "2024-07-27",
+   "2024-10-26",
+   "2025-01-25",
+   "2025-04-26"
+  ]
+ },
+ "target": {
+  "accession": "0000057131-26-000007",
+  "filed": "2026-02-17",
+  "period_end": "2026-01-24",
+  "prior_accession": "0000057131-25-000097",
+  "prior_form": "10-Q",
+  "url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000007"
+ },
+ "public": "2026-02-17",
+ "units": {
+  "cover": "",
+  "income": "shares in Thousands, $ in Thousands",
+  "balance": "$ in Thousands",
+  "cash": "$ in Thousands"
+ },
+ "scale": 1000,
+ "pages": {
+  "cover": "R1.htm",
+  "income": "R2.htm",
+  "balance": "R4.htm",
+  "cash": "R6.htm"
+ },
+ "notes": [],
+ "shares": {
+  "current": {
+   "value": 40923710,
+   "as_of": "2026-02-10",
+   "accession": "0000057131-26-000007"
+  },
+  "prior": {
+   "value": 41248970,
+   "as_of": "2025-11-11",
+   "accession": "0000057131-25-000097"
+  }
+ },
+ "labels": {
+  "revenue": "Sales",
+  "cogs": "Cost of sales",
+  "sga": "Selling, general and administrative expense",
+  "operating_income": "Operating income",
+  "interest_expense": "Interest expense",
+  "pretax_income": "Income before income taxes",
+  "income_tax": "Income tax expense",
+  "net_income": "Net income attributable to La-Z-Boy Incorporated",
+  "da": "Depreciation and amortization",
+  "cfo": "Net cash provided by operating activities",
+  "capex": "Capital expenditures",
+  "cfi": "Net cash used for investing activities",
+  "cff": "Net cash used for financing activities",
+  "cash": "Cash and equivalents",
+  "receivables": "Receivables, net of allowance of $4,875 at 1/24/2026 and $5,042 at 4/26/2025",
+  "inventory": "Inventories, net",
+  "current_assets": "Total current assets",
+  "ppe": "Property, plant and equipment, net",
+  "goodwill": "Goodwill",
+  "intangibles": "Other intangible assets, net",
+  "total_assets": "Total assets",
+  "payables": "Accounts payable",
+  "current_liabilities": "Total current liabilities",
+  "equity": "Total La-Z-Boy Incorporated shareholders' equity",
+  "nci": "Noncontrolling interests",
+  "total_liabilities_equity": "Total liabilities and equity"
+ },
+ "lines": {
+  "revenue": {
+   "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "values": {
+    "FY-1Q1": 495532000.0,
+    "FY-1Q2": 521027000.0,
+    "FY-1Q3": 521777000.0,
+    "FY-1": 2109207000.0,
+    "FY-1Q3YTD": 1538336000.0,
+    "FYQ1": 492229000.0,
+    "FYQ2": 522480000.0,
+    "FYQ3": 541588000.0,
+    "FY-2": 2047027000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007",
+    "FY-2": "0000057131-25-000029"
+   },
+   "by_period": {
+    "FY-1Q1": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FY-1Q2": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FY-1Q3": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FY-1": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FY-1Q3YTD": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FYQ1": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FYQ2": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FYQ3": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "FY-2": "RevenueFromContractWithCustomerExcludingAssessedTax"
+   }
+  },
+  "cogs": {
+   "concept": "CostOfRevenue",
+   "values": {
+    "FY-1Q1": 282189000.0,
+    "FY-1Q2": 290379000.0,
+    "FY-1Q3": 290412000.0,
+    "FY-1": 1182789000.0,
+    "FY-1Q3YTD": 862980000.0,
+    "FYQ1": 283032000.0,
+    "FYQ2": 291342000.0,
+    "FYQ3": 308077000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "CostOfRevenue",
+    "FY-1Q2": "CostOfRevenue",
+    "FY-1Q3": "CostOfRevenue",
+    "FY-1": "CostOfRevenue",
+    "FY-1Q3YTD": "CostOfRevenue",
+    "FYQ1": "CostOfRevenue",
+    "FYQ2": "CostOfRevenue",
+    "FYQ3": "CostOfRevenue"
+   }
+  },
+  "sga": {
+   "concept": "SellingGeneralAndAdministrativeExpense",
+   "values": {
+    "FY-1Q1": 180973000.0,
+    "FY-1Q2": 191876000.0,
+    "FY-1Q3": 196197000.0,
+    "FY-1": 770000000.0,
+    "FY-1Q3YTD": 569046000.0,
+    "FYQ1": 187210000.0,
+    "FYQ2": 194959000.0,
+    "FYQ3": 203700000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "SellingGeneralAndAdministrativeExpense",
+    "FY-1Q2": "SellingGeneralAndAdministrativeExpense",
+    "FY-1Q3": "SellingGeneralAndAdministrativeExpense",
+    "FY-1": "SellingGeneralAndAdministrativeExpense",
+    "FY-1Q3YTD": "SellingGeneralAndAdministrativeExpense",
+    "FYQ1": "SellingGeneralAndAdministrativeExpense",
+    "FYQ2": "SellingGeneralAndAdministrativeExpense",
+    "FYQ3": "SellingGeneralAndAdministrativeExpense"
+   }
+  },
+  "operating_income": {
+   "concept": "OperatingIncomeLoss",
+   "values": {
+    "FY-1Q1": 32370000.0,
+    "FY-1Q2": 38772000.0,
+    "FY-1Q3": 35168000.0,
+    "FY-1": 135837000.0,
+    "FY-1Q3YTD": 106310000.0,
+    "FYQ1": 21987000.0,
+    "FYQ2": 36179000.0,
+    "FYQ3": 29811000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "OperatingIncomeLoss",
+    "FY-1Q2": "OperatingIncomeLoss",
+    "FY-1Q3": "OperatingIncomeLoss",
+    "FY-1": "OperatingIncomeLoss",
+    "FY-1Q3YTD": "OperatingIncomeLoss",
+    "FYQ1": "OperatingIncomeLoss",
+    "FYQ2": "OperatingIncomeLoss",
+    "FYQ3": "OperatingIncomeLoss"
+   }
+  },
+  "interest_expense": {
+   "concept": "InterestExpenseNonoperating",
+   "values": {
+    "FY-1Q1": 210000.0,
+    "FY-1Q2": 99000.0,
+    "FY-1Q3": 102000.0,
+    "FY-1": 545000.0,
+    "FY-1Q3YTD": 411000.0,
+    "FYQ1": 120000.0,
+    "FYQ2": 110000.0,
+    "FYQ3": 159000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "InterestExpenseNonoperating",
+    "FY-1Q2": "InterestExpenseNonoperating",
+    "FY-1Q3": "InterestExpenseNonoperating",
+    "FY-1": "InterestExpenseNonoperating",
+    "FY-1Q3YTD": "InterestExpenseNonoperating",
+    "FYQ1": "InterestExpenseNonoperating",
+    "FYQ2": "InterestExpenseNonoperating",
+    "FYQ3": "InterestExpenseNonoperating"
+   }
+  },
+  "pretax_income": {
+   "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+   "values": {
+    "FY-1Q1": 35966000.0,
+    "FY-1Q2": 40524000.0,
+    "FY-1Q3": 38628000.0,
+    "FY-1": 147134000.0,
+    "FY-1Q3YTD": 115118000.0,
+    "FYQ1": 24390000.0,
+    "FYQ2": 39564000.0,
+    "FYQ3": 31751000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FY-1Q2": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FY-1Q3": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FY-1": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FY-1Q3YTD": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FYQ1": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FYQ2": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+    "FYQ3": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   }
+  },
+  "income_tax": {
+   "concept": "IncomeTaxExpenseBenefit",
+   "values": {
+    "FY-1Q1": 9162000.0,
+    "FY-1Q2": 10671000.0,
+    "FY-1Q3": 9683000.0,
+    "FY-1": 46182000.0,
+    "FY-1Q3YTD": 29516000.0,
+    "FYQ1": 6093000.0,
+    "FYQ2": 10574000.0,
+    "FYQ3": 9951000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "IncomeTaxExpenseBenefit",
+    "FY-1Q2": "IncomeTaxExpenseBenefit",
+    "FY-1Q3": "IncomeTaxExpenseBenefit",
+    "FY-1": "IncomeTaxExpenseBenefit",
+    "FY-1Q3YTD": "IncomeTaxExpenseBenefit",
+    "FYQ1": "IncomeTaxExpenseBenefit",
+    "FYQ2": "IncomeTaxExpenseBenefit",
+    "FYQ3": "IncomeTaxExpenseBenefit"
+   }
+  },
+  "net_income": {
+   "concept": "NetIncomeLoss",
+   "values": {
+    "FY-1Q1": 26159000.0,
+    "FY-1Q2": 30037000.0,
+    "FY-1Q3": 28429000.0,
+    "FY-1": 99556000.0,
+    "FY-1Q3YTD": 84625000.0,
+    "FYQ1": 18204000.0,
+    "FYQ2": 28858000.0,
+    "FYQ3": 21650000.0
+   },
+   "sources": {
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2": "0000057131-25-000097",
+    "FY-1Q3": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q3YTD": "0000057131-26-000007",
+    "FYQ1": "0000057131-25-000081",
+    "FYQ2": "0000057131-25-000097",
+    "FYQ3": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1Q1": "NetIncomeLoss",
+    "FY-1Q2": "NetIncomeLoss",
+    "FY-1Q3": "NetIncomeLoss",
+    "FY-1": "NetIncomeLoss",
+    "FY-1Q3YTD": "NetIncomeLoss",
+    "FYQ1": "NetIncomeLoss",
+    "FYQ2": "NetIncomeLoss",
+    "FYQ3": "NetIncomeLoss"
+   }
+  },
+  "da": {
+   "concept": "DepreciationDepletionAndAmortization",
+   "values": {
+    "FYQ1YTD": 11329000.0,
+    "FYQ2YTD": 23099000.0,
+    "FYQ3YTD": 35624000.0,
+    "FY-1": 46667000.0,
+    "FY-1Q1": 12147000.0,
+    "FY-1Q2YTD": 23644000.0,
+    "FY-1Q3YTD": 35020000.0
+   },
+   "sources": {
+    "FYQ1YTD": "0000057131-25-000081",
+    "FYQ2YTD": "0000057131-25-000097",
+    "FYQ3YTD": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029",
+    "FY-1Q1": "0000057131-25-000081",
+    "FY-1Q2YTD": "0000057131-25-000097",
+    "FY-1Q3YTD": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FYQ1YTD": "DepreciationDepletionAndAmortization",
+    "FYQ2YTD": "DepreciationDepletionAndAmortization",
+    "FYQ3YTD": "DepreciationDepletionAndAmortization",
+    "FY-1": "DepreciationDepletionAndAmortization",
+    "FY-1Q1": "DepreciationDepletionAndAmortization",
+    "FY-1Q2YTD": "DepreciationDepletionAndAmortization",
+    "FY-1Q3YTD": "DepreciationDepletionAndAmortization"
+   }
+  },
+  "cfo": {
+   "concept": "NetCashProvidedByUsedInOperatingActivities",
+   "values": {
+    "FYQ1YTD": 36292000.0,
+    "FYQ2YTD": 86324000.0,
+    "FYQ3YTD": 175690000.0,
+    "FY-1": 187271000.0
+   },
+   "sources": {
+    "FYQ1YTD": "0000057131-25-000081",
+    "FYQ2YTD": "0000057131-25-000097",
+    "FYQ3YTD": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029"
+   },
+   "by_period": {
+    "FYQ1YTD": "NetCashProvidedByUsedInOperatingActivities",
+    "FYQ2YTD": "NetCashProvidedByUsedInOperatingActivities",
+    "FYQ3YTD": "NetCashProvidedByUsedInOperatingActivities",
+    "FY-1": "NetCashProvidedByUsedInOperatingActivities"
+   }
+  },
+  "capex": {
+   "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "values": {
+    "FYQ1YTD": 18461000.0,
+    "FYQ2YTD": 38927000.0,
+    "FYQ3YTD": 56737000.0,
+    "FY-1": 74280000.0
+   },
+   "sources": {
+    "FYQ1YTD": "0000057131-25-000081",
+    "FYQ2YTD": "0000057131-25-000097",
+    "FYQ3YTD": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029"
+   },
+   "by_period": {
+    "FYQ1YTD": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "FYQ2YTD": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "FYQ3YTD": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "FY-1": "PaymentsToAcquirePropertyPlantAndEquipment"
+   }
+  },
+  "cfi": {
+   "concept": "NetCashProvidedByUsedInInvestingActivities",
+   "values": {
+    "FYQ1YTD": -18819000.0,
+    "FYQ2YTD": -38810000.0,
+    "FYQ3YTD": -137739000.0,
+    "FY-1": -98389000.0
+   },
+   "sources": {
+    "FYQ1YTD": "0000057131-25-000081",
+    "FYQ2YTD": "0000057131-25-000097",
+    "FYQ3YTD": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029"
+   },
+   "by_period": {
+    "FYQ1YTD": "NetCashProvidedByUsedInInvestingActivities",
+    "FYQ2YTD": "NetCashProvidedByUsedInInvestingActivities",
+    "FYQ3YTD": "NetCashProvidedByUsedInInvestingActivities",
+    "FY-1": "NetCashProvidedByUsedInInvestingActivities"
+   }
+  },
+  "cff": {
+   "concept": "NetCashProvidedByUsedInFinancingActivities",
+   "values": {
+    "FYQ1YTD": -27716000.0,
+    "FYQ2YTD": -37555000.0,
+    "FYQ3YTD": -60989000.0,
+    "FY-1": -102612000.0
+   },
+   "sources": {
+    "FYQ1YTD": "0000057131-25-000081",
+    "FYQ2YTD": "0000057131-25-000097",
+    "FYQ3YTD": "0000057131-26-000007",
+    "FY-1": "0000057131-25-000029"
+   },
+   "by_period": {
+    "FYQ1YTD": "NetCashProvidedByUsedInFinancingActivities",
+    "FYQ2YTD": "NetCashProvidedByUsedInFinancingActivities",
+    "FYQ3YTD": "NetCashProvidedByUsedInFinancingActivities",
+    "FY-1": "NetCashProvidedByUsedInFinancingActivities"
+   }
+  },
+  "cash": {
+   "concept": "CashAndCashEquivalentsAtCarryingValue",
+   "values": {
+    "FY-1END": 328449000.0,
+    "FYQ1END": 318544000.0,
+    "FYQ2END": 338506000.0,
+    "FYQ3END": 306117000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "CashAndCashEquivalentsAtCarryingValue",
+    "FYQ1END": "CashAndCashEquivalentsAtCarryingValue",
+    "FYQ2END": "CashAndCashEquivalentsAtCarryingValue",
+    "FYQ3END": "CashAndCashEquivalentsAtCarryingValue"
+   }
+  },
+  "receivables": {
+   "concept": "ReceivablesNetCurrent",
+   "values": {
+    "FY-1END": 139533000.0,
+    "FYQ1END": 131001000.0,
+    "FYQ2END": 138308000.0,
+    "FYQ3END": 123800000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "ReceivablesNetCurrent",
+    "FYQ1END": "ReceivablesNetCurrent",
+    "FYQ2END": "ReceivablesNetCurrent",
+    "FYQ3END": "ReceivablesNetCurrent"
+   }
+  },
+  "inventory": {
+   "concept": "InventoryNet",
+   "values": {
+    "FY-1END": 255285000.0,
+    "FYQ1END": 252120000.0,
+    "FYQ2END": 225566000.0,
+    "FYQ3END": 235051000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "InventoryNet",
+    "FYQ1END": "InventoryNet",
+    "FYQ2END": "InventoryNet",
+    "FYQ3END": "InventoryNet"
+   }
+  },
+  "current_assets": {
+   "concept": "AssetsCurrent",
+   "values": {
+    "FY-1END": 805688000.0,
+    "FYQ1END": 793237000.0,
+    "FYQ2END": 823259000.0,
+    "FYQ3END": 808695000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "AssetsCurrent",
+    "FYQ1END": "AssetsCurrent",
+    "FYQ2END": "AssetsCurrent",
+    "FYQ3END": "AssetsCurrent"
+   }
+  },
+  "ppe": {
+   "concept": "PropertyPlantAndEquipmentNet",
+   "values": {
+    "FY-1END": 339212000.0,
+    "FYQ1END": 345262000.0,
+    "FYQ2END": 348777000.0,
+    "FYQ3END": 340421000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "PropertyPlantAndEquipmentNet",
+    "FYQ1END": "PropertyPlantAndEquipmentNet",
+    "FYQ2END": "PropertyPlantAndEquipmentNet",
+    "FYQ3END": "PropertyPlantAndEquipmentNet"
+   }
+  },
+  "goodwill": {
+   "concept": "Goodwill",
+   "values": {
+    "FY-1END": 205590000.0,
+    "FYQ1END": 205629000.0,
+    "FYQ2END": 205556000.0,
+    "FYQ3END": 263259000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "Goodwill",
+    "FYQ1END": "Goodwill",
+    "FYQ2END": "Goodwill",
+    "FYQ3END": "Goodwill"
+   }
+  },
+  "intangibles": {
+   "concept": "IntangibleAssetsNetExcludingGoodwill",
+   "values": {
+    "FY-1END": 51161000.0,
+    "FYQ1END": 50991000.0,
+    "FYQ2END": 49581000.0,
+    "FYQ3END": 77776000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "IntangibleAssetsNetExcludingGoodwill",
+    "FYQ1END": "IntangibleAssetsNetExcludingGoodwill",
+    "FYQ2END": "IntangibleAssetsNetExcludingGoodwill",
+    "FYQ3END": "IntangibleAssetsNetExcludingGoodwill"
+   }
+  },
+  "total_assets": {
+   "concept": "Assets",
+   "values": {
+    "FY-1END": 1922162000.0,
+    "FYQ1END": 1925953000.0,
+    "FYQ2END": 1958758000.0,
+    "FYQ3END": 2086963000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "Assets",
+    "FYQ1END": "Assets",
+    "FYQ2END": "Assets",
+    "FYQ3END": "Assets"
+   }
+  },
+  "payables": {
+   "concept": "AccountsPayableCurrent",
+   "values": {
+    "FY-1END": 95984000.0,
+    "FYQ1END": 99725000.0,
+    "FYQ2END": 103992000.0,
+    "FYQ3END": 117943000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "AccountsPayableCurrent",
+    "FYQ1END": "AccountsPayableCurrent",
+    "FYQ2END": "AccountsPayableCurrent",
+    "FYQ3END": "AccountsPayableCurrent"
+   }
+  },
+  "short_term_debt": {
+   "concept": "",
+   "values": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "sources": {},
+   "by_period": {}
+  },
+  "current_ltd": {
+   "concept": "",
+   "values": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "sources": {},
+   "by_period": {}
+  },
+  "current_liabilities": {
+   "concept": "LiabilitiesCurrent",
+   "values": {
+    "FY-1END": 420791000.0,
+    "FYQ1END": 416290000.0,
+    "FYQ2END": 423721000.0,
+    "FYQ3END": 487503000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "LiabilitiesCurrent",
+    "FYQ1END": "LiabilitiesCurrent",
+    "FYQ2END": "LiabilitiesCurrent",
+    "FYQ3END": "LiabilitiesCurrent"
+   }
+  },
+  "long_term_debt": {
+   "concept": "",
+   "values": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "sources": {},
+   "by_period": {}
+  },
+  "equity": {
+   "concept": "StockholdersEquity",
+   "values": {
+    "FY-1END": 1020623000.0,
+    "FYQ1END": 1016167000.0,
+    "FYQ2END": 1039590000.0,
+    "FYQ3END": 1042522000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "StockholdersEquity",
+    "FYQ1END": "StockholdersEquity",
+    "FYQ2END": "StockholdersEquity",
+    "FYQ3END": "StockholdersEquity"
+   }
+  },
+  "redeemable_nci": {
+   "concept": "",
+   "values": {
+    "FY-1END": 0.0,
+    "FYQ1END": 0.0,
+    "FYQ2END": 0.0,
+    "FYQ3END": 0.0
+   },
+   "sources": {},
+   "by_period": {}
+  },
+  "nci": {
+   "concept": "MinorityInterest",
+   "values": {
+    "FY-1END": 11353000.0,
+    "FYQ1END": 11855000.0,
+    "FYQ2END": 11867000.0,
+    "FYQ3END": 12632000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "MinorityInterest",
+    "FYQ1END": "MinorityInterest",
+    "FYQ2END": "MinorityInterest",
+    "FYQ3END": "MinorityInterest"
+   }
+  },
+  "total_liabilities_equity": {
+   "concept": "LiabilitiesAndStockholdersEquity",
+   "values": {
+    "FY-1END": 1922162000.0,
+    "FYQ1END": 1925953000.0,
+    "FYQ2END": 1958758000.0,
+    "FYQ3END": 2086963000.0
+   },
+   "sources": {
+    "FY-1END": "0000057131-26-000007",
+    "FYQ1END": "0000057131-25-000081",
+    "FYQ2END": "0000057131-25-000097",
+    "FYQ3END": "0000057131-26-000007"
+   },
+   "by_period": {
+    "FY-1END": "LiabilitiesAndStockholdersEquity",
+    "FYQ1END": "LiabilitiesAndStockholdersEquity",
+    "FYQ2END": "LiabilitiesAndStockholdersEquity",
+    "FYQ3END": "LiabilitiesAndStockholdersEquity"
+   }
+  }
+ }
+}

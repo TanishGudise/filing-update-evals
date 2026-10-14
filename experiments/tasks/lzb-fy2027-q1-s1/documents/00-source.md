@@ -1,0 +1,1 @@
+Source: LA-Z-BOY INC, Form 10-Q for the quarter ended July 25, 2026, filed 2026-08-18 (SEC accession 0000057131-26-000035; https://www.sec.gov/Archives/edgar/data/57131/000005713126000035). Tables as SEC EDGAR renders them from the filing's XBRL.

@@ -212,10 +212,19 @@ async def main() -> int:
     parser.add_argument("--runs", type=int, default=20)
     parser.add_argument("--task", action="append", help="only validate these task ids")
     parser.add_argument("--jobs", type=int, default=8, help="graders running in parallel")
-    parser.add_argument("--out", type=Path, default=REPO / "outputs" / "validation.md")
+    parser.add_argument(
+        "--out", type=Path, help="default: outputs/validation.md, or <root>/validation.md with --root"
+    )
+    parser.add_argument("--root", type=Path, help="tasks from this folder (e.g. experiments/tasks)")
     args = parser.parse_args()
+    if args.out is None:
+        args.out = args.root / "validation.md" if args.root else REPO / "outputs" / "validation.md"
 
-    specs = [s for s in load_specs() if not args.task or s.id in args.task]
+    specs = [
+        s
+        for s in (load_specs(args.root) if args.root else load_specs())
+        if not args.task or s.id in args.task
+    ]
     if not specs:
         print("no matching tasks", file=sys.stderr)
         return 2
