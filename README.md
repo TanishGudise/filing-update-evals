@@ -83,8 +83,9 @@ uv run fue-grade-byo --task-dir demo-task --xlsx examples/byo-inserted-column/af
 The analyst's own update scores 1.0 and the workbook left as it was scores 0.0. The cells that
 differ between before and after are the update; rows and columns are matched by their labels, not
 their addresses, so an inserted column is new cells, not a shifted sheet. A target the analyst
-wrote as a formula that reads other cells needs a formula (a formula of numbers only, `=1000+250`,
-is a typed figure), and the filing's figures are moved to check the formulas read them.
+wrote as a formula that reads other cells needs a formula (a formula that reads no cell,
+`=1000+250` or `=SUM(1000,250)`, is a typed figure), and the filing's figures are moved to check the
+formulas read them.
 `--previous-before` adds the update before this one as the agent's worked example;
 `fue-gate --tasks DIR --config NAME=MODEL:MODE --config ...` runs two configurations on a folder of
 tasks and lists the tasks that pass under one and not the other. Each task is also written as a
@@ -112,7 +113,12 @@ Limits:
 - Typed changes that don't appear in the filing are flagged, and the build stops until you exclude
   or keep them (a cell that held a formula before the update can only be kept). A figure the filing
   shows only as part of a sum, or a percentage typed as a decimal, doesn't appear, so it is flagged
-  too, and so is every whole number from -9 to 9 (they would match the filing by chance).
+  too, and so is every whole number from -9 to 9 (they would match the filing by chance). A figure
+  typed as a sum of the filing's lines (`=71304+110215`, every part 10 or more) is traced by its
+  parts; any other formula that reads no cell (`=SUM(71304,110215)`, `=18151900*1%`) only by its
+  value.
+- A formula target that no perturbed copy moves (one that reads only blank cells, say) is checked
+  at its base value only; the build lists any.
 - Text the update types (a new period's header, say) must match the analyst's exactly; exclude it
   if its wording shouldn't count.
 - A sheet without row labels or column headers is matched by position (the build report says so).
