@@ -463,9 +463,13 @@ def align(
         cb = b.col_labels + [""] * (cols - len(b.col_labels))
         out.rows[ws.title] = {i + 1: j + 1 for i, j in match(ra, rb).items()}
         out.cols[ws.title] = {i + 1: j + 1 for i, j in match(ca, cb).items()}
-        by_signature = {block.signature: block for block in b.blocks}
+        # Blocks pair by signature only where it is unique on both sides (two dashboard groups whose
+        # text sits in the header rows both have an empty one); otherwise by position.
+        count_a = Counter(block.signature for block in a.blocks)
+        count_b = Counter(block.signature for block in b.blocks)
+        by_signature = {block.signature: block for block in b.blocks if count_b[block.signature] == 1}
         for k, block_a in enumerate(a.blocks):
-            block_b = by_signature.get(block_a.signature)
+            block_b = by_signature.get(block_a.signature) if count_a[block_a.signature] == 1 else None
             if block_b is None and len(a.blocks) == len(b.blocks):
                 block_b = b.blocks[k]
             if block_b is None:
